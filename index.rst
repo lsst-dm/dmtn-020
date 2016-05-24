@@ -299,7 +299,7 @@ Glossary
       Cost Variance. Defined as :term:`BCWP`\-:term:`ACWP`.
 
    eCAM
-      The eCAM Notebook, a tool which reports information from the
+      The `eCAM Notebook`_, a tool which reports information from the
       :term:`PMCS`. It provides a convenient view of the current status of the
       project in terms of :term:`EVMS`.
 
@@ -348,6 +348,8 @@ Glossary
 
    WBS
       Work Breakdown Structure; see the definition :ref:`above <sec-wbs>`.
+
+.. _eCAM Notebook: https://msweb.lsstcorp.org/eCAM/
 
 Recruiting new staff
 ====================
