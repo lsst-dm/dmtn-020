@@ -204,6 +204,28 @@ following format:
 | YYYY-MM-DD -- YYYY-MM-DD |           |            |             |            |           |         |           |           |           |            |
 +--------------------------+-----------+------------+-------------+------------+-----------+---------+-----------+-----------+-----------+------------+
 
+Note that when reporting actuals at this level it is not required to provide a
+mapping from dollar values to individuals who did the work. However, it is
+important to note that, should the Project be audited in the future, it is
+perfectly possible that they will wish to examine such a mapping. You should
+therefore keep records which will enable you to provide it upon request.
+
+Note that when loading the plan at the start of a cycle (as described
+:ref:`here <sec-cycle-plan>`), you are expected to provide the names of the
+individuals who will be carrying out the work. It is not, in general,
+appropriate to charge for labor from individuals who have not been named in
+this way, even if the total sum comes in below the budgeted amount specified
+in your contract. In some special cases (e.g. temporary work carried out by
+summer students) it may be possible to make an exception: please discuss this
+with the :ref:`project manager <sec-contacts>` on a case-by-case basis.
+
+.. _sec-cycle-plan:
+
+Cycle Level Planning
+====================
+
+
+
 Important Documents
 ===================
 
