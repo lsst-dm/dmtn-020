@@ -219,11 +219,36 @@ in your contract. In some special cases (e.g. temporary work carried out by
 summer students) it may be possible to make an exception: please discuss this
 with the :ref:`project manager <sec-contacts>` on a case-by-case basis.
 
+
+Planning
+========
+
+:ldm:`465` presents a high level overview of the DM planning process in terms
+of the “baselined” long-term plan, which is strictly change controlled, and
+the short term, cycle-based execution plan. This document assumes the reader
+is familiar with the concepts defined therein, and provides only how-to
+information together with clarifications and examples.
+
+Long Term
+---------
+
+At time of writing, the long-term planning strategy as described in :ldm:`465`
+is new; we have yet to uncover its complexities. For that reason, there is
+currently nothing to add here.
+
 .. _sec-cycle-plan:
 
-Cycle Level Planning
-====================
+Short Term
+----------
 
+Per :ldm:`465`, short term planning is carried out in blocks referred to as
+:term:`cycle`\s, which (usually) last for six months. Before the start of a
+cycle, technical managers work with the DM Project Manager and the Project
+Controls Specialist to ensure their plan for the cycle is well defined in both
+:term:`JIRA` and :term:`PMCS`.
+
+Sprinting
+=========
 
 
 Important Documents
@@ -298,6 +323,12 @@ Glossary
    CV
       Cost Variance. Defined as :term:`BCWP`\-:term:`ACWP`.
 
+   Cycle
+      The time period over which detailed, short-term plans are defined and
+      executed. Normally, cycles run for six months, and culminate in a new
+      release of the LSST Software Stack, however this need not always be the
+      case.
+
    eCAM
       The `eCAM Notebook`_, a tool which reports information from the
       :term:`PMCS`. It provides a convenient view of the current status of the
@@ -309,6 +340,11 @@ Glossary
    EVMS
       Earned Value Management System. See the brief description :ref:`above
       <sec-evms>`, or refer to formal training.
+
+   JIRA
+      Issue and project tracking software produced by `Atlassian`_. `LSST's
+      JIRA`_ is a core interface between technical managers, their teams, and
+      the :term:`PMCS`.
 
    LCR
       LSST Change Request. It is necessary to submit a change request to alter
@@ -350,6 +386,8 @@ Glossary
       Work Breakdown Structure; see the definition :ref:`above <sec-wbs>`.
 
 .. _eCAM Notebook: https://msweb.lsstcorp.org/eCAM/
+.. _Atlassian: http://www.atlassian.com/
+.. _LSST's JIRA: https://jira.lsstcorp.org/
 
 Recruiting new staff
 ====================
