@@ -24,3 +24,7 @@ git_version = subprocess.check_output(["git", "log", "-1", "--date=short",
 if subprocess.check_output(["git", "status", "--porcelain"]).decode().strip():
     git_version += "-dirty"
 g['html_context']['last_revised'] = "%s (%s)" % (git_date, git_version)
+
+import sys
+sys.path.append(os.getcwd())
+extensions.append("ext.lsst")
