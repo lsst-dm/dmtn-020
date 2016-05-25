@@ -172,18 +172,31 @@ of the system are accurate, at the end of construction, all of these three
 quantities will be equal.
 
 In practice, estimation is rarely perfect. Imperfect estimates are exposed as
-:term:`SV` (defined as BCWP-BCWS; a negative value means that less of the
-system has been delivered to date than planned) and :term:`CV` (defined as
-BCWP-ACWP; a negative value means that the work delivered to date has been
-more expensive than predicted). Related quantities, :term:`SPI` and
-:term:`CPI`, express the same information as ratios rather than sums. In
-general, we strive to achieve variances of near zero: even a positive variance
-(corresponding being ahead of schedule or being cheaper than expected) is
-indicative of an inaccurate plan.
+variances. Specifically, we can show either :term:`SV` (defined as BCWP-BCWS;
+a negative value means that less of the system has been delivered to date than
+planned) or :term:`CV` (defined as BCWP-ACWP; a negative value means that the
+work delivered to date has been more expensive than predicted). Related
+quantities, :term:`SPI` and :term:`CPI`, express the same information as
+ratios rather than sums. In general, we strive to achieve variances of near
+zero: even a positive variance (corresponding being ahead of schedule or being
+cheaper than expected) is indicative of an inaccurate plan.
 
 All of these indices can be applied to any WBS element within the project.
 Thus, we can talk about value earned across the whole of DM (1.02C) or on a
 very specific component (say, the User Workspace Toolkit, 1.02C.05.05).
+
+Variance Narratives
+-------------------
+
+Every month, the :term:`eCAM` tool is updated from PMCS to reflect the latest
+earned value status. If either schedule or cost variance (SV or CV) is more
+than -$100k, you will be required to provide a “narrative”. This is divided
+into two parts: you must explain why the variance arose, and what action will
+be taken to correct it (e.g. slipping work into the future, or diverting
+resources from elsewhere to make up the shortfall). The narrative is entered
+directly into eCAM.
+
+.. todo:: Confirm exact thresholds with Kevin.
 
 .. _sec-loe:
 
@@ -430,10 +443,14 @@ careful to ensure that cross-team work is well defined. Usually, it is
 convenient for a single manager to take ultimate responsibility for ensuring
 that it is successfully delivered.
 
-Revising the Plan
------------------
+Handling Variance & Revising the Plan
+-------------------------------------
 
-.. todo:: Add text.
+During the cycle, it is possible that changing circumstances will cause
+reality not to exactly match with the plan. This has two possible
+consequences.
+
+Variance
 
 .. _sec-cycle-close:
 
@@ -513,6 +530,12 @@ with the :ref:`project manager <sec-contacts>` on a case-by-case basis.
 
 Monthly Narratives
 ==================
+
+
+Staff Onboarding
+================
+
+.. todo:: Note LSST onboarding page, also update Jacek's spreadsheet.
 
 
 Glossary
@@ -631,8 +654,3 @@ Glossary
 .. _eCAM Notebook: https://msweb.lsstcorp.org/eCAM/
 .. _Atlassian: http://www.atlassian.com/
 .. _LSST's JIRA: https://jira.lsstcorp.org/
-
-Recruiting new staff
-====================
-
-
