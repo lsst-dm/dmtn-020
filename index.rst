@@ -7,8 +7,44 @@ underpinning LSST Data Management's approach to project management. It is
 intended to be read in conjunction with :ldm:`465`, which provides a formal
 description of the project management process and requirements.
 
-Introduction
-============
+Important Documents
+===================
+
+Wherever a conflict arises, baselined project documentation takes precedence
+over this note. You are encouraged to submit bug reports so that this document
+can be made compliant.
+
+Be aware of prefixes: “LDM-” documents refer specificially to the Data
+Management subsystem, “LSE-” to Systems Engineering, “LPM-” to Project
+Management.
+
+:lpm:`43`, :lpm:`44`
+   *WBS Structure* and *WBS Dictionary*, respectively. The former shows the
+   overall work breakdown structure for the whole project.
+
+:lpm:`98`
+   *LSST Project Controls System Description*. Describes and defines the
+   components of the :term:`PMCS` used to manage and report on the overall
+   LSST Project.
+
+:ldm:`465`
+   *LSST DM Project Management and Tools*. The formal, high-level document
+   which defines the project management process used by LSST DM. The present
+   document may be thought of as a guide to applying the principles defined
+   in :ldm:`465` in practice.
+
+.. _sec-contacts:
+
+Useful Contacts
+===============
+
+The LSST DM Project Manager is Jacek Becla. He is the first point of contact
+for all issues regarding project management within DM.
+
+The LSST Project Controls Specialist is Kevin Long. He is responsible for the
+:term:`PMCS` and, in particular, for ensuring that DM properly complies with
+our earned value management requirements. He is the first point of contact for
+all questions about the PMCS system.
 
 Technical Managers
 ==================
@@ -171,56 +207,6 @@ The assumption encoded in :ldm:`465` is that developers will spent 30% of
 their time on LOE type activities, and the remaining 70% of their effort is
 tracked against concrete deliverables.
 
-.. _sec-actuals:
-
-Reporting Actuals
-=================
-
-In order to comply with the :ref:`earned value management system <sec-evms>`,
-it is necessary to track the actual cost of work being performed (the
-“actuals”) in each leaf element of the WBS. That is, whenever an invoice is
-issue from a subcontracting institution to AURA, it must be broken down into
-dollar charges against individual WBS elements.
-
-Some institutions rigorously track how staff are spending their time (e.g. by
-filling in timesheets), and may directly make that information available to
-AURA as part of the invoicing process. In this case, the technical manager
-need take no further action.
-
-Other institutions do not rigorously check staff activity and/or do not supply
-this information to AURA when invoicing. In this case, the technical manager
-is responsible for breaking down the invoice by WBS and forwarding that to the
-relevant AURA contracts officer (check with the :ref:`project manager
-<sec-contacts>` if you are unsure who that is).
-
-A typical invoice breakout should be supplied in a spreadsheet in the
-following format:
-
-+--------------------------+-----------+------------+-------------+------------+-----------+---------+-----------+-----------+-----------+------------+
-| Invoice Voucher          | Salary    | Fringe xx% | Materials & |  F & A yy% | Total     | WBS     | 02C.0N.00 | 02C.0N.01 | 02C.0N.02 | TOTAL      |
-|                          |           |            | Services    |            |           |         |           |           |           |            |
-+==========================+===========+============+=============+============+===========+=========+===========+===========+===========+============+
-| Invoice Date YYYY-MM-DD  |           |            |             |            |           | ACCOUNT | KLM20N00A | KLM20N01A | KLM20N02A |            |
-+--------------------------+-----------+------------+-------------+------------+-----------+---------+-----------+-----------+-----------+------------+
-| Invoice Period           | $ABCDE.FG |  $HIJKL.MN |   $OPQRS.TU |  $VWXYZ.AB | $CDEFG.HI | AMOUNT  | $12345.67 | $89012.34 | $56789.01 | $158147.02 |
-| YYYY-MM-DD -- YYYY-MM-DD |           |            |             |            |           |         |           |           |           |            |
-+--------------------------+-----------+------------+-------------+------------+-----------+---------+-----------+-----------+-----------+------------+
-
-Note that when reporting actuals at this level it is not required to provide a
-mapping from dollar values to individuals who did the work. However, it is
-important to note that, should the Project be audited in the future, it is
-perfectly possible that they will wish to examine such a mapping. You should
-therefore keep records which will enable you to provide it upon request.
-
-Note that when loading the plan at the start of a cycle (as described
-:ref:`here <sec-cycle-plan>`), you are expected to provide the names of the
-individuals who will be carrying out the work. It is not, in general,
-appropriate to charge for labor from individuals who have not been named in
-this way, even if the total sum comes in below the budgeted amount specified
-in your contract. In some special cases (e.g. temporary work carried out by
-summer students) it may be possible to make an exception: please discuss this
-with the :ref:`project manager <sec-contacts>` on a case-by-case basis.
-
 .. _sec-effort:
 
 Estimating Effort
@@ -283,19 +269,10 @@ In either case, the total number of SPs which will will be generated by the
 team in a given time interval is reduced. This should be taken into account
 when :term:`resource loading`.
 
-Planning
-========
-
-:ldm:`465` presents a high level overview of the DM planning process in terms
-of the “baselined” long-term plan, which is strictly change controlled, and
-the short term, cycle-based execution plan. This document assumes the reader
-is familiar with the concepts defined therein, and provides only how-to
-information together with clarifications and examples.
-
 .. _sec-long-term-plan:
 
-Long Term
----------
+Long Term Planning
+==================
 
 At time of writing, the long-term planning strategy as described in :ldm:`465`
 is new; we have yet to uncover its complexities. For that reason, there is
@@ -303,14 +280,17 @@ currently nothing to add here.
 
 .. _sec-cycle-plan:
 
-Short Term
-----------
+Short Term Planning
+===================
 
 Per :ldm:`465`, short term planning is carried out in blocks referred to as
 :term:`cycle`\s, which (usually) last for six months. Before the start of a
 cycle, technical managers work with the DM Project Manager and the Project
 Controls Specialist to ensure their plan for the cycle is well defined in both
 :term:`JIRA` and :term:`PMCS`.
+
+Defining The Plan
+-----------------
 
 Scoping Work
 ^^^^^^^^^^^^
@@ -439,58 +419,83 @@ careful to ensure that cross-team work is well defined. Usually, it is
 convenient for a single manager to take ultimate responsibility for ensuring
 that it is successfully delivered.
 
+Revising the Plan
+-----------------
+
+.. todo:: Add text.
+
 .. _sec-cycle-close:
 
-Closing a Cycle
-^^^^^^^^^^^^^^^
+Closing the Cycle
+-----------------
 
 .. todo:: Add text.
 
-Mid-Cycle Replans
-^^^^^^^^^^^^^^^^^
-
-.. todo:: Add text.
-
-Sprinting
+Execution
 =========
 
+Sprinting
+---------
+
 .. todo:: Add text.
 
+Handling Bugs & Emergent Work
+-----------------------------
 
-Important Documents
-===================
+.. todo::
 
-Be aware of prefixes: “LDM-” documents refer specificially to the Data
-Management subsystem, “LSE-” to Systems Engineering, “LPM-” to Project
-Management.
+   Should include earning value for bugs, but also semantics of issue types.
 
-:ldm:`465`
-   *LSST DM Project Management and Tools*. The formal, high-level document
-   which defines the project management process used by LSST DM. The present
-   document may be thought of as a guide to applying the principles defined
-   in :ldm:`465` in practice.
+.. _sec-actuals:
 
-:lpm:`43`, :lpm:`44`
-   *WBS Structure* and *WBS Dictionary*, respectively. The former shows the
-   overall work breakdown structure for the whole project.
+Reporting Actuals
+=================
 
-:lpm:`98`
-   *LSST Project Controls System Description*. Describes and defines the
-   components of the :term:`PMCS` used to manage and report on the overall
-   LSST Project.
+In order to comply with the :ref:`earned value management system <sec-evms>`,
+it is necessary to track the actual cost of work being performed (the
+“actuals”) in each leaf element of the WBS. That is, whenever an invoice is
+issue from a subcontracting institution to AURA, it must be broken down into
+dollar charges against individual WBS elements.
 
-.. _sec-contacts:
+Some institutions rigorously track how staff are spending their time (e.g. by
+filling in timesheets), and may directly make that information available to
+AURA as part of the invoicing process. In this case, the technical manager
+need take no further action.
 
-Useful Contacts
-===============
+Other institutions do not rigorously check staff activity and/or do not supply
+this information to AURA when invoicing. In this case, the technical manager
+is responsible for breaking down the invoice by WBS and forwarding that to the
+relevant AURA contracts officer (check with the :ref:`project manager
+<sec-contacts>` if you are unsure who that is).
 
-The LSST DM Project Manager is Jacek Becla. He is the first point of contact
-for all issues regarding project management within DM.
+A typical invoice breakout should be supplied in a spreadsheet in the
+following format:
 
-The LSST Project Controls Specialist is Kevin Long. He is responsible for the
-:term:`PMCS` and, in particular, for ensuring that DM properly complies with
-our earned value management requirements. He is the first point of contact for
-all questions about the PMCS system.
++--------------------------+-----------+------------+-------------+------------+-----------+---------+-----------+-----------+-----------+------------+
+| Invoice Voucher          | Salary    | Fringe xx% | Materials & |  F & A yy% | Total     | WBS     | 02C.0N.00 | 02C.0N.01 | 02C.0N.02 | TOTAL      |
+|                          |           |            | Services    |            |           |         |           |           |           |            |
++==========================+===========+============+=============+============+===========+=========+===========+===========+===========+============+
+| Invoice Date YYYY-MM-DD  |           |            |             |            |           | ACCOUNT | KLM20N00A | KLM20N01A | KLM20N02A |            |
++--------------------------+-----------+------------+-------------+------------+-----------+---------+-----------+-----------+-----------+------------+
+| Invoice Period           | $ABCDE.FG |  $HIJKL.MN |   $OPQRS.TU |  $VWXYZ.AB | $CDEFG.HI | AMOUNT  | $12345.67 | $89012.34 | $56789.01 | $158147.02 |
+| YYYY-MM-DD -- YYYY-MM-DD |           |            |             |            |           |         |           |           |           |            |
++--------------------------+-----------+------------+-------------+------------+-----------+---------+-----------+-----------+-----------+------------+
+
+Note that when reporting actuals at this level it is not required to provide a
+mapping from dollar values to individuals who did the work. However, it is
+important to note that, should the Project be audited in the future, it is
+perfectly possible that they will wish to examine such a mapping. You should
+therefore keep records which will enable you to provide it upon request.
+
+Note that when loading the plan at the start of a cycle (as described
+:ref:`here <sec-cycle-plan>`), you are expected to provide the names of the
+individuals who will be carrying out the work. It is not, in general,
+appropriate to charge for labor from individuals who have not been named in
+this way, even if the total sum comes in below the budgeted amount specified
+in your contract. In some special cases (e.g. temporary work carried out by
+summer students) it may be possible to make an exception: please discuss this
+with the :ref:`project manager <sec-contacts>` on a case-by-case basis.
+
 
 Glossary
 ========
