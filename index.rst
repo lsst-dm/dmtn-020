@@ -53,9 +53,9 @@ This guide is primarily aimed at the LSST DM technical managers. Technical
 managers report directly to the DM Project Manager. Per :ldm:`465`, they are
 expected to:
 
-- Assemble the team capable of delivering work scoped through the WBS on-time
-  and within budget. Provide daily technical management and leadership for the
-  team, monitor and optimize team performance.
+- Assemble the team capable of delivering work scoped through the :term:`WBS`
+  on-time and within budget. Provide daily technical management and leadership
+  for the team, monitor and optimize team performance.
 
 - Work closely with the DM Project Manager on defining short and long-term
   plan and schedule for their teams. Direct the execution of their teams's
@@ -207,6 +207,12 @@ The assumption encoded in :ldm:`465` is that developers will spent 30% of
 their time on LOE type activities, and the remaining 70% of their effort is
 tracked against concrete deliverables.
 
+All LOE work should be invoiced to the “00” fourth-level WBS element
+(1.02C.03.00, 1.02C.04.00, etc), which is reserved for “management engineering
+and integration”. Per the :ref:`effort estimation procedure <sec-effort>`,
+this means that *at least* 30% of every individual's time will be invoiced to
+the 00 element.
+
 .. _sec-effort:
 
 Estimating Effort
@@ -224,7 +230,8 @@ the remainder of their time to personal research.
 Our base assumption is that 30% of an individual's LSST time (i.e. 540
 hours/year for a developer, 432 hours/year for a scientist) are devoted to
 overhead for meetings, ad-hoc discussions and other interruptions. This work
-is counted as :term:`LOE`.
+is counted as :term:`LOE` (and, as such, is charged to the relevant “00”
+fourth level WBS element, as described :ref:`here <sec-loe>`).
 
 Some individuals—notably technical managers themselves, as well as others in
 leadership roles—are expected to have a larger fraction of their time devoted
@@ -332,6 +339,10 @@ Note that:
   possible to define epics that cover multiple WBS elements. See
   :ref:`sec-cross-team` for information on scheduling work which requires
   resources from multiple elements.
+- Although :ref:`LOE work should be charged to the 00 fourth-level element
+  <sec-loe>`, this does not imply that other work cannot be charged here.
+  Indeed, where possible management activities *should* be scheduled as epics
+  with concrete deliverables in this element rather than being handled as LOE.
 
 The :ref:`Project Controls Specialist <sec-contacts>` will automatically pull
 information from JIRA to populate :term:`PMCS` with the plan.
@@ -468,18 +479,22 @@ is responsible for breaking down the invoice by WBS and forwarding that to the
 relevant AURA contracts officer (check with the :ref:`project manager
 <sec-contacts>` if you are unsure who that is).
 
-A typical invoice breakout should be supplied in a spreadsheet in the
-following format:
+A typical invoice breakout should be supplied in a spreadsheet similar to that
+shown in :numref:`tab-invoice`.
 
-+--------------------------+-----------+------------+-------------+------------+-----------+---------+-----------+-----------+-----------+------------+
-| Invoice Voucher          | Salary    | Fringe xx% | Materials & |  F & A yy% | Total     | WBS     | 02C.0N.00 | 02C.0N.01 | 02C.0N.02 | TOTAL      |
-|                          |           |            | Services    |            |           |         |           |           |           |            |
-+==========================+===========+============+=============+============+===========+=========+===========+===========+===========+============+
-| Invoice Date YYYY-MM-DD  |           |            |             |            |           | ACCOUNT | KLM20N00A | KLM20N01A | KLM20N02A |            |
-+--------------------------+-----------+------------+-------------+------------+-----------+---------+-----------+-----------+-----------+------------+
-| Invoice Period           | $ABCDE.FG |  $HIJKL.MN |   $OPQRS.TU |  $VWXYZ.AB | $CDEFG.HI | AMOUNT  | $12345.67 | $89012.34 | $56789.01 | $158147.02 |
-| YYYY-MM-DD -- YYYY-MM-DD |           |            |             |            |           |         |           |           |           |            |
-+--------------------------+-----------+------------+-------------+------------+-----------+---------+-----------+-----------+-----------+------------+
+.. _tab-invoice:
+
+.. table:: Example invoice breakout.
+
+   +--------------------------+-----------+------------+-------------+------------+-----------+---------+-----------+-----------+-----------+------------+
+   | Invoice Voucher          | Salary    | Fringe xx% | Materials & |  F & A yy% | Total     | WBS     | 02C.0N.00 | 02C.0N.01 | 02C.0N.02 | TOTAL      |
+   |                          |           |            | Services    |            |           |         |           |           |           |            |
+   +==========================+===========+============+=============+============+===========+=========+===========+===========+===========+============+
+   | Invoice Date YYYY-MM-DD  |           |            |             |            |           | ACCOUNT | KLM20N00A | KLM20N01A | KLM20N02A |            |
+   +--------------------------+-----------+------------+-------------+------------+-----------+---------+-----------+-----------+-----------+------------+
+   | Invoice Period           | $ABCDE.FG |  $HIJKL.MN |   $OPQRS.TU |  $VWXYZ.AB | $CDEFG.HI | AMOUNT  | $12345.67 | $89012.34 | $56789.01 | $158147.02 |
+   | YYYY-MM-DD -- YYYY-MM-DD |           |            |             |            |           |         |           |           |           |            |
+   +--------------------------+-----------+------------+-------------+------------+-----------+---------+-----------+-----------+-----------+------------+
 
 Note that when reporting actuals at this level it is not required to provide a
 mapping from dollar values to individuals who did the work. However, it is
@@ -495,6 +510,9 @@ this way, even if the total sum comes in below the budgeted amount specified
 in your contract. In some special cases (e.g. temporary work carried out by
 summer students) it may be possible to make an exception: please discuss this
 with the :ref:`project manager <sec-contacts>` on a case-by-case basis.
+
+Monthly Narratives
+==================
 
 
 Glossary
