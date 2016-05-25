@@ -185,6 +185,8 @@ All of these indices can be applied to any WBS element within the project.
 Thus, we can talk about value earned across the whole of DM (1.02C) or on a
 very specific component (say, the User Workspace Toolkit, 1.02C.05.05).
 
+.. _sec-variance-narrative:
+
 Variance Narratives
 -------------------
 
@@ -297,6 +299,13 @@ Long Term Planning
 At time of writing, the long-term planning strategy as described in :ldm:`465`
 is new; we have yet to uncover its complexities. For that reason, there is
 currently nothing to add here.
+
+.. todo:: Brief mention of the DMBP project.
+
+   But since it doesn't exist yet, there's only so much that can be said.
+
+   Also: how are planning packages flowed down into a schedule and into work
+   packages? See e-mail correspondence with Kevin.
 
 .. _sec-cycle-plan:
 
@@ -443,14 +452,32 @@ careful to ensure that cross-team work is well defined. Usually, it is
 convenient for a single manager to take ultimate responsibility for ensuring
 that it is successfully delivered.
 
-Handling Variance & Revising the Plan
--------------------------------------
+Revising the Plan
+-----------------
 
 During the cycle, it is possible that changing circumstances will cause
-reality not to exactly match with the plan. This has two possible
-consequences.
+reality not to exactly match with the plan. This will ultimately cause a
+:ref:`variance <sec-evms>`, which should be avoid and which—if it becomes
+significant enough—will require a narrative.
 
-Variance
+After the plan for the cycle has been entered into JIRA, it is under change
+control: it can only be altered through a :term:`LCR` approved by the
+:term:`CCB`. In order to reschedule (or remove entirely from the cycle) an
+epic which has not yet started, the technical manager should work with the
+:ref:`Project Controls Specialist <sec-contacts>` to prepare and submit an
+appropriate LCR to the monthly CCB meeting.
+
+Note that it is *not possible* to alter history by means of an LCR. That is,
+if the scheduled start date of an epic is already in the past, it is not
+possible to move it into the future using a change request. In this case,
+there is no option but to carry the variance related to the late start of the
+epic into the future, to describe that with :ref:`narratives
+<sec-variance-narrative>` where necessary, and to attempt to address the
+variance as soon as is possible.
+
+Based on the above, it is clear that technical managers should closely track
+performance relative to the plan throughout the cycle, and proactively file
+change requests to avoid running variances wherever possible.
 
 .. _sec-cycle-close:
 
@@ -563,6 +590,10 @@ Glossary
    CAM
       Control Account Manager. A CAM is responsible for the scope, schedule
       and budget for one or more :term:`control account`\s.
+
+   CCB
+      Change Control Board. All changes to the baselined plan must be approved
+      by the CCB. See :lpm:`19` for details.
 
    Control Account
       An intersection point between the :term:`WBS` and the :term:`OBS`. For
