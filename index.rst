@@ -171,6 +171,8 @@ The assumption encoded in :ldm:`465` is that developers will spent 30% of
 their time on LOE type activities, and the remaining 70% of their effort is
 tracked against concrete deliverables.
 
+.. _sec-actuals:
+
 Reporting Actuals
 =================
 
@@ -219,6 +221,13 @@ in your contract. In some special cases (e.g. temporary work carried out by
 summer students) it may be possible to make an exception: please discuss this
 with the :ref:`project manager <sec-contacts>` on a case-by-case basis.
 
+Estimating Effort
+=================
+
+.. todo::
+
+   Define story points, hours per developer, etc.
+
 
 Planning
 ========
@@ -247,8 +256,130 @@ cycle, technical managers work with the DM Project Manager and the Project
 Controls Specialist to ensure their plan for the cycle is well defined in both
 :term:`JIRA` and :term:`PMCS`.
 
+
+Defining Epics
+^^^^^^^^^^^^^^
+
+As described in LDM-465, the plan for a six month cycle fundamentally consists
+of a set of resource loaded :term:`epic`\s defined in JIRA. Each epic loaded
+into the plan must have:
+
+- A concrete, well defined deliverable *or* be clearly described as a “bucket”;
+- The ``cycle`` field set to the appropriate cycle;
+- The ``WBS`` field set to the appropriate WBS *leaf* element.
+- The ``Story Points`` field set to a (non-zero!) estimate of the effort
+  required to complete the epic.
+
+Note that:
+
+- An epic may only be assigned to a single cycle. It is not possible to define
+  an epic that crosses the cycle boundary (see :ref:`sec-cycle-close` for the
+  procedure when an epic is not complete by the end of the cycle).
+- An epic may only be assigned to a single WBS leaf element. It is not
+  possible to define epics that cover multiple WBS elements. See
+  :ref:`sec-cross-team` for information on scheduling work which requires
+  resources from multiple elements.
+
+The :ref:`Project Controls Specialist <sec-contacts>` will automatically pull
+information from JIRA to populate :term:`PMCS` with the plan.
+
+.. note::
+
+   Epics which do not satisfy the above criteria may be defined in JIRA. These
+   will not be pulled into PMCS, will not form part of the scheduled plan, and
+   will not earn value. However, they may still be useful for organizing other
+   work, sketching plans for future cycles, etc: please feel free to define
+   them.
+
+In order to fully describe the plan to PMCS, epics require information that is
+not captured in JIRA. Specifically, it is necessary to define:
+
+- Start and end dates for the epic;
+- Staff assignments.
+
+.. note::
+
+   Although it is possible—indeed, encouraged—to set the ``assignee`` field in
+   JIRA to the individual who is expected to carry out the bulk of the work in
+   an epic, this does not provide sufficient granularity for those cases when
+   more than one person will be contributing.
+
+This information is most conveniently captured in per-team spreadsheets which
+are supplied to the Project Controls Specialist before the start of the
+cycle. Spreadsheets describing previous cycles are stored in `Google Drive`_:
+a convenient way to get started would be to use one of those as a template.
+
+The spreadsheets used capture epic start and end dates at monthly granularity.
+This can lead to a :ref:`variance <sec-evms>` when monthly results are
+tabulated (it builds in the assumption that epics start at the beginning of
+a month, so even an intentional start mid-month will look like a deviation
+from the schedule). In practice, this variance is likely to be small, and
+should average out by the end of the cycle, when all epics should be closed on
+schedule. However, if this becomes a problem, it is possible to fine-tune
+dates by directly consulting with the Project Controls Specialist.
+
+.. _Google Drive: https://drive.google.com/drive/u/0/folders/0BxgFbTQURmr6TmxXSm5Dc1JJWk0
+
+Bucket epics
+^^^^^^^^^^^^
+
+Some work is “emergent”: we can predict in advance that it will be necessary,
+but we cannot predict exactly what form it will take. The typical example of
+this is fixing bugs: we can reasonably assume that bugs will be discovered in
+the codebase and will need to be addressed, but we cannot predict in advance
+what those bugs will be.
+
+This can be included in the schedule by defining a “bucket” epic in which
+stories can be created when necessary during the course of a cycle. Make clear
+in the description of the epic that this is its intended purpose: every epic
+should either have a concrete deliverable or be a bucket.
+
+Bucket epics have some similarities with :term:`LOE` work. As such, we
+acknowledge that they are necessary, but seek to minimize the fraction of our
+resources assigned to them. If more than a relatively small fraction of the
+work for a cycle is assigned to bucket epics, please consider whether this is
+really necessary and appropriate.
+
+.. _sec-cross-team:
+
+Cross Team Work
+^^^^^^^^^^^^^^^
+
+Planning epics are always assigned to a particular WBS leaf element: they do
+not span elements or teams. It is therefore impossible to schedule a single
+epic which covers cross-team work. There are two ways to approach this
+problem:
+
+- The technical managers for both teams to be involved in the work schedule
+  epics separately, within their own WBS structure. They are responsible for
+  agreeing start and end dates, deliverables and resourcing between
+  themselves. From the point of view of the :term:`PMCS`, these epics are
+  independent pieces of work which happen to be coincident.
+- With agreement between technical managers, an individual may be detached
+  from one team and explicitly work for another team for some defined period.
+  One technical manager is therefore responsible for defining and scheduling
+  their work. Their “home” manager will charge :ref:`actuals <sec-actuals>`
+  against the WBS supplied by the maanger manager of the receiving team.
+
+Regardless of the approach taken, technical managers should be especially
+careful to ensure that cross-team work is well defined. Usually, it is
+convenient for a single manager to take ultimate responsibility for ensuring
+that it is successfully delivered.
+
+.. _sec-cycle-close:
+
+Closing a Cycle
+^^^^^^^^^^^^^^^
+
+.. todo:: Add text.
+
+Mid-Cycle Replans
+^^^^^^^^^^^^^^^^^
+
 Sprinting
 =========
+
+.. todo:: Add text.
 
 
 Important Documents
@@ -336,6 +467,11 @@ Glossary
 
    Element
       A node in the hierarchical project :term:`WBS`.
+
+   Epic
+      A self contained work with a concrete deliverable which my be scheduled
+      to take place with a single :term:`cycle` and :term:`WBS`
+      :term:`element`.
 
    EVMS
       Earned Value Management System. See the brief description :ref:`above
