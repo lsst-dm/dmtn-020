@@ -365,6 +365,10 @@ Be aware that:
   <sec-loe>`, this does not imply that other work cannot be charged here.
   Indeed, where possible management activities *should* be scheduled as epics
   with concrete deliverables in this element rather than being handled as LOE.
+- The epic should be at an appropriate level of granularity. While short epics
+  (a few SPs) may be suitable for some activities, in general epics will
+  describe a few months of developer-time. Epics allocated multiple hundreds
+  of story points are likely too broad to be accurately estimated.
 
 The :ref:`Project Controls Specialist <sec-contacts>` will automatically pull
 information from JIRA to populate :term:`PMCS` with the plan.
