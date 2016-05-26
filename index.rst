@@ -352,7 +352,7 @@ into the plan must have:
   required to complete the epic in terms of :term:`SP`\s (see :ref:`above
   <sec-effort>`).
 
-Note that:
+Be aware that:
 
 - An epic may only be assigned to a single cycle. It is not possible to define
   an epic that crosses the cycle boundary (see :ref:`sec-cycle-close` for the
@@ -404,6 +404,14 @@ should average out by the end of the cycle, when all epics should be closed on
 schedule. However, if this becomes a problem, it is possible to fine-tune
 dates by directly consulting with the Project Controls Specialist.
 
+.. note::
+
+   When loading epics at the start of a cycle, it is not necessary that they
+   be fully :ref:`loaded with stories <sec-defining-stories>`: these can be
+   defined during the cycle. You do, of course, need to have thought through
+   the contents of the epic in enough detail to provide an overall SP
+   estimate, though.
+
 .. _Google Drive: https://drive.google.com/drive/u/0/folders/0BxgFbTQURmr6TmxXSm5Dc1JJWk0
 
 Bucket epics
@@ -425,6 +433,11 @@ acknowledge that they are necessary, but seek to minimize the fraction of our
 resources assigned to them. If more than a relatively small fraction of the
 work for a cycle is assigned to bucket epics, please consider whether this is
 really necessary and appropriate.
+
+Mapping SPs to BCWS
+^^^^^^^^^^^^^^^^^^^
+
+.. todo:: Add text mapping from SP count to budgeted cost of work.
 
 .. _sec-cross-team:
 
@@ -484,10 +497,18 @@ change requests to avoid running variances wherever possible.
 Closing the Cycle
 -----------------
 
-.. todo:: Add text.
+Assuming everything has gone to plan, by the end of a cycle all epics should
+be marked as “done”. The full value
 
 Execution
 =========
+
+.. _sec-defining-stories:
+
+Defining Stories
+----------------
+
+.. todo:: Add text.
 
 Sprinting
 ---------
@@ -500,6 +521,13 @@ Handling Bugs & Emergent Work
 .. todo::
 
    Should include earning value for bugs, but also semantics of issue types.
+
+Earning Value
+-------------
+
+.. todo::
+
+   How is value accured as epics are worked?
 
 .. _sec-actuals:
 
