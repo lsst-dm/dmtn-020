@@ -579,6 +579,29 @@ Earning Value
 
    How is value accured as epics are worked?
 
+JIRA Maintenance
+----------------
+
+At any time, new tickets may be added to JIRA by team members. Please remind
+your team of the best practice in this respect (:jira:`RFC-147`). It is the
+responsibility of technical managers to ensure that new tickets are handled
+appropriately. In particular, it is required that the ``Team`` field be set to
+the appropriate team (:jira:`RFC-145`). Please regularly monitor JIRA for
+incomplete tickets and update them appropriately.
+
+In some cases, a ticket may describe emergent work which can be :ref:`handled
+immediately <sec-bugs>`. In other cases, it can be deferred to a later cycle,
+or, after appropriate discussion, may be regarded as inappropriate (and can be
+tagged as Invalid or Won't Fix). This is a management decision. When closing a
+ticket as inappropriate, please take a moment to describe why—the individual
+who reported it will appreciate an explanation of why it has been rejected,
+and it will serve as a useful reference the next time somebody suggests the
+same thing!
+
+A special case of inappropriate tickets are those that duplicate work which
+has already been described elsewhere. Please close these as Invalid, and add a
+JIRA link of type "duplicates" to the original ticket.
+
 .. _sec-actuals:
 
 Reporting Actuals
