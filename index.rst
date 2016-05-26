@@ -553,17 +553,62 @@ done.
 Execution
 =========
 
+.. caution::
+
+   The description below focuses on a sprint-based monthly cadence. I *think*,
+   based on :ldm:`465`, that this is globally applicable. However, I'm not
+   sure if some teams (NCSA, SQuaRE?) don't sprint, and I'm not sure what
+   subtleties are introduced by Kanban rather than Scrum. Please check!
+
+Having :ref:`thus <sec-cycle-plan>` defined the plan for a cycle, we execute
+it by means of a series of month-long sprints. In this section, we detail the
+procedures teams are expected to follow during the cycle.
+
 .. _sec-defining-stories:
 
 Defining Stories
 ----------------
 
-.. todo:: Add text.
+:ref:`Epics have already been defined <sec-planning-epics>` as part of the
+cycle plan. However, the epic is not at an appropriate level for scheduling
+day-to-day work. Rather, each epic is broken down into a series of
+self-contained “stories”. A :term:`story` describes a planned activity worth
+between a small fraction of a :term:`SP` and several SPs (more than about 10 is
+likely an indication that the story has not been sufficiently refined).
+
+The process for breaking epics down into stories is not mandated. In some
+circumstances, it may be appropriate for the technical manager to provide a
+breakdown; in others, they may request input from the developer who is
+actually going to be doing the work, or even hold a brainstorming session
+involving the wider team. This is a management decision.
+
+It is not required to break all epics down into stories before the cycle
+begins: it may be more appropriate to first schedule a few exploratory stories
+and use them to inform the development of the rest of the epic. However, it is
+required that all stories which will be :ref:`worked in an upcoming sprint
+<sec-sprinting>` are defined before the sprint starts.
+
+Note that there is no relationship enforced between the SP total estimated for
+the epic and the sum of the SPs of its consituent stories. It is therefore
+possible to over- or under-load an epic. This will have obvious ramifications
+for the schedule. See :ref:`sec-earning-value` for its impact on earned value.
+
+.. _sec-sprinting:
 
 Sprinting
 ---------
 
+.. caution::
+
+   The :ldm:`465` draft mentions various concepts that aren't currently
+   standard practice (reports during all hands standups, a central DM board,
+   scripts for monitoring the status of JIRA, etc). This document aims to be
+   descriptive rather than normative, so these are not discussed here. After a
+   fleshed-out policy has been developed, we can add them.
+
 .. todo:: Add text.
+
+.. _sec-bugs:
 
 Handling Bugs & Emergent Work
 -----------------------------
@@ -571,6 +616,10 @@ Handling Bugs & Emergent Work
 .. todo::
 
    Should include earning value for bugs, but also semantics of issue types.
+
+   Also tranferring issues to/from GitHub issue trackers.
+
+.. _sec-earning-value:
 
 Earning Value
 -------------
@@ -659,12 +708,12 @@ with the :ref:`project manager <sec-contacts>` on a case-by-case basis.
 Monthly Narratives
 ==================
 
+.. todo:: Add text, link to Google Docs.
 
 Staff Onboarding
 ================
 
 .. todo:: Note LSST onboarding page, also update Jacek's spreadsheet.
-
 
 Glossary
 ========
@@ -776,6 +825,14 @@ Glossary
    SP
       Story Point. Used to estimate the duration of tasks in JIRA. One SP is
       equivalent to 4 hours of uninterrupted effort by a competent developer.
+
+   Story
+      A JIRA issue type describing a scheduled, self-contained task worked as
+      part of an epic. Typically, stories are appropriate for work worth
+      between a fraction of a :term:`SP` and 10 SPs; beyond that, the work is
+      insufficiently fine-grained to schedule as a story. While fractional SPs
+      are fine, all stories involve work, so the SP total of an in progress or
+      completed story should not be 0.
 
    SV
       Schedule Variance. Defined as :term:`BCWP`\-:term:`BCWS`.
