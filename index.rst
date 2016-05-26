@@ -414,6 +414,8 @@ dates by directly consulting with the Project Controls Specialist.
 
 .. _Google Drive: https://drive.google.com/drive/u/0/folders/0BxgFbTQURmr6TmxXSm5Dc1JJWk0
 
+.. _sec-bucket:
+
 Bucket epics
 ^^^^^^^^^^^^
 
@@ -433,6 +435,8 @@ acknowledge that they are necessary, but seek to minimize the fraction of our
 resources assigned to them. If more than a relatively small fraction of the
 work for a cycle is assigned to bucket epics, please consider whether this is
 really necessary and appropriate.
+
+.. _sec-sps-to-bcws:
 
 Mapping SPs to BCWS
 ^^^^^^^^^^^^^^^^^^^
@@ -487,6 +491,8 @@ careful to ensure that cross-team work is well defined. Usually, it is
 convenient for a single manager to take ultimate responsibility for ensuring
 that it is successfully delivered.
 
+.. _sec-cycle-change:
+
 Revising the Plan
 -----------------
 
@@ -520,7 +526,25 @@ Closing the Cycle
 -----------------
 
 Assuming everything has gone to plan, by the end of a cycle all epics should
-be marked as “done”. The full value
+be marked as “done”. When an epic is marked as done, it is equivalent to
+having delivered the required functionality. The total cost of that
+functionality—the :term:`BCWS`, calculated as per :ref:`sec-sps-to-bcws`\—is
+now claimed as value earned.
+
+Epics which are in progress at the end of the cycle cannot be closed until
+they have been completed. These epics will spill over into the subsequent
+cycle. It is *not* appropriate to close an in-progress epic with a concrete
+deliverable until that deliverable has been achieved: instead, a variance will
+be shown until the epic can be closed. Obviously, this will impact the labor
+available for other activities in the next cycle. (This does not apply to
+:ref:`bucket epics <sec-bucket>`, which are, by their nature,
+:term:`timebox`\ed within the cycle).
+
+Similar logic applies to epics which *have not been started*: if the planned
+start date is in the past, they :ref:`can no longer be rescheduled
+<sec-cycle-change>` by means of an :term:`LCR`. They must be completed at the
+earliest possible opportunity; you will show a variance until this has been
+done.
 
 Execution
 =========
@@ -728,6 +752,11 @@ Glossary
 
    SV
       Schedule Variance. Defined as :term:`BCWP`\-:term:`BCWS`.
+
+   Timebox
+      A limited time period assigned to a piece of work or other activity.
+      Useful in scheduling work which is not otherwise easily limited in
+      scope, for example research projects or servicing user requests.
 
    WBS
       Work Breakdown Structure; see the definition :ref:`above <sec-wbs>`.
