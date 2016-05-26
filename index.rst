@@ -437,7 +437,29 @@ really necessary and appropriate.
 Mapping SPs to BCWS
 ^^^^^^^^^^^^^^^^^^^
 
-.. todo:: Add text mapping from SP count to budgeted cost of work.
+.. caution:: I think this is correct, but please check.
+
+As discussed above, the amount of work to be performed is :ref:`estimated in
+terms of SPs <sec-effort>`, while the :ref:`earned value <sec-evms>` system
+accounts for work in terms of budgeted cost (:term:`BCWS`). In order to
+estimate the value earned by completing an epic, it is necessary to map from
+one to the other.
+
+The outline of the calculation here is straightforward: SPs map to developer
+hours. Given the :ref:`staff assignment <sec-planning-epics>` for the epic,
+the number of hours scheduled per developer can be calculated.
+
+The planning process is deliberately designed to avoid exposing individual
+salaries to the wider project. Therefore, we do not simply multiply the
+developer hours by a known cost of that developer. Rather, all staff are
+assigned to one of a small number of grades (scientist, senior scientst,
+developer, senior developer), each of which is assigned a nominal cost level.
+This nominal cost does not correspond to a particular individual, but is a
+broadly defined expectation.
+
+Therefore, we calculate the number of hours of each staffing grade being
+assigned to the epic, multiply that by the cost per hour of that grade, and
+that provides the cost of the work scheduled.
 
 .. _sec-cross-team:
 
