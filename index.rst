@@ -872,10 +872,25 @@ in your contract. In some special cases (e.g. temporary work carried out by
 summer students) it may be possible to make an exception: please discuss this
 with the :ref:`project manager <sec-contacts>` on a case-by-case basis.
 
-Monthly Narratives
-==================
+Monthly Narrative
+=================
 
-.. todo:: Add text, link to Google Docs.
+Every calendar month, each technical manager is required to support the
+Project Manager with a report on the activities of their group. The hard
+deadline for submitting this report is generally the 15th of the month
+following that being reported on, but this may be moved earlier on occasion.
+However, you are *strongly encouraged* to submit your report as early in the
+month as possible.
+
+Submit your report by editing the `template for the appropriate month`_ on
+Google Docs. You need to fill in all the sections with your name attached;
+when complete, remove your name. Provide a per-WBS breakdown of work over the
+month being reported on and plans for the upcoming month, as well as
+describing any recruitment activities (positions opened, interviews conducted,
+appointments made, etc). Refer to previous reports for examples of the style
+used (but note that they are not not always consistent).
+
+.. _template for the appropriate month: https://drive.google.com/drive/u/0/folders/0BxgFbTQURmr6TUJleXZaY2ZNcEE
 
 Staff Onboarding
 ================
