@@ -689,6 +689,37 @@ Handling Bugs & Emergent Work
 
    Also tranferring issues to/from GitHub issue trackers.
 
+Issue Types
+^^^^^^^^^^^
+
+We have previously referred to day-to-day work being described by means of
+stories. However, JIRA provides us with two additional issue types: “bug” and
+“improvement”. Per :jira:`RFC-43`, the semantics of the various issue types
+are:
+
+- A story is the result of breaking down an epic into workable units;
+- A bug describes a fault or error in code which has already been accepted to
+  master;
+- An improvement describes a feature request or enhancement which has not
+  been derived by breaking down the long term plan (i.e., it is an ad-hoc
+  developer or user request).
+
+The three issue types are functionally equivalent: these semantic distinctions
+are for convenience only, and are not rigorously enforced.
+
+In particular, note that all issue types are equivalent in terms of the data
+which is loaded to :term:`PMCS`: it makes no distinction between them. Marking
+a bug or improvement as done has exactly the same impact on the global earned
+value state as would completing an equivalent story.
+
+Scheduling
+^^^^^^^^^^
+
+
+Relationship to Earned Value
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
 .. _sec-earning-value:
 
 Earning Value
@@ -724,7 +755,21 @@ JIRA link of type "duplicates" to the original ticket.
 Coordination Standup
 --------------------
 
-.. todo:: Add text.
+.. attention::
+
+   I've not included the meeting URL here, since the tech note will be
+   publicly available.
+
+The technical managers meet with the :ref:`Project Manager <sec-contacts>` and
+interested others (it is not a closed meeting) twice every week. This is a
+forum to discuss general project management issues, but, in particular, to
+resolve issues which cut across team boundaries and are relevant for the
+ongoing sprint.
+
+Meetings take place using `Google Hangouts`_ at a pre-arranged URL. Meetings
+take place at 11:00 (11am) Project (Pacific) Time on Tuesdays and Fridays.
+
+.. _Google Hangouts: https://hangouts.google.com/
 
 .. _sec-actuals:
 
