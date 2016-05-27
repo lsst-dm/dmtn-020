@@ -892,10 +892,23 @@ used (but note that they are not not always consistent).
 
 .. _template for the appropriate month: https://drive.google.com/drive/u/0/folders/0BxgFbTQURmr6TUJleXZaY2ZNcEE
 
-Staff Onboarding
+Staffing Changes
 ================
 
-.. todo:: Note LSST onboarding page, also update Jacek's spreadsheet.
+In addition to onboarding procedures at your local institution, please be
+aware of
+
+- The LSST `New Employee Onboarding`_ material, and
+- The DM `Developer Onboarding Checklist`_
+
+and direct new recruits to them when they join your team.
+
+We maintain a `spreadsheet`_ listing all members of the DM team. Ensure it is
+kept up to date with the current and projected staffing within your team.
+
+.. _New Employee Onboarding: https://project.lsst.org/onboarding
+.. _Developer Onboarding Checklist: https://developer.lsst.io/getting-started/onboarding.html
+.. _spreadsheet: https://docs.google.com/spreadsheets/d/1G9KXBJJHfWkVDQeApfXaN_nZjD_YUJlHiEDOzhTy-0c/edit?usp=drive_web
 
 Glossary
 ========
