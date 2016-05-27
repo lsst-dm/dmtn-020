@@ -582,7 +582,9 @@ cycle plan. However, the epic is not at an appropriate level for scheduling
 day-to-day work. Rather, each epic is broken down into a series of
 self-contained “stories”. A :term:`story` describes a planned activity worth
 between a small fraction of a :term:`SP` and several SPs (more than about 10 is
-likely an indication that the story has not been sufficiently refined).
+likely an indication that the story has not been sufficiently refined). It
+must be possible to schedule a story within a single sprint, so no story
+should ever be allocated more than 26 SPs.
 
 The process for breaking epics down into stories is not mandated. In some
 circumstances, it may be appropriate for the technical manager to provide a
@@ -745,10 +747,34 @@ value state as would completing an equivalent story.
 Scheduling
 ^^^^^^^^^^
 
+In some cases, a ticket may describe emergent work which must be immediately
+by adding it to a :ref:`bucket epic <sec-bucket>`. In other cases, it can be
+deferred to a later cycle, or, after appropriate discussion, may be regarded
+as inappropriate (and can be tagged as Invalid or Won't Fix). This is a
+management decision. When closing a ticket as inappropriate, please take a
+moment to describe why—the individual who reported it will appreciate an
+explanation of why it has been rejected, and it will serve as a useful
+reference the next time somebody suggests the same thing!
+
+A special case of inappropriate tickets are those that duplicate work which
+has already been described elsewhere. Please close these as Invalid, and add a
+JIRA link of type "duplicates" to the original ticket.
 
 Relationship to Earned Value
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+We adopt the position that bugs are a natural part of the software lifecycle,
+and hence addressing them at an appropriate level earns value in the same way
+as new software development. That is, SPs earned by working on bugs and
+completing bucket epics contribute to earned value in the same way as other
+work.
+
+However, bugs do serve as an bellwether for software quality issues. It would
+obviously be inappropriate—and a severe source of schedule risk—for the value
+earned from addressing bugs in existing software to dominate the productivity
+of the team at the expense of new development. We expect that no more than
+around 30% of schedulable developer time will be dedicated addressing bugs:
+any more than this must be carefully justified.
 
 .. _sec-earning-value:
 
@@ -767,22 +793,11 @@ JIRA Maintenance
 At any time, new tickets may be added to JIRA by team members. Please remind
 your team of the best practice in this respect (:jira:`RFC-147`). It is the
 responsibility of technical managers to ensure that new tickets are handled
-appropriately. In particular, it is required that the ``Team`` field be set to
-the appropriate team (:jira:`RFC-145`). Please regularly monitor JIRA for
-incomplete tickets and update them appropriately.
-
-In some cases, a ticket may describe emergent work which can be :ref:`handled
-immediately <sec-bugs>`. In other cases, it can be deferred to a later cycle,
-or, after appropriate discussion, may be regarded as inappropriate (and can be
-tagged as Invalid or Won't Fix). This is a management decision. When closing a
-ticket as inappropriate, please take a moment to describe why—the individual
-who reported it will appreciate an explanation of why it has been rejected,
-and it will serve as a useful reference the next time somebody suggests the
-same thing!
-
-A special case of inappropriate tickets are those that duplicate work which
-has already been described elsewhere. Please close these as Invalid, and add a
-JIRA link of type "duplicates" to the original ticket.
+appropriately, updating the schedule to include them where necessary. It is
+required that the ``Team`` field be set to the appropriate team
+(:jira:`RFC-145`). Please regularly monitor JIRA for incomplete tickets and
+update them appropriately. Where tickets describe bugs or other urgent
+emergent work which cannot be deferred, refer to :ref:`sec-bugs`.
 
 Coordination Standup
 --------------------
