@@ -689,6 +689,36 @@ Handling Bugs & Emergent Work
 
    Also tranferring issues to/from GitHub issue trackers.
 
+Receiving Bug Reports
+^^^^^^^^^^^^^^^^^^^^^
+
+Members of the project who have access to JIRA may report bugs or make feature
+requests directly using JIRA. As discussed under :ref:`sec-jira-maintenance`,
+technical managers should regularly monitor JIRA for relevant tickets and
+ensure they are handled appropriately.
+
+Our code repositories are exposed to the world in general through `GitHub`_.
+Each repository on GitHub has a bug tracker associated with it. Members of the
+public may report issues or make requests on the GitHub trackers. Per the
+`Developer Workflow`_, all new work must be associated with a JIRA ticket
+number before it can be committed to the repository. It is therefore the
+responsibility of technical managers to file a JIRA ticket corresponding to
+the GitHub ticket, to keep them synchronized with relevant information, and to
+ensure that the GitHub ticket is closed with the the issue is resolved in
+JIRA.
+
+The GitHub issue trackers are, in some sense, not a core part of our workflow,
+but they are fundamental to community expectations of how they can interact
+with the project. Ensure that issues reported on GitHub are serviced promptly.
+
+In some cases, the technical manager responsible for a given repository is
+obvious, and they can be expected to take the lead on handling tickets.
+Often, this is not the case: repositories regularly span team boundaries.
+Work together to ensure that all tickets are handled.
+
+.. _GitHub: https://github.com/lsst/
+.. _Developer Workflow: https://developer.lsst.io/processes/workflow.html
+
 Issue Types
 ^^^^^^^^^^^
 
@@ -728,6 +758,8 @@ Earning Value
 .. todo::
 
    How is value accured as epics are worked?
+
+.. _sec-jira-maintenance:
 
 JIRA Maintenance
 ----------------
