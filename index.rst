@@ -779,6 +779,12 @@ Earning Value
 
    How is value accured as epics are worked?
 
+   Do Invalid and Won't Fix issues count for nothing? Suggestion from the old
+   T/CAM guide is "We leave them as story points in Primavera, but we zero out
+   the EV weight in PMCS so they don't count towards progress measurements".
+
+   Waiting for input on the above from Kevin.
+
 .. _sec-jira-maintenance:
 
 JIRA Maintenance
