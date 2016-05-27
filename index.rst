@@ -560,6 +560,14 @@ Execution
    sure if some teams (NCSA, SQuaRE?) don't sprint, and I'm not sure what
    subtleties are introduced by Kanban rather than Scrum. Please check!
 
+.. caution::
+
+   The :ldm:`465` draft mentions various concepts that aren't currently
+   standard practice (reports during all hands standups, a central DM board,
+   scripts for monitoring the status of JIRA, etc). This document aims to be
+   descriptive rather than normative, so these are not discussed here. After a
+   fleshed-out policy has been developed, we can add them.
+
 Having :ref:`thus <sec-cycle-plan>` defined the plan for a cycle, we execute
 it by means of a series of month-long sprints. In this section, we detail the
 procedures teams are expected to follow during the cycle.
@@ -598,15 +606,77 @@ for the schedule. See :ref:`sec-earning-value` for its impact on earned value.
 Sprinting
 ---------
 
-.. caution::
+.. todo::
 
-   The :ldm:`465` draft mentions various concepts that aren't currently
-   standard practice (reports during all hands standups, a central DM board,
-   scripts for monitoring the status of JIRA, etc). This document aims to be
-   descriptive rather than normative, so these are not discussed here. After a
-   fleshed-out policy has been developed, we can add them.
+   Do we actually require that a sprint be one month long? Why?
 
-.. todo:: Add text.
+Each team organizes its work around month-long periods called
+:term:`sprint`\s. A sprint comprises a defined collection of stories which
+will be addressed over the course of the month. These stories are not
+necessarily (indeed, not generally) all drawn from the same epic: rather,
+while epics divide the cycle along logical grounds, sprints divide it along
+the time axes.
+
+Broadly, executing a sprint falls into three stages:
+
+#. Preparation.
+
+   The team assigns the work that will be addressed during the sprint by
+   choosing from the :ref:`pre-defined stories <sec-defining-stories>`. Each
+   team member should be assigned a plausible amount of work, based on the
+   per-story SP estimates and the likely working rate of the developer (see
+   :ref:`sec-effort`).
+
+   The process by which work is assigned to team members is a local management
+   decision: the orthodox approach is to call a team-wide meeting and discuss
+   it, but other approaches are possible (one-to-one interactions between
+   developers and technical manager, managerial fiat, etc).
+
+   Do not overload developers! The sprint should describe a plausible amount
+   of work for the time available.
+
+#. Execution.
+
+   Daily management during the sprint is a local decision. Suggested best
+   practice includes holding regular “standup” meetings, at which developers
+   discuss their current activities and try to resolve “blockers” which are
+   preventing them from making progress.
+
+   Stories should be executed following the instructions in the `Developer
+   Guide`_ as regards workflow, coding standards, review requirements, and so
+   on. It is important to ensure that completed stories are marked as “done”:
+   experience suggests that this can easily be forgotten as developers rush on
+   to the next challenge, but it is required to enable us to properly
+   :ref:`track earned value <sec-earning-value>`.
+
+   Avoid adding more stories to a sprint in progress unless it is unavoidable
+   (for example, the story describes a critical bug that must be addressed
+   before proceeding).
+
+#. Review.
+
+   At the end of the sprint, step back and consider what has been achieved.
+   What worked well? What did not? How can these problems be avoided for next
+   time? Was your estimate of the amount of work that could be finished in the
+   sprint accurate? If not, how can it be improved in future? Refer to the
+   `burn-down chart`_ for the sprint, and, if it diverged from the ideal,
+   understand why.
+
+   Again, the form the review takes is a local management decision: it may
+   involve all team members, or just a few.
+
+We use :term:`JIRA`\'s `Agile`_ capabilities to manage our sprints. Each
+technical manager is responsible for defining and maintaining their own agile
+board. The board may be configured for either `Scrum`_ or `Kanban`_ style work
+as appropriate: the former is suitable for planned development activities
+(e.g. Science Pipelines development); the latter for servicing user requests
+(e.g. providing developer support).
+
+.. _Developer Guide: http://developer.lsst.io/
+.. _burn-down chart: https://en.wikipedia.org/wiki/Burn_down_chart
+.. _Agile: https://www.atlassian.com/software/jira/agile
+.. _Scrum: https://en.wikipedia.org/wiki/Scrum_(software_development)
+.. _Kanban: https://en.wikipedia.org/wiki/Kanban_(development)
 
 .. _sec-bugs:
 
@@ -650,6 +720,11 @@ same thing!
 A special case of inappropriate tickets are those that duplicate work which
 has already been described elsewhere. Please close these as Invalid, and add a
 JIRA link of type "duplicates" to the original ticket.
+
+Coordination Standup
+--------------------
+
+.. todo:: Add text.
 
 .. _sec-actuals:
 
@@ -819,12 +894,15 @@ Glossary
       staffing) to particular tasks. A “resource loaded plan” provides a
       mapping of resources to the plan throughout execution.
 
-   SPI
-       Schedule Performance Index. Defined as :term:`BCWP`\/:term:`BCWS`.
-
    SP
       Story Point. Used to estimate the duration of tasks in JIRA. One SP is
       equivalent to 4 hours of uninterrupted effort by a competent developer.
+
+   SPI
+       Schedule Performance Index. Defined as :term:`BCWP`\/:term:`BCWS`.
+
+   Sprint
+      A month-long period of work for a particular team.
 
    Story
       A JIRA issue type describing a scheduled, self-contained task worked as
