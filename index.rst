@@ -685,12 +685,6 @@ as appropriate: the former is suitable for planned development activities
 Handling Bugs & Emergent Work
 -----------------------------
 
-.. todo::
-
-   Should include earning value for bugs, but also semantics of issue types.
-
-   Also tranferring issues to/from GitHub issue trackers.
-
 Receiving Bug Reports
 ^^^^^^^^^^^^^^^^^^^^^
 
