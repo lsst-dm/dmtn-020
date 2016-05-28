@@ -25,6 +25,4 @@ if subprocess.check_output(["git", "status", "--porcelain"]).decode().strip():
     git_version += "-dirty"
 g['html_context']['last_revised'] = "%s (%s)" % (git_date, git_version)
 
-import sys
-sys.path.append(os.getcwd())
-extensions.append("ext.lsst")
+extensions.append("documenteer.sphinxext")
