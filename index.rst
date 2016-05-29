@@ -359,6 +359,8 @@ use within DM, but even here properly adhering to the plan is vital: your
 colleagues in other teams will use these milestones to align their schedules
 with yours, so they rely on you to be accurate.
 
+.. _sec-long-term-value:
+
 Earned Value and Planning Packages
 ----------------------------------
 
@@ -706,7 +708,7 @@ required that all stories which will be :ref:`worked in an upcoming sprint
 Note that there is no relationship enforced between the SP total estimated for
 the epic and the sum of the SPs of its consituent stories. It is therefore
 possible to over- or under-load an epic. This will have obvious ramifications
-for the schedule. See :ref:`sec-earning-value` for its impact on earned value.
+for the schedule. See :ref:`sec-cycle-value` for its impact on earned value.
 
 .. _sec-sprinting:
 
@@ -754,7 +756,7 @@ Broadly, executing a sprint falls into three stages:
    on. It is important to ensure that completed stories are marked as “done”:
    experience suggests that this can easily be forgotten as developers rush on
    to the next challenge, but it is required to enable us to properly
-   :ref:`track earned value <sec-earning-value>`.
+   :ref:`track earned value <sec-cycle-value>`.
 
    Avoid adding more stories to a sprint in progress unless it is unavoidable
    (for example, the story describes a critical bug that must be addressed
@@ -874,20 +876,41 @@ of the team at the expense of new development. We expect that no more than
 around 30% of schedulable developer time will be dedicated addressing bugs:
 any more than this must be carefully justified.
 
-.. _sec-earning-value:
+.. _sec-cycle-value:
 
 Earning Value
 -------------
 
-.. todo::
+The basic procedure for earning value during the cycle is akin to that
+:ref:`discussed earlier <sec-long-term-value>` for long term planning.
 
-   How is value accured as epics are worked?
+In short, :ref:`as we have seen <sec-sps-to-bcws>`, the :term:`BCWS` for a
+particular epic is defined by its *estimated* (i.e. attached to the epic
+before work commences) SP total and its staff assignment. When an epic is
+marked as complete, this is the value that is earned.
 
-   Do Invalid and Won't Fix issues count for nothing? Suggestion from the old
-   T/CAM guide is "We leave them as story points in Primavera, but we zero out
-   the EV weight in PMCS so they don't count towards progress measurements".
+The :term:`BCWP` for an epic is calculated based on the fractional
+completeness of an epic. That is, if an epic has a total SP count of ``X``,
+and the total of stories marked as complete within it is ``Y``, then ``BCWP =
+BCWS * Y / X``.
 
-   Waiting for input on the above from Kevin.
+Be aware that stories that marked as “invalid” or “won't fix” in JIRA are not
+included in this calculation: they earn no value.
+
+:ref:`As we have seen <sec-defining-stories>`, it is not required that the
+total SPs of all the stories contained within an epic (the “planned SPs”) is
+equal to the total SP estimate of the epic itself (“estimated SPs”). Further,
+it is permitted to add stories to (or, indeed, remove stories from) the epic
+during the cycle. In these cases, we hold to two basic tenets:
+
+#. No epic can ever be more than 100% complete;
+#. Completeness cannot decrease. That is, if an epic has been registered as
+   90% complete, adding more stories cannot make it *less* complete than
+   before.
+
+In order to meet these criteria, the relative weights of stories will be
+automatically adjusted on ingest to the :term:`PMCS`. The detailed algorithm
+by which this adjustment is made is not publicly documented.
 
 .. _sec-jira-maintenance:
 
