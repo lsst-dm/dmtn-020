@@ -443,6 +443,16 @@ The first essential step of developing the short term plan is to produce an
 outline of the programme of work to be executed. In general, this should flow
 directly from the :ref:`long term plan <sec-long-term-plan>`, ensuring that
 the expected planning packages are being worked on and milestones being hit.
+
+While developing the cycle, please:
+
+- Do not add *artificial* padding or buffers to make the schedule look good;
+- Do budget appropriate time for handling bugs and emergent issues;
+- Reserve time for planning the following cycle: it will have to be defined
+  before this cycle is complete;
+- Leave time for other necessary activities, such as cross-team collaboration
+  meetings and writing documentation.
+
 Obviously, ensure that the programme of work being developed is achievable by
 your team in the time available: ultimately, you will want to compare the
 :ref:`number of SPs your team is able to deliver <sec-effort>` with the sum of
