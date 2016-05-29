@@ -1056,12 +1056,8 @@ Glossary
    BCWS
       Budgeted Cost of Work Scheduled.
 
-   Budgeted units
-      Hours.
-
-      .. todo::
-
-         Total working hours, or applied to story points? Check!
+   Budgeted (labor) unit
+      An hour of work.
 
    CAM
       Control Account Manager. A CAM is responsible for the scope, schedule
