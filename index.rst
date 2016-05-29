@@ -183,7 +183,7 @@ cheaper than expected) is indicative of an inaccurate plan.
 
 All of these indices can be applied to any WBS element within the project.
 Thus, we can talk about value earned across the whole of DM (1.02C) or on a
-very specific component (say, the User Workspace Toolkit, 1.02C.05.05).
+specific component (say, the User Workspace Toolkit, 1.02C.05.05).
 
 .. _sec-variance-narrative:
 
@@ -235,7 +235,7 @@ Estimating Effort
 
 The Project assumes that a full-time individual works for a total of 1,800
 hours per year: this figure is *after* all vacations, sick leave, etc are
-taken into account.  Staff appointed to “developer” positions are expected to
+taken into account. Staff appointed to “developer” positions are expected to
 devote this effort directly to LSST.
 
 Appointment as a “scientist” includes a 20% personal research time allowance.
@@ -279,7 +279,7 @@ On occasion, it may be appropriate to tailor the number of SPs expected per
 unit time from a particular individual. For example:
 
 - Individuals in leadership roles may assign a larger fraction of their time
-  to LOE type work, and therefore spend fewer hours generating SPs.  The ratio
+  to LOE type work, and therefore spend fewer hours generating SPs. The ratio
   of hours to story points remains constant, but the number of hours
   decreases.
 - New or inexperienced developers, even when devoting their full attention to
@@ -378,8 +378,8 @@ information from JIRA to populate :term:`PMCS` with the plan.
    Epics which do not satisfy the above criteria may be defined in JIRA. These
    will not be pulled into PMCS, will not form part of the scheduled plan, and
    will not earn value. However, they may still be useful for organizing other
-   work, sketching plans for future cycles, etc: please feel free to define
-   them.
+   work, sketching plans for future cycles, etc: please feel define them as
+   necessary.
 
 In order to fully describe the plan to PMCS, epics require information that is
 not captured in JIRA. Specifically, it is necessary to define:
@@ -634,7 +634,7 @@ Broadly, executing a sprint falls into three stages:
    it, but other approaches are possible (one-to-one interactions between
    developers and technical manager, managerial fiat, etc).
 
-   Do not overload developers! The sprint should describe a plausible amount
+   Do not overload developers. The sprint should describe a plausible amount
    of work for the time available.
 
 #. Execution.
@@ -700,8 +700,7 @@ public may report issues or make requests on the GitHub trackers. Per the
 number before it can be committed to the repository. It is therefore the
 responsibility of technical managers to file a JIRA ticket corresponding to
 the GitHub ticket, to keep them synchronized with relevant information, and to
-ensure that the GitHub ticket is closed with the the issue is resolved in
-JIRA.
+ensure that the GitHub ticket is closed when the issue is resolved in JIRA.
 
 The GitHub issue trackers are, in some sense, not a core part of our workflow,
 but they are fundamental to community expectations of how they can interact
@@ -748,7 +747,7 @@ as inappropriate (and can be tagged as Invalid or Won't Fix). This is a
 management decision. When closing a ticket as inappropriate, please take a
 moment to describe why—the individual who reported it will appreciate an
 explanation of why it has been rejected, and it will serve as a useful
-reference the next time somebody suggests the same thing!
+reference the next time somebody suggests the same thing.
 
 A special case of inappropriate tickets are those that duplicate work which
 has already been described elsewhere. Please close these as Invalid, and add a
@@ -814,7 +813,7 @@ resolve issues which cut across team boundaries and are relevant for the
 ongoing sprint.
 
 Meetings take place using `Google Hangouts`_ at a pre-arranged URL. Meetings
-take place at 11:00 (11am) Project (Pacific) Time on Tuesdays and Fridays.
+take place at 11:00 (11 a.m.) Project (Pacific) Time on Tuesdays and Fridays.
 
 .. _Google Hangouts: https://hangouts.google.com/
 
