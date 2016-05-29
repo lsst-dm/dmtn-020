@@ -189,6 +189,20 @@ All of these indices can be applied to any WBS element within the project.
 Thus, we can talk about value earned across the whole of DM (1.02C) or on a
 specific component (say, the User Workspace Toolkit, 1.02C.05.05).
 
+.. _sec-labor-costs:
+
+Labor Costs
+-----------
+
+Our methodology is designed to avoid exposing individual salaries to the wider
+project. Therefore, when calculating labor costs for earned value purposes, we
+do not rely on a known cost per individual. Instead, all staff are assigned to
+one of a small number of types (scientist, senior scientst, developer, senior
+developer), each of which is assigned a nominal cost level which does not vary
+between individuals, or, indeed, across institutions.  This nominal cost does
+not correspond to a particular individual, but is a broadly defined
+expectation.
+
 .. _sec-variance-narrative:
 
 Variance Narratives
@@ -354,15 +368,9 @@ Earned Value and Planning Packages
    mechanism. It needs Jacek and/or Kevin to confirm if this is what we're
    actually doing.
 
-.. todo::
-
-   Probably need to change the order of this with respect to the material on
-   BCWS in short term planning below -- at least, talk about nominal staff
-   costs earlier.
-
 A planning package has a duration and a staff assignment (it is “resource
 loaded”). Given a (nominal) cost per unit time of the staff involved (see
-...!), this translates directly to a :term:`BCWS`.
+:ref:`sec-labor-costs`), this translates directly to a :term:`BCWS`.
 
 During :ref:`sec-cycle-plan`, effort is drawn from the budget embodied in the
 planning packages to generate the cycle plan, described in terms of epics: see
@@ -559,15 +567,9 @@ one to the other.
 
 The outline of the calculation here is straightforward: SPs map to developer
 hours. Given the :ref:`staff assignment <sec-planning-epics>` for the epic,
-the number of hours scheduled per developer can be calculated.
-
-The planning process is deliberately designed to avoid exposing individual
-salaries to the wider project. Therefore, we do not simply multiply the
-developer hours by a known cost of that developer. Rather, all staff are
-assigned to one of a small number of grades (scientist, senior scientst,
-developer, senior developer), each of which is assigned a nominal cost level.
-This nominal cost does not correspond to a particular individual, but is a
-broadly defined expectation.
+the number of hours scheduled per developer can be calculated. Given the
+:ref:`nominal costs <sec-labor-costs>` associated with each developer, the
+total labor cost can be estimated.
 
 Therefore, we calculate the number of hours of each staffing grade being
 assigned to the epic, multiply that by the cost per hour of that grade, and
