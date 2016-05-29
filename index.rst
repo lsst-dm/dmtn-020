@@ -107,9 +107,13 @@ WBS      Description                               Lead Institution
 
 These subdivisions are referred to as the *third level WBS*. Often, they are
 quoted without the leading “1” (e.g. “02C.01”), but, even in this form, they
-are referred to as “third level”. Further subdivisions beneath the third level
-are common, and depend on the requirements of the particular deliverable.
-Nodes in the WBS tree are referred to as :term:`element`\s.
+are referred to as “third level”.
+
+All of these third level WBS elements are subdivided, forming a fourth level.
+The fourth level always contains a “00” element, which is used to capture
+management and :ref:`sec-loe` work, and may contain other fourth level, or
+even deeper, structure. Nodes in the WBS tree are referred to as
+:term:`element`\s.
 
 .. _sec-obs:
 
@@ -143,8 +147,8 @@ performed at another institution.
 
 .. _sec-evms:
 
-Earned Value
-============
+Earned Value Principles
+=======================
 
 LSST DM is funded by as an :term:`NSF` :term:`MREFC` project. Under the terms
 of the MREFC award, we are required to follow an *earned value* approach to
@@ -190,6 +194,11 @@ specific component (say, the User Workspace Toolkit, 1.02C.05.05).
 Variance Narratives
 -------------------
 
+.. caution:: Confirm exact thresholds with Kevin.
+
+   There's some talk of a 10% threshold, but I believe (per input from Jacek)
+   that it's not currently enforced. Waiting for Kevin to respond to enquiry.
+
 Every month, the :term:`eCAM` tool is updated from PMCS to reflect the latest
 earned value status. If either schedule or cost variance (SV or CV) is more
 than -$100k, you will be required to provide a “narrative”. This is divided
@@ -197,8 +206,6 @@ into two parts: you must explain why the variance arose, and what action will
 be taken to correct it (e.g. slipping work into the future, or diverting
 resources from elsewhere to make up the shortfall). The narrative is entered
 directly into eCAM.
-
-.. todo:: Confirm exact thresholds with Kevin.
 
 .. _sec-loe:
 
@@ -296,16 +303,110 @@ when :term:`resource loading`.
 Long Term Planning
 ==================
 
-At time of writing, the long-term planning strategy as described in :ldm:`465`
-is new; we have yet to uncover its complexities. For that reason, there is
-currently nothing to add here.
+.. caution::
 
-.. todo:: Brief mention of the DMBP project.
+   I'm providing just a brief description and references to :ldm:`465` here
+   because the DMBP project isn't yet in place. I don't think it's appropriate
+   for this document to be normative (i.e. it should describe, rather than
+   define, procedure), and there aren't yet a list of questions or gotchas to
+   address.
 
-   But since it doesn't exist yet, there's only so much that can be said.
+Refer to :ldm:`465` for a description of the long-term planning system. In
+brief, the plan for the duration of construction is embodied in:
 
-   Also: how are planning packages flowed down into a schedule and into work
-   packages? See e-mail correspondence with Kevin.
+#. A series of *planning packages*, which describe major pieces of technical
+   work. Planning packages are associated with concrete, albeit high-level,
+   deliverables (in the shape of milestones, below), and have specific
+   resource loads (staff assignements), start dates, and durations. The entire
+   DM system is covered by around 100 of these planning packages.
+#. *Milestones* represent the delivery or availability of specific
+   functionality. Each planning package culiminates in a milestone, and may
+   contain other milestones describing intermediate results.
+
+Planning packages are defined at the fourth level of the WBS breakdown (e.g.
+at 1.02C.04.02, see the material on the :ref:`sec-wbs`). They may not cut
+across the WBS structure, but rather must refer to that particular
+fourth-level element and its children.
+
+.. caution::
+
+   Who is responsible for deciding the level of a milestone? Can technical
+   managers directly create level 1 miletones? Are technical managers limited
+   to only directly inputting level 4 (or 3, or, ...?) milestones, with higher
+   level deliverables defined by the Project Manager/Subsystem Lead?
+
+   What is the consequence for missing a milestone? It has no direct earned
+   value impact.
+
+Milestones are defined at a number of levels: see :ldm:`465` for details. Some
+of these are exposed to external reviewers: it is vital that these be
+delivered on time and to specification. Low-level milestones are defined for
+use within DM, but even here properly adhering to the plan is vital: your
+colleagues in other teams will use these milestones to align their schedules
+with yours, so they rely on you to be accurate.
+
+Earned Value and Planning Packages
+----------------------------------
+
+.. caution::
+
+   This is my attempt to think through the issues and figure out the
+   mechanism. It needs Jacek and/or Kevin to confirm if this is what we're
+   actually doing.
+
+.. todo::
+
+   Probably need to change the order of this with respect to the material on
+   BCWS in short term planning below -- at least, talk about nominal staff
+   costs earlier.
+
+A planning package has a duration and a staff assignment (it is “resource
+loaded”). Given a (nominal) cost per unit time of the staff involved (see
+...!), this translates directly to a :term:`BCWS`.
+
+During :ref:`sec-cycle-plan`, effort is drawn from the budget embodied in the
+planning packages to generate the cycle plan, described in terms of epics: see
+:ref:`sec-planning-epics` for details. Each epic itself has a particular
+budget. This budget is subtracted from that available in the planning package
+at the point when the epic is defined.
+
+At any given time, the :term:`BCWP` of a planning package consists of the
+sum of the BCWP of all epics derived from that package which have been marked
+complete, together with the fractions of value earned from all epics currently
+in progress.
+
+An example may serve to illustrate.
+
+Planning package ``P`` is baselined to start at the beginning of F17 and run
+through to the end of F18, i.e. a total of three cycles, or 18 months. It has
+two members of staff\—``A`` and ``A``\— assigned to it full time. Both share the same
+nominal cost of ``$X`` per cycle.
+
+The BCWS for the total planning package is the cost per cycle multiplied by
+the number of cycles: ``3 * $2X = $6X``.
+
+In F17, both members of staff are assigned to an epic derived from ``P``. The
+BCWS of the epic is ``$2X``. The remaining value in the planning package is
+``$4X``.
+
+At the end of F17, the epic is completed. The BCWP and ACWP are both ``$2X``.
+The work is on cost and on schedule: there is no variance.
+
+In S18, ``A`` is reassigned and is unable to work on a new epic derived from
+``P``. ``B`` continues the work alone, completing an epic worth ``$X`` by the
+end of the cycle. The BCWP and ACWP are now both ``$3X``; there is no cost
+variance.  However, the BCWS is ``$4X``: compared to the original schedule for
+the planning package, there is a schedule variance of ``-$X``. There is a
+total of ``$3K`` left in the planning package.
+
+In F18, ``C`` joins the project. ``C`` only costs ``$0.5X`` per cycle, but is
+a fast worker: she can complete in one cycle work that would take ``A`` or
+``B`` two cycles.
+
+``B`` and ``C`` work together through F18. The ACWP for the cycle is
+``$1.5X``; the BCWP is ``$3X``. The ACWP to date ``$4.5X``. The BCWP and BCWS
+are both ``$6X``. At this point, the project is complete: there is no schedule
+variance, and a cost variance of ``+$1.5X``.
 
 .. _sec-cycle-plan:
 
@@ -340,6 +441,9 @@ accurately.
 
 Defining Epics
 ^^^^^^^^^^^^^^
+
+.. todo:: Note that epics must be associated with individual planning
+          packages.
 
 As described in LDM-465, the plan for a six month cycle fundamentally consists
 of a set of resource loaded :term:`epic`\s defined in JIRA. Each epic loaded
