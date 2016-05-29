@@ -14,7 +14,7 @@ Wherever a conflict arises, baselined project documentation takes precedence
 over this note. You are encouraged to submit bug reports so that this document
 can be made compliant.
 
-Be aware of prefixes: “LDM-” documents refer specificially to the Data
+Be aware of prefixes: “LDM-” documents refer specifically to the Data
 Management subsystem, “LSE-” to Systems Engineering, “LPM-” to Project
 Management.
 
@@ -58,7 +58,7 @@ expected to:
   for the team, monitor and optimize team performance.
 
 - Work closely with the DM Project Manager on defining short and long-term
-  plan and schedule for their teams. Direct the execution of their teams's
+  plan and schedule for their teams. Direct the execution of their team's
   plan, ensuring the team delivers on-time and within budget.
 
 - Report group's activities as required, including reporting to the
@@ -111,9 +111,8 @@ are referred to as “third level”.
 
 All of these third level WBS elements are subdivided, forming a fourth level.
 The fourth level always contains a “00” element, which is used to capture
-management and :ref:`sec-loe` work, and may contain other fourth level, or
-even deeper, structure. Nodes in the WBS tree are referred to as
-:term:`element`\s.
+management and :ref:`sec-loe`, and may contain other fourth level, or even
+deeper, structure. Nodes in the WBS tree are referred to as :term:`element`\s.
 
 .. _sec-obs:
 
@@ -140,7 +139,7 @@ The Control Account Manager
 
 A :term:`control account` is the intersection between the WBS and the OBS.
 Each control account falls under the purview of a :term:`CAM`. Typically
-within DM, a single CAM is resposible for the whole of a third level WBS. That
+within DM, a single CAM is responsible for the whole of a third level WBS. That
 is, the manager at the lead institution for a particular component is
 responsible for all work performed on that WBS element, even if that work is
 performed at another institution.
@@ -197,9 +196,9 @@ Labor Costs
 Our methodology is designed to avoid exposing individual salaries to the wider
 project. Therefore, when calculating labor costs for earned value purposes, we
 do not rely on a known cost per individual. Instead, all staff are assigned to
-one of a small number of types (scientist, senior scientst, developer, senior
+one of a small number of types (scientist, senior scientist, developer, senior
 developer), each of which is assigned a nominal cost level which does not vary
-between individuals, or, indeed, across institutions.  This nominal cost does
+between individuals, or, indeed, across institutions. This nominal cost does
 not correspond to a particular individual, but is a broadly defined
 expectation.
 
@@ -331,11 +330,16 @@ brief, the plan for the duration of construction is embodied in:
 #. A series of *planning packages*, which describe major pieces of technical
    work. Planning packages are associated with concrete, albeit high-level,
    deliverables (in the shape of milestones, below), and have specific
-   resource loads (staff assignements), start dates, and durations. The entire
+   resource loads (staff assignments), start dates, and durations. The entire
    DM system is covered by around 100 of these planning packages.
 #. *Milestones* represent the delivery or availability of specific
-   functionality. Each planning package culiminates in a milestone, and may
+   functionality. Each planning package culminates in a milestone, and may
    contain other milestones describing intermediate results.
+
+.. warning::
+
+   :ldm:`465` claims that planning packages are defined at the third level
+   WBS. I think this is a mistake.
 
 Planning packages are defined at the fourth level of the WBS breakdown (e.g.
 at 1.02C.04.02, see the material on the :ref:`sec-wbs`). They may not cut
@@ -345,8 +349,8 @@ fourth-level element and its children.
 .. caution::
 
    Who is responsible for deciding the level of a milestone? Can technical
-   managers directly create level 1 miletones? Are technical managers limited
-   to only directly inputting level 4 (or 3, or, ...?) milestones, with higher
+   managers directly create level 1 milestones? Are technical managers limited
+   to only directly inputting level 4 (or 3, or, …?) milestones, with higher
    level deliverables defined by the Project Manager/Subsystem Lead?
 
    What is the consequence for missing a milestone? It has no direct earned
@@ -595,7 +599,7 @@ problem:
   from one team and explicitly work for another team for some defined period.
   One technical manager is therefore responsible for defining and scheduling
   their work. Their “home” manager will charge :ref:`actuals <sec-actuals>`
-  against the WBS supplied by the maanger manager of the receiving team.
+  against the WBS supplied by the manager manager of the receiving team.
 
 Regardless of the approach taken, technical managers should be especially
 careful to ensure that cross-team work is well defined. Usually, it is
@@ -706,7 +710,7 @@ required that all stories which will be :ref:`worked in an upcoming sprint
 <sec-sprinting>` are defined before the sprint starts.
 
 Note that there is no relationship enforced between the SP total estimated for
-the epic and the sum of the SPs of its consituent stories. It is therefore
+the epic and the sum of the SPs of its constituent stories. It is therefore
 possible to over- or under-load an epic. This will have obvious ramifications
 for the schedule. See :ref:`sec-cycle-value` for its impact on earned value.
 
