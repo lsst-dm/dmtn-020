@@ -450,9 +450,6 @@ accurately.
 Defining Epics
 ^^^^^^^^^^^^^^
 
-.. todo:: Note that epics must be associated with individual planning
-          packages.
-
 As described in LDM-465, the plan for a six month cycle fundamentally consists
 of a set of resource loaded :term:`epic`\s defined in JIRA. Each epic loaded
 into the plan must have:
@@ -473,6 +470,8 @@ Be aware that:
   possible to define epics that cover multiple WBS elements. See
   :ref:`sec-cross-team` for information on scheduling work which requires
   resources from multiple elements.
+- An epic must descend from a single planning package (see
+  :ref:`sec-long-term-plan`).
 - Although :ref:`LOE work should be charged to the 00 fourth-level element
   <sec-loe>`, this does not imply that other work cannot be charged here.
   Indeed, where possible management activities *should* be scheduled as epics
@@ -714,7 +713,7 @@ for the schedule. See :ref:`sec-earning-value` for its impact on earned value.
 Sprinting
 ---------
 
-.. todo::
+.. caution::
 
    Do we actually require that a sprint be one month long? Why?
 
