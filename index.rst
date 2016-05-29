@@ -220,6 +220,10 @@ be taken to correct it (e.g. slipping work into the future, or diverting
 resources from elsewhere to make up the shortfall). The narrative is entered
 directly into eCAM.
 
+Variance is calculated on a monthly basis; variance narratives are due in the
+second week of the calendar month following that to which they apply (refer to
+the :ref:`sec-monthly-cycle` for details).
+
 .. _sec-loe:
 
 Level of Effort Work
@@ -959,6 +963,28 @@ take place at 11:00 (11 a.m.) Project (Pacific) Time on Tuesdays and Fridays.
 
 .. _Google Hangouts: https://hangouts.google.com/
 
+.. _sec-monthly-narrative:
+
+Monthly Progress Narratives
+---------------------------
+
+Every calendar month, each technical manager is required to support the
+Project Manager with a report on the activities of their group. This report
+should be generally submitted no later than the second week of the month
+(refer to the :ref:`sec-monthly-cycle`), but this may be moved earlier on
+occasion. You are encouraged to submit your report as early in the month as
+possible.
+
+Submit your report by editing the `template for the appropriate month`_ on
+Google Docs. You need to fill in all the sections with your name attached;
+when complete, remove your name. Provide a per-WBS breakdown of work over the
+month being reported on and plans for the upcoming month, as well as
+describing any recruitment activities (positions opened, interviews conducted,
+appointments made, etc). Refer to previous reports for examples of the style
+used (but note that they are not not always consistent).
+
+.. _template for the appropriate month: https://drive.google.com/drive/u/0/folders/0BxgFbTQURmr6TUJleXZaY2ZNcEE
+
 .. _sec-actuals:
 
 Reporting Actuals
@@ -1013,25 +1039,25 @@ in your contract. In some special cases (e.g. temporary work carried out by
 summer students) it may be possible to make an exception: please discuss this
 with the :ref:`project manager <sec-contacts>` on a case-by-case basis.
 
-Monthly Narrative
-=================
+.. _sec-monthly-cycle:
 
-Every calendar month, each technical manager is required to support the
-Project Manager with a report on the activities of their group. The hard
-deadline for submitting this report is generally the 15th of the month
-following that being reported on, but this may be moved earlier on occasion.
-However, you are *strongly encouraged* to submit your report as early in the
-month as possible.
+Standard Reporting Cycle
+========================
 
-Submit your report by editing the `template for the appropriate month`_ on
-Google Docs. You need to fill in all the sections with your name attached;
-when complete, remove your name. Provide a per-WBS breakdown of work over the
-month being reported on and plans for the upcoming month, as well as
-describing any recruitment activities (positions opened, interviews conducted,
-appointments made, etc). Refer to previous reports for examples of the style
-used (but note that they are not not always consistent).
+- During the first week of the calendar month, data from JIRA together with
+  actual costs (labor charges, etc) are ingested to the :term:`PMCS` system.
+  This indicates the progress of all activities and shows any Earned Value
+  variances. This information is made available to technical managers through
+  :term:`eCAM`.
+- During the second week of the calendar month:
 
-.. _template for the appropriate month: https://drive.google.com/drive/u/0/folders/0BxgFbTQURmr6TUJleXZaY2ZNcEE
+   - :ref:`sec-variance-narrative`, where necessary, must be submitted through
+     eCAM.
+   - :ref:`sec-monthly-narrative` must be submitted through Google Docs.
+- The DM Project Manager assembles extended and summary reports, based on the
+  reports received from the institutions. The extended report is periodically
+  examined by Federal auditors, while the summary report is provided to senior
+  management and the :term:`AMCL` for review.
 
 Staffing Changes
 ================
@@ -1059,6 +1085,9 @@ Glossary
 
    ACWP
       Actual Cost of Work Performed (often referred to as “actuals”).
+
+   AMCL
+      AURA Management Committee for LSST.
 
    BCWP
       Budgeted Cost of Work Performed.
