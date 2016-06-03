@@ -2,6 +2,11 @@
 
 :tocdepth: 1
 
+.. warning::
+
+   This document is still under revision: see :jira:`DM-6447` for current work
+   in progress.
+
 This document provides an informal guide to the everyday mechanisms
 underpinning LSST Data Management's approach to project management. It is
 intended to be read in conjunction with :ldm:`465`, which provides a formal
