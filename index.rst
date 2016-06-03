@@ -108,6 +108,7 @@ WBS      Description                               Lead Institution
 1.02C.07 Processing Control & Site Infrastructure  NCSA
 1.02C.08 International Communications. & Base Site NCSA & LSST
 1.02C.09 Systems Integration & Test                LSST
+1.02C.10 Science Quality & Reliability Engineering LSST
 ======== ========================================= =======================
 
 These subdivisions are referred to as the *third level WBS*. Often, they are
@@ -283,12 +284,16 @@ to :term:`LOE` work.
 
 Assuming no variation throughout the year, we therefore expect 105 hours of
 productive work from a developer, or 84 hours from a scientist, per month.
+Note that this is averaged across the year: some months, such as those
+containing major holidays, will naturally involve less working time than
+others: the remainder will necessarily include more working time to
+compensate.
 
 Rather than working in hours, our :term:`JIRA` based system uses “story
 points” (:term:`SP`\s), with one SP being defined as equivalent to four hours
 of effort by a competent developer. Thus, we expect developers and scientists
-to produce 26.25 and 21 SPs per month respectively. This is summarized in
-:numref:`tab-working-rate`.
+to produce 26.25 and 21 SPs per *average* month respectively. This is
+summarized in :numref:`tab-working-rate`.
 
 .. _tab-working-rate:
 
@@ -345,28 +350,30 @@ brief, the plan for the duration of construction is embodied in:
    functionality. Each planning package culminates in a milestone, and may
    contain other milestones describing intermediate results.
 
-.. warning::
-
-   :ldm:`465` claims that planning packages are defined at the third level
-   WBS. I think this is a mistake.
-
 Planning packages are defined at the fourth level of the WBS breakdown (e.g.
 at 1.02C.04.02, see the material on the :ref:`sec-wbs`). They may not cut
 across the WBS structure, but rather must refer to that particular
 fourth-level element and its children.
 
-.. caution::
+Milestones are defined at a number of levels: see :ldm:`465` for details. To
+summarize:
 
-   Who is responsible for deciding the level of a milestone? Can technical
-   managers directly create level 1 milestones? Are technical managers limited
-   to only directly inputting level 4 (or 3, or, …?) milestones, with higher
-   level deliverables defined by the Project Manager/Subsystem Lead?
+Level 1
+   These are chosen by the :term:`NSF`.
 
-   What is the consequence for missing a milestone? It has no direct earned
-   value impact.
+Level 2
+   These reflect cross-subsystem commitments. As such, they must be defined in
+   consultation with the DM Project Manager.
 
-Milestones are defined at a number of levels: see :ldm:`465` for details. Some
-of these are exposed to external reviewers: it is vital that these be
+Level 3
+   These reflect cross-third-level WBS commitments. As such, they must be
+   defined in discussion between two or more technical managers.
+
+Level 3
+   These are internal to a particular third-level WBS, and can therefore be
+   specified by a single technical manager.
+
+Some of these are exposed to external reviewers: it is vital that these be
 delivered on time and to specification. Low-level milestones are defined for
 use within DM, but even here properly adhering to the plan is vital: your
 colleagues in other teams will use these milestones to align their schedules
@@ -388,10 +395,10 @@ loaded”). Given a (nominal) cost per unit time of the staff involved (see
 :ref:`sec-labor-costs`), this translates directly to a :term:`BCWS`.
 
 During :ref:`sec-cycle-plan`, effort is drawn from the budget embodied in the
-planning packages to generate the cycle plan, described in terms of epics: see
-:ref:`sec-planning-epics` for details. Each epic itself has a particular
-budget. This budget is subtracted from that available in the planning package
-at the point when the epic is defined.
+planning packages to generate the :term:`cycle` plan, described in terms of
+epics: see :ref:`sec-planning-epics` for details. Each epic itself has a
+particular budget. This budget is subtracted from that available in the
+planning package at the point when the epic is defined.
 
 At any given time, the :term:`BCWP` of a planning package consists of the
 sum of the BCWP of all epics derived from that package which have been marked
@@ -408,9 +415,9 @@ nominal cost of ``$X`` per cycle.
 The BCWS for the total planning package is the cost per cycle multiplied by
 the number of cycles: ``3 * $2X = $6X``.
 
-In F17, both members of staff are assigned to an epic derived from ``P``. The
-BCWS of the epic is ``$2X``. The remaining value in the planning package is
-``$4X``.
+In F17, both members of staff are assigned to six-month epic derived from
+``P``. The BCWS of the epic is ``$2X``. The remaining value in the planning
+package is ``$4X``.
 
 At the end of F17, the epic is completed. The BCWP and ACWP are both ``$2X``.
 The work is on cost and on schedule: there is no variance.
@@ -506,15 +513,18 @@ Be aware that:
   describe a few months of developer-time. Epics allocated multiple hundreds
   of story points are likely too broad to be accurately estimated.
 
-The :ref:`Project Controls Specialist <sec-contacts>` will automatically pull
-information from JIRA to populate :term:`PMCS` with the plan.
+The :ref:`Project Controls Specialist <sec-contacts>` will :ref:`periodically
+<sec-monthly-cycle>` pull information from JIRA to populate :term:`PMCS` with
+the plan.
 
 .. note::
 
-   Epics which do not satisfy the above criteria may be defined in JIRA. These
+   All epics which have WBS and cycle defined will be loaded into PMCS (and
+   must, therefore, have concrete deliverables and plausible SP estimates).
+   Epics which do not satisfy these criteria may be defined in JIRA. These
    will not be pulled into PMCS, will not form part of the scheduled plan, and
    will not earn value. However, they may still be useful for organizing other
-   work, sketching plans for future cycles, etc: please feel define them as
+   work, sketching plans for future cycles, etc: please define them as
    necessary.
 
 In order to fully describe the plan to PMCS, epics require information that is
@@ -537,12 +547,12 @@ a convenient way to get started would be to use one of those as a template.
 
 The spreadsheets used capture epic start and end dates at monthly granularity.
 This can lead to a :ref:`variance <sec-evms>` when monthly results are
-tabulated (it builds in the assumption that epics start at the beginning of
-a month, so even an intentional start mid-month will look like a deviation
-from the schedule). In practice, this variance is likely to be small, and
-should average out by the end of the cycle, when all epics should be closed on
-schedule. However, if this becomes a problem, it is possible to fine-tune
-dates by directly consulting with the Project Controls Specialist.
+tabulated (it assumes that work for an epic is evenly distributed across all
+the months in which it is scheduled). In practice, this variance is likely to
+be small, and should average out by the end of the cycle, when all epics
+should be closed on schedule. However, if this becomes a problem, it is
+possible to fine-tune dates by directly consulting with the Project Controls
+Specialist.
 
 .. note::
 
@@ -550,7 +560,7 @@ dates by directly consulting with the Project Controls Specialist.
    be fully :ref:`loaded with stories <sec-defining-stories>`: these can be
    defined during the cycle. You do, of course, need to have thought through
    the contents of the epic in enough detail to provide an overall SP
-   estimate, though.
+   estimate and deliverables, though.
 
 .. _Google Drive: https://drive.google.com/drive/u/0/folders/0BxgFbTQURmr6TmxXSm5Dc1JJWk0
 
@@ -632,7 +642,7 @@ Revising the Plan
 
 During the cycle, it is possible that changing circumstances will cause
 reality not to exactly match with the plan. This will ultimately cause a
-:ref:`variance <sec-evms>`, which should be avoid and which—if it becomes
+:ref:`variance <sec-evms>`, which should be avoided and which—if it becomes
 significant enough—will require a narrative.
 
 After the plan for the cycle has been entered into JIRA, it is under change
@@ -659,11 +669,11 @@ change requests to avoid running variances wherever possible.
 Closing the Cycle
 -----------------
 
-Assuming everything has gone to plan, by the end of a cycle all epics should
-be marked as “done”. When an epic is marked as done, it is equivalent to
-having delivered the required functionality. The total cost of that
-functionality—the :term:`BCWS`, calculated as per :ref:`sec-sps-to-bcws`\—is
-now claimed as value earned.
+Assuming everything has gone to plan, by the end of a cycle all deliverables
+should be verified and the corresponding epics should be marked as “done”.
+When an epic is marked as done, it is equivalent to having delivered the
+required functionality. The total cost of that functionality—the :term:`BCWS`,
+calculated as per :ref:`sec-sps-to-bcws`\—is now claimed as value earned.
 
 Epics which are in progress at the end of the cycle cannot be closed until
 they have been completed. These epics will spill over into the subsequent
@@ -738,16 +748,11 @@ for the schedule. See :ref:`sec-cycle-value` for its impact on earned value.
 Sprinting
 ---------
 
-.. caution::
-
-   Do we actually require that a sprint be one month long? Why?
-
-Each team organizes its work around month-long periods called
-:term:`sprint`\s. A sprint comprises a defined collection of stories which
-will be addressed over the course of the month. These stories are not
-necessarily (indeed, not generally) all drawn from the same epic: rather,
-while epics divide the cycle along logical grounds, sprints divide it along
-the time axes.
+Each team organizes its work around periods of work called :term:`sprint`\s. A
+sprint comprises a defined collection of stories which will be addressed over
+the course of the month. These stories are not necessarily (indeed, not
+generally) all drawn from the same epic: rather, while epics divide the cycle
+along logical grounds, sprints divide it along the time axes.
 
 Broadly, executing a sprint falls into three stages:
 
@@ -764,8 +769,8 @@ Broadly, executing a sprint falls into three stages:
    it, but other approaches are possible (one-to-one interactions between
    developers and technical manager, managerial fiat, etc).
 
-   Do not overload developers. The sprint should describe a plausible amount
-   of work for the time available.
+   Do not overload developers. Take vacations and holidays into account. The
+   sprint should describe a plausible amount of work for the time available.
 
 #. Execution.
 
@@ -783,7 +788,10 @@ Broadly, executing a sprint falls into three stages:
 
    Avoid adding more stories to a sprint in progress unless it is unavoidable
    (for example, the story describes a critical bug that must be addressed
-   before proceeding).
+   before proceeding). A sprint should always stay current and should be
+   up-to-date with reality; if necessary, already scheduled stories may be
+   pushed out of a sprint as soon as it is obvious it is unrealistic to expect
+   them to be completed.
 
 #. Review.
 
@@ -896,8 +904,8 @@ However, bugs do serve as an bellwether for software quality issues. It would
 obviously be inappropriate—and a severe source of schedule risk—for the value
 earned from addressing bugs in existing software to dominate the productivity
 of the team at the expense of new development. We expect that no more than
-around 30% of schedulable developer time will be dedicated addressing bugs:
-any more than this must be carefully justified.
+around 30% of schedulable developer time will be dedicated addressing bugs and
+performing maintenance: any more than this must be carefully justified.
 
 .. _sec-cycle-value:
 
@@ -975,18 +983,18 @@ Monthly Progress Narratives
 
 Every calendar month, each technical manager is required to support the
 Project Manager with a report on the activities of their group. This report
-should be generally submitted no later than the second week of the month
-(refer to the :ref:`sec-monthly-cycle`), but this may be moved earlier on
-occasion. You are encouraged to submit your report as early in the month as
-possible.
+should be generally submitted no later than tenth of the month (refer to the
+:ref:`sec-monthly-cycle`), but this may be moved earlier on occasion. You are
+encouraged to submit your report as early in the month as possible.
 
 Submit your report by editing the `template for the appropriate month`_ on
 Google Docs. You need to fill in all the sections with your name attached;
-when complete, remove your name. Provide a per-WBS breakdown of work over the
-month being reported on and plans for the upcoming month, as well as
-describing any recruitment activities (positions opened, interviews conducted,
-appointments made, etc). Refer to previous reports for examples of the style
-used (but note that they are not not always consistent).
+when complete, remove your name. Provide a brief (one or two sentences) high
+level summary, a per-WBS breakdown of work over the month being reported on
+and plans for the upcoming month, as well as describing any recruitment
+activities (positions opened, interviews conducted, appointments made, etc).
+Refer to previous reports for examples of the style used (but note that they
+are not not always consistent).
 
 .. _template for the appropriate month: https://drive.google.com/drive/u/0/folders/0BxgFbTQURmr6TUJleXZaY2ZNcEE
 
@@ -1058,7 +1066,8 @@ Standard Reporting Cycle
 
    - :ref:`sec-variance-narrative`, where necessary, must be submitted through
      eCAM.
-   - :ref:`sec-monthly-narrative` must be submitted through Google Docs.
+   - :ref:`sec-monthly-narrative` must be submitted through Google Docs by the
+     tenth day of the month.
 - The DM Project Manager assembles extended and summary reports, based on the
   reports received from the institutions. The extended report is periodically
   examined by Federal auditors, while the summary report is provided to senior
@@ -1193,7 +1202,8 @@ Glossary
        Schedule Performance Index. Defined as :term:`BCWP`\/:term:`BCWS`.
 
    Sprint
-      A month-long period of work for a particular team.
+      A defined period of work for a particular team. Typically, sprints are
+      one calendar month long, but this is not required.
 
    Story
       A JIRA issue type describing a scheduled, self-contained task worked as
