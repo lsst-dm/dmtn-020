@@ -38,6 +38,14 @@ Management.
    document may be thought of as a guide to applying the principles defined
    in :ldm:`465` in practice.
 
+In addition, you should be familiar with the `EVMS Training – CAM 101`_
+presented by the :ref:`Project Controls Specialist <sec-contacts>` at the
+`LSST 2014 Meeting`_. `Slides are available as a PDF`_ for easy reference.
+
+.. _EVMS Training – CAM 101: https://project.lsst.org/meetings/lsst2014/node/100
+.. _LSST 2014 Meeting: https://project.lsst.org/meetings/lsst2014/
+.. _Slides are available as a PDF: _static/EVMS_Training.pdf
+
 .. _sec-contacts:
 
 Useful Contacts
