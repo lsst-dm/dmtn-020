@@ -393,6 +393,20 @@ use within DM, but even here properly adhering to the plan is vital: your
 colleagues in other teams will use these milestones to align their schedules
 with yours, so they rely on you to be accurate.
 
+.. _sec-long-term-research:
+
+Planning Research Work
+----------------------
+
+In order for the DM system to reach its science goals, new algorithmic or
+engineering approaches must sometimes be researched. It is appropriate to
+budget time for this research work in planning packages. However, areas where
+successful delivery of the DM system is dependent on speculative research are
+a source of :term:`risk`: wherever possible, the plan should also provide for
+a fallback option to be taken when research objectives are not achieved. When
+fallback options are not available, discuss how to account for this risk with
+the :ref:`DM Project Manager <sec-contacts>`.
+
 .. _sec-long-term-value:
 
 Earned Value and Planning Packages
@@ -607,9 +621,36 @@ requiring a formal :ref:`change request <sec-cycle-change>`.
 
 .. _Google Drive: https://drive.google.com/drive/u/0/folders/0BxgFbTQURmr6TmxXSm5Dc1JJWk0
 
+.. _sec-research-epics:
+
+Scheduling Research Work
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+As discussed in :ref:`sec-long-term-research`, research is sometimes required
+to meet our objectives. However, it is not a natural fit to our usual planning
+process, as it is speculative in its nature: it is often impossible to produce
+a series of logical steps that will lead to the required result. We
+acknowledge, therefore, that scheduling an epic to deliver some particular new
+algorithm based on the results of research is impossible: we cannot predict
+with any confidence when the breakthrough will occur.
+
+We therefore schedule research in :term:`timebox`\ed epics: we allocate a
+certain amount of time based on the resources available, rather than on an
+estimate of time to completion. However, note that these timeboxed epics
+should still provide concrete deliverables: they are not open-ended “buckets”
+as discussed elsewhere. Since we cannot rely on the successful completion of
+the research project as a deliverable, we instead require that a summary of
+the research completed to date be delivered at the completion of the time
+allocated. The presentation and format of this report will vary depending on
+the nature of the research (a `technical note`_ is a likely option), and,
+:ref:`as usual <sec-planning-epics>`, should be defined before the epic is
+ingested to :term:`PMCS`.
+
+.. _technical note: https://sqr-000.lsst.io/
+
 .. _sec-bucket:
 
-Bucket epics
+Bucket Epics
 ^^^^^^^^^^^^
 
 Some work is “emergent”: we can predict in advance that it will be necessary,
@@ -1231,6 +1272,13 @@ Glossary
    OBS
       Organizational Breakdown Structure; see the definition :ref:`above
       <sec-obs>`.
+
+   Risk
+      Risks are (per ISO 31000) “the effect of uncertainty upon objectives”.
+      For the purposes of this document, that corresponds to the impact of
+      unplanned or unpredictable events upon the cost or schedule of the
+      Project. The Project maintains a register of risks, which includes
+      probability estimates and possible mitigations.
 
    PMCS
       Project Management Control System. The PMCS is not a single piece of
