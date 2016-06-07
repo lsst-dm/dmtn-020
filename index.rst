@@ -126,8 +126,8 @@ Organization Breakdown Structure
 --------------------------------
 
 In parallel with the WBS, we have an :term:`OBS`, which assigns each
-institution involved in the project a unique numeric identifier. Those
-directly relevant to DM are:
+institution involved in the project a unique numeric identifier. The OBS is
+defined in :lpm:`98`. Those institutions directly relevant to DM include:
 
 ==== ========================
 OBS  Institution
