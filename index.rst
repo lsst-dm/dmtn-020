@@ -566,6 +566,13 @@ not captured in JIRA. Specifically, it is necessary to define:
    an epic, this does not provide sufficient granularity for those cases when
    more than one person will be contributing.
 
+.. note::
+
+   In fact, it is only required to provide a staff assigment in terms of
+   “resource types” (i.e. scientists, senior scientists, developers, senior
+   developers, etc). In practice, to ensure your team is evenly loaded, it is
+   usually necessary to break it down to named individuals.
+
 This information is most conveniently captured in per-team spreadsheets which
 are supplied to the Project Controls Specialist before the start of the
 cycle. Spreadsheets describing previous cycles are stored in `Google Drive`_:
@@ -1082,15 +1089,6 @@ mapping from dollar values to individuals who did the work. However, it is
 important to note that, should the Project be audited in the future, it is
 perfectly possible that they will wish to examine such a mapping. You should
 therefore keep records which will enable you to provide it upon request.
-
-Note that when loading the plan at the start of a cycle (as described
-:ref:`here <sec-cycle-plan>`), you are expected to provide the names of the
-individuals who will be carrying out the work. It is not, in general,
-appropriate to charge for labor from individuals who have not been named in
-this way, even if the total sum comes in below the budgeted amount specified
-in your contract. In some special cases (e.g. temporary work carried out by
-summer students) it may be possible to make an exception: please discuss this
-with the :ref:`project manager <sec-contacts>` on a case-by-case basis.
 
 .. _sec-monthly-cycle:
 
