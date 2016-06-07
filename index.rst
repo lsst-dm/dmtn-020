@@ -221,18 +221,18 @@ expectation.
 Variance Narratives
 -------------------
 
-.. caution:: Confirm exact thresholds with Kevin.
-
-   There's some talk of a 10% threshold, but I believe (per input from Jacek)
-   that it's not currently enforced. Waiting for Kevin to respond to enquiry.
-
 Every month, the :term:`eCAM` tool is updated from PMCS to reflect the latest
-earned value status. If either schedule or cost variance (SV or CV) is more
-than -$100k, you will be required to provide a “narrative”. This is divided
-into two parts: you must explain why the variance arose, and what action will
-be taken to correct it (e.g. slipping work into the future, or diverting
-resources from elsewhere to make up the shortfall). The narrative is entered
-directly into eCAM.
+earned value status. If either cost or schedule is behind schedule by more
+than either $100,000 or 10% you are required to provide a “narrative”. This is
+divided into two parts: you must explain why the variance arose, and what
+action will be taken to correct it (e.g. slipping work into the future, or
+diverting resources from elsewhere to make up the shortfall). The narrative is
+entered directly into eCAM.
+
+.. note::
+
+   In future, narratives may also be required for positive variances (i.e.
+   running ahead of schedule).
 
 Variance is calculated on a monthly basis; variance narratives are due in the
 second week of the calendar month following that to which they apply (refer to
