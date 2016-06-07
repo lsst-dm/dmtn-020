@@ -844,6 +844,13 @@ Broadly, executing a sprint falls into three stages:
    to the next challenge, but it is required to enable us to properly
    :ref:`track earned value <sec-cycle-value>`.
 
+   .. note::
+
+      When completing a story we do not change the number of SPs assigned to
+      it: the SP total reflects our initial estimate of the work involved, not
+      the total time invested. This makes it possible to review the quality of
+      our estimates at the end of the sprint.
+
    Avoid adding more stories to a sprint in progress unless it is unavoidable
    (for example, the story describes a critical bug that must be addressed
    before proceeding). A sprint should always stay current and should be
@@ -1076,7 +1083,10 @@ Other institutions do not rigorously check staff activity and/or do not supply
 this information to AURA when invoicing. In this case, the technical manager
 is responsible for breaking down the invoice by WBS and forwarding that to the
 relevant AURA contracts officer (check with the :ref:`project manager
-<sec-contacts>` if you are unsure who that is).
+<sec-contacts>` if you are unsure who that is). Note that, since
+:ref:`story points reflect estimated, not actual, time spent on work
+<sec-sprinting>`, it is *not* appropriate to simply allocate actual costs
+based on SP totals.
 
 A typical invoice breakout should be supplied in a spreadsheet similar to that
 shown in :numref:`tab-invoice`.
