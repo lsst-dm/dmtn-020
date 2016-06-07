@@ -9,7 +9,7 @@
 
 This document provides an informal guide to the everyday mechanisms
 underpinning LSST Data Management's approach to project management. It is
-intended to be read in conjunction with :ldm:`465`, which provides a formal
+intended to be read in conjunction with :ldm:`472`, which provides a formal
 description of the project management process and requirements.
 
 Important Documents
@@ -32,11 +32,11 @@ Management.
    components of the :term:`PMCS` used to manage and report on the overall
    LSST Project.
 
-:ldm:`465`
+:ldm:`472`
    *LSST DM Project Management and Tools*. The formal, high-level document
    which defines the project management process used by LSST DM. The present
    document may be thought of as a guide to applying the principles defined
-   in :ldm:`465` in practice.
+   in :ldm:`472` in practice.
 
 In addition, you should be familiar with the `EVMS Training – CAM 101`_
 presented by the :ref:`Project Controls Specialist <sec-contacts>` at the
@@ -63,7 +63,7 @@ Technical Managers
 ==================
 
 This guide is primarily aimed at the LSST DM technical managers. Technical
-managers report directly to the DM Project Manager. Per :ldm:`465`, they are
+managers report directly to the DM Project Manager. Per :ldm:`472`, they are
 expected to:
 
 - Assemble the team capable of delivering work scoped through the :term:`WBS`
@@ -251,12 +251,12 @@ may be particularly the case for technical managers or others in leadership
 roles within the project. This work is referred to as :term:`LOE`: it is
 assumed to earn value simply through the passage of time.
 
-:ldm:`465` provides a detailed definition of the types of work it is
+:ldm:`472` provides a detailed definition of the types of work it is
 permissible to regard as LOE. In general, we strive to minimize the fraction
 of our effort which is devoted to LOE activities and favour those which are
 more directly accountable.
 
-The assumption encoded in :ldm:`465` is that developers will spent 30% of
+The assumption encoded in :ldm:`472` is that developers will spent 30% of
 their time on LOE type activities, and the remaining 70% of their effort is
 tracked against concrete deliverables.
 
@@ -358,13 +358,13 @@ Long Term Planning
 
 .. caution::
 
-   I'm providing just a brief description and references to :ldm:`465` here
+   I'm providing just a brief description and references to :ldm:`472` here
    because the DMBP project isn't yet in place. I don't think it's appropriate
    for this document to be normative (i.e. it should describe, rather than
    define, procedure), and there aren't yet a list of questions or gotchas to
    address.
 
-Refer to :ldm:`465` for a description of the long-term planning system. In
+Refer to :ldm:`472` for a description of the long-term planning system. In
 brief, the plan for the duration of construction is embodied in:
 
 #. A series of *planning packages*, which describe major pieces of technical
@@ -381,7 +381,7 @@ at 1.02C.04.02, see the material on the :ref:`sec-wbs`). They may not cut
 across the WBS structure, but rather must refer to that particular
 fourth-level element and its children.
 
-Milestones are defined at a number of levels: see :ldm:`465` for details. To
+Milestones are defined at a number of levels: see :ldm:`472` for details. To
 summarize:
 
 Level 1
@@ -489,7 +489,7 @@ scope, cost and schedule are carefully controlled.
 Short Term Planning
 ===================
 
-Per :ldm:`465`, short term planning is carried out in blocks referred to as
+Per :ldm:`472`, short term planning is carried out in blocks referred to as
 :term:`cycle`\s, which (usually) last for six months. Before the start of a
 cycle, technical managers work with the DM Project Manager and the Project
 Controls Specialist to ensure their plan for the cycle is well defined in both
@@ -528,7 +528,7 @@ accurately.
 Defining Epics
 ^^^^^^^^^^^^^^
 
-As described in LDM-465, the plan for a six month cycle fundamentally consists
+As described in :ldm:`472`, the plan for a six month cycle fundamentally consists
 of a set of resource loaded :term:`epic`\s defined in JIRA. Each epic loaded
 into the plan must have:
 
@@ -750,13 +750,13 @@ Execution
 .. caution::
 
    The description below focuses on a sprint-based monthly cadence. I *think*,
-   based on :ldm:`465`, that this is globally applicable. However, I'm not
+   based on :ldm:`472`, that this is globally applicable. However, I'm not
    sure if some teams (NCSA, SQuaRE?) don't sprint, and I'm not sure what
    subtleties are introduced by Kanban rather than Scrum. Please check!
 
 .. caution::
 
-   The :ldm:`465` draft mentions various concepts that aren't currently
+   The :ldm:`472` draft mentions various concepts that aren't currently
    standard practice (reports during all hands standups, a central DM board,
    scripts for monitoring the status of JIRA, etc). This document aims to be
    descriptive rather than normative, so these are not discussed here. After a
@@ -1220,7 +1220,7 @@ Glossary
 
    LOE
       Level of Effort. LOE work is that which does not correspond to a
-      specific deliverable. A detailed definition is provided in :ldm:`465`;
+      specific deliverable. A detailed definition is provided in :ldm:`472`;
       see also the discussion :ref:`above <sec-loe>`.
 
    MREFC
