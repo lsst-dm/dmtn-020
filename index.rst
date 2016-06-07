@@ -211,10 +211,11 @@ Our methodology is designed to avoid exposing individual salaries to the wider
 project. Therefore, when calculating labor costs for earned value purposes, we
 do not rely on a known cost per individual. Instead, all staff are assigned to
 one of a small number of types (scientist, senior scientist, developer, senior
-developer), each of which is assigned a nominal cost level which does not vary
-between individuals, or, indeed, across institutions. This nominal cost does
-not correspond to a particular individual, but is a broadly defined
-expectation.
+developer), each of which is assigned a nominal cost level according to
+institution: it does not vary between individuals of the same type within the
+same institution. This nominal cost does not, therefore, correspond to a
+particular individual, but is a broadly defined expectation. See :lpm:`81` for
+details.
 
 .. _sec-variance-narrative:
 
