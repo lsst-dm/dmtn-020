@@ -823,6 +823,7 @@ Broadly, executing a sprint falls into three stages:
       the total time invested. This makes it possible to review the quality of
       our estimates at the end of the sprint.
 
+
    Avoid adding more stories to a sprint in progress unless it is unavoidable
    (for example, the story describes a critical bug that must be addressed
    before proceeding). A sprint should always stay current and should be
@@ -854,6 +855,25 @@ as appropriate: the former is suitable for planned development activities
 .. _Agile: https://www.atlassian.com/software/jira/agile
 .. _Scrum: https://en.wikipedia.org/wiki/Scrum_(software_development)
 .. _Kanban: https://en.wikipedia.org/wiki/Kanban_(development)
+
+.. _sec-epic-done:
+
+Completing Epics
+----------------
+
+An epic may be marked as “done” when:
+
+#. It contains at least one completed story;
+#. There are no more incomplete stories defined within it;
+#. There are no plans to add more stories;
+#. (If applicable, i.e. it is not a :ref:`bucket <sec-bucket>`) its concrete
+   deliverable has been achieved.
+
+Note that it is not permitted to close an epic without defining at least one
+story within it. Empty epics can never be completed.
+
+When an epic is marked as complete, :ref:`all of its value is earned
+<sec-cycle-value>`.
 
 .. _sec-bugs:
 
@@ -954,8 +974,8 @@ The basic procedure for earning value during the cycle is akin to that
 
 In short, :ref:`as we have seen <sec-sps-to-bcws>`, the :term:`BCWS` for a
 particular epic is defined by its *estimated* (i.e. attached to the epic
-before work commences) SP total and its staff assignment. When an epic is
-marked as complete, this is the value that is earned.
+before work commences) SP total and its staff assignment. When :ref:`an epic
+is marked as complete <sec-epic-done>`, this is the value that is earned.
 
 The :term:`BCWP` for an epic is calculated based on the fractional
 completeness of an epic. That is, if an epic has a total SP count of ``X``,
