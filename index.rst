@@ -704,7 +704,11 @@ control: it can only be altered through a :term:`LCR` approved by the
 :term:`CCB`. In order to reschedule (or remove entirely from the cycle) an
 epic which has not yet started, the technical manager should work with the
 :ref:`Project Controls Specialist <sec-contacts>` to prepare and submit an
-appropriate LCR to the monthly CCB meeting.
+appropriate LCR to the CCB. The CCB meets on the third Wednesday of the
+calendar month; change requests must be submitted well in advance of this.
+Therefore, it is advisable to take time early in the calendar month to review
+epics due to start in the *following* month and to issue an LCR on them if
+necessary.
 
 Note that it is *not possible* to alter history by means of an LCR. That is,
 if the scheduled start date of an epic is already in the past, it is not
