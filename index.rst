@@ -280,6 +280,24 @@ Appointment as a “scientist” includes a 20% personal research time allowance
 That is, scientists are expected to devote 1,440 hours per year to LSST, and
 the remainder of their time to personal research.
 
+.. note::
+
+   Personal research time is *not* chargeable to LSST under any WBS or
+   account. In particular, it is not counted as level of effort. The Project
+   expects to pay the full rate for an individual with research time who
+   contributes 1,440 hours to the project, and does not require any accounting
+   of the remaining 360 hours. See also the discussion in :lpm:`81` section 7.
+
+.. note::
+
+   Some individuals serve roles within DM which are referred to as
+   “scientist”, such as the Project Scientist and Pipelines Scientist. These
+   roles are not equivalent to being granted personal research time, but
+   reflect a level of scientific oversight within the project. Time spent
+   performing this role must be accounted for in the usual way (either as LOE
+   or as providing deliverables), and charged to an account agreed with the
+   :ref:`DM Project Manager <sec-contacts>`.
+
 Our base assumption is that 30% of an individual's LSST time (i.e. 540
 hours/year for a developer, 432 hours/year for a scientist) are devoted to
 overhead for meetings, ad-hoc discussions and other interruptions. This work
