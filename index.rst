@@ -2,11 +2,6 @@
 
 :tocdepth: 1
 
-.. warning::
-
-   This document is still under revision: see :jira:`DM-6447` for current work
-   in progress.
-
 This document provides an informal guide to the everyday mechanisms
 underpinning LSST Data Management's approach to project management. It is
 intended to be read in conjunction with :ldm:`472`, which provides a formal
@@ -357,14 +352,6 @@ when :term:`resource loading`.
 Long Term Planning
 ==================
 
-.. caution::
-
-   I'm providing just a brief description and references to :ldm:`472` here
-   because the DMBP project isn't yet in place. I don't think it's appropriate
-   for this document to be normative (i.e. it should describe, rather than
-   define, procedure), and there aren't yet a list of questions or gotchas to
-   address.
-
 Refer to :ldm:`472` for a description of the long-term planning system. In
 brief, the plan for the duration of construction is embodied in:
 
@@ -410,12 +397,6 @@ with yours, so they rely on you to be accurate.
 
 Earned Value and Planning Packages
 ----------------------------------
-
-.. caution::
-
-   This is my attempt to think through the issues and figure out the
-   mechanism. It needs Jacek and/or Kevin to confirm if this is what we're
-   actually doing.
 
 A planning package has a duration and a staff assignment (it is “resource
 loaded”). Given a (nominal) cost per unit time of the staff involved (see
@@ -653,8 +634,6 @@ really necessary and appropriate.
 Mapping SPs to BCWS
 ^^^^^^^^^^^^^^^^^^^
 
-.. caution:: I think this is correct, but please check.
-
 As discussed above, the amount of work to be performed is :ref:`estimated in
 terms of SPs <sec-effort>`, while the :ref:`earned value <sec-evms>` system
 accounts for work in terms of budgeted cost (:term:`BCWS`). In order to
@@ -758,21 +737,6 @@ done.
 
 Execution
 =========
-
-.. caution::
-
-   The description below focuses on a sprint-based monthly cadence. I *think*,
-   based on :ldm:`472`, that this is globally applicable. However, I'm not
-   sure if some teams (NCSA, SQuaRE?) don't sprint, and I'm not sure what
-   subtleties are introduced by Kanban rather than Scrum. Please check!
-
-.. caution::
-
-   The :ldm:`472` draft mentions various concepts that aren't currently
-   standard practice (reports during all hands standups, a central DM board,
-   scripts for monitoring the status of JIRA, etc). This document aims to be
-   descriptive rather than normative, so these are not discussed here. After a
-   fleshed-out policy has been developed, we can add them.
 
 Having :ref:`thus <sec-cycle-plan>` defined the plan for a cycle, we execute
 it by means of a series of month-long sprints. In this section, we detail the
@@ -1033,10 +997,10 @@ emergent work which cannot be deferred, refer to :ref:`sec-bugs`.
 Coordination Standup
 --------------------
 
-.. attention::
+.. note::
 
-   I've not included the meeting URL here, since the tech note will be
-   publicly available.
+   The meeting URL is not included here since this note is publicly available.
+   Contact the Project Manager for details.
 
 The technical managers meet with the :ref:`Project Manager <sec-contacts>` and
 interested others (it is not a closed meeting) twice every week. This is a
