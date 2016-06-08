@@ -431,8 +431,8 @@ An example may serve to illustrate.
 
 Planning package ``P`` is baselined to start at the beginning of F17 and run
 through to the end of F18, i.e. a total of three cycles, or 18 months. It has
-two members of staff\—``A`` and ``A``\— assigned to it full time. Both share the same
-nominal cost of ``$X`` per cycle.
+two members of staff\—``A`` and ``B``\— assigned to it full time. Both share
+the same nominal cost of ``$X`` per cycle.
 
 The BCWS for the total planning package is the cost per cycle multiplied by
 the number of cycles: ``3 * $2X = $6X``.
