@@ -20,7 +20,9 @@ Management.
 
 :lpm:`43`, :lpm:`44`
    *WBS Structure* and *WBS Dictionary*, respectively. The former shows the
-   overall work breakdown structure for the whole project.
+   overall work breakdown structure for the whole project. Note that these
+   documents are periodically extracted from the master :term:`PMCS` system,
+   and therefore occasionally do not reflect the most recent changes.
 
 :lpm:`98`
    *LSST Project Controls System Description*. Describes and defines the
