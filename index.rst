@@ -429,36 +429,37 @@ in progress.
 
 An example may serve to illustrate.
 
-Planning package ``P`` is baselined to start at the beginning of F17 and run
-through to the end of F18, i.e. a total of three cycles, or 18 months. It has
-two members of staff\—``A`` and ``B``\— assigned to it full time. Both share
-the same nominal cost of ``$X`` per cycle.
+Planning package :math:`P` is baselined to start at the beginning of F17 and
+run through to the end of F18, i.e. a total of three cycles, or 18 months. It
+has two members of staff\—:math:`A` and :math:`B`\— assigned to it full time.
+Both share the same nominal cost of :math:`$X` per cycle.
 
 The BCWS for the total planning package is the cost per cycle multiplied by
-the number of cycles: ``3 * $2X = $6X``.
+the number of cycles: :math:`3 \times $2X = $6X`.
 
 In F17, both members of staff are assigned to six-month epic derived from
-``P``. The BCWS of the epic is ``$2X``. The remaining value in the planning
-package is ``$4X``.
+:math:`P`. The BCWS of the epic is :math:`$2X`. The remaining value in the
+planning package is :math:`$4X`.
 
-At the end of F17, the epic is completed. The BCWP and ACWP are both ``$2X``.
-The work is on cost and on schedule: there is no variance.
+At the end of F17, the epic is completed. The BCWP and ACWP are both
+:math:`$2X`.  The work is on cost and on schedule: there is no variance.
 
-In S18, ``A`` is reassigned and is unable to work on a new epic derived from
-``P``. ``B`` continues the work alone, completing an epic worth ``$X`` by the
-end of the cycle. The BCWP and ACWP are now both ``$3X``; there is no cost
-variance.  However, the BCWS is ``$4X``: compared to the original schedule for
-the planning package, there is a schedule variance of ``-$X``. There is a
-total of ``$3K`` left in the planning package.
+In S18, :math:`A` is reassigned and is unable to work on a new epic derived
+from :math:`P`. :math:`B` continues the work alone, completing an epic worth
+:math:`$X` by the end of the cycle. The BCWP and ACWP are now both
+:math:`$3X`; there is no cost variance.  However, the BCWS is :math:`$4X`:
+compared to the original schedule for the planning package, there is a
+schedule variance of :math:`-$X`. There is a total of :math:`$3K` left in the
+planning package.
 
-In F18, ``C`` joins the project. ``C`` only costs ``$0.5X`` per cycle, but is
-a fast worker: she can complete in one cycle work that would take ``A`` or
-``B`` two cycles.
+In F18, :math:`C` joins the project. :math:`C` only costs :math:`$0.5X` per
+cycle, but is a fast worker: she can complete in one cycle work that would
+take :math:`A` or :math:`B` two cycles.
 
-``B`` and ``C`` work together through F18. The ACWP for the cycle is
-``$1.5X``; the BCWP is ``$3X``. The ACWP to date ``$4.5X``. The BCWP and BCWS
-are both ``$6X``. At this point, the project is complete: there is no schedule
-variance, and a cost variance of ``+$1.5X``.
+:math:`B` and :math:`C` work together through F18. The ACWP for the cycle is
+:math:`$1.5X`; the BCWP is :math:`$3X`. The ACWP to date :math:`$4.5X`. The
+BCWP and BCWS are both :math:`$6X`. At this point, the project is complete:
+there is no schedule variance, and a cost variance of :math:`+$1.5X`.
 
 Epic-Based Long Term Plans
 --------------------------
@@ -1019,9 +1020,9 @@ before work commences) SP total and its staff assignment. When :ref:`an epic
 is marked as complete <sec-epic-done>`, this is the value that is earned.
 
 The :term:`BCWP` for an epic is calculated based on the fractional
-completeness of an epic. That is, if an epic has a total SP count of ``X``,
-and the total of stories marked as complete within it is ``Y``, then ``BCWP =
-BCWS * Y / X``.
+completeness of an epic. That is, if an epic has a total SP count of
+:math:`X`, and the total of stories marked as complete within it is :math:`Y`,
+then :math:`BCWP = BCWS \times Y / X`.
 
 Be aware that stories that marked as “invalid” or “won't fix” in JIRA are not
 included in this calculation: they earn no value.
