@@ -1104,7 +1104,7 @@ Reporting Actuals
 In order to comply with the :ref:`earned value management system <sec-evms>`,
 it is necessary to track the actual cost of work being performed (the
 “actuals”) in each leaf element of the WBS. That is, whenever an invoice is
-issue from a subcontracting institution to AURA, it must be broken down into
+issued from a subcontracting institution to AURA, it must be broken down into
 dollar charges against individual WBS elements.
 
 Some institutions rigorously track how staff are spending their time (e.g. by
