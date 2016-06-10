@@ -531,7 +531,8 @@ As described in :ldm:`472`, the plan for a six month cycle fundamentally consist
 of a set of resource loaded :term:`epic`\s defined in JIRA. Each epic loaded
 into the plan must have:
 
-- A concrete, well defined deliverable *or* be clearly described as a “bucket”;
+- A concrete, well defined deliverable *or* be clearly described as a
+  “:ref:`bucket <sec-bucket>`\”;
 - The ``cycle`` field set to the appropriate cycle;
 - The ``WBS`` field set to the appropriate WBS *leaf* element.
 - The ``Story Points`` field set to a (non-zero!) estimate of the effort
