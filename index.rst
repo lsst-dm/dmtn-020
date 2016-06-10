@@ -1,5 +1,19 @@
 .. vim: ts=3:sts=3
 
+.. Define a role for formatting text (roughly)
+   as it appears in JIRA status fields.
+
+.. role:: jira_field
+
+.. raw:: html
+
+   <style> .jira-field { text-transform: uppercase;
+                         font-size: smaller;
+                         border: 1px solid;
+                         border-radius: 4px;
+                         padding: 2px; }
+   </style>
+
 :tocdepth: 1
 
 This document provides an informal guide to the everyday mechanisms
@@ -533,11 +547,11 @@ into the plan must have:
 
 - A concrete, well defined deliverable *or* be clearly described as a
   “:ref:`bucket <sec-bucket>`\”;
-- The ``cycle`` field set to the appropriate cycle;
-- The ``WBS`` field set to the appropriate WBS *leaf* element.
-- The ``Story Points`` field set to a (non-zero!) estimate of the effort
-  required to complete the epic in terms of :term:`SP`\s (see :ref:`above
-  <sec-effort>`).
+- The :jira_field:`cycle` field set to the appropriate cycle;
+- The :jira_field:`WBS` field set to the appropriate WBS *leaf* element.
+- The :jira_field:`Story Points` field set to a (non-zero!) estimate of the
+  effort required to complete the epic in terms of :term:`SP`\s (see
+  :ref:`above <sec-effort>`).
 
 Be aware that:
 
@@ -581,10 +595,10 @@ not captured in JIRA. Specifically, it is necessary to define:
 
 .. note::
 
-   Although it is possible—indeed, encouraged—to set the ``assignee`` field in
-   JIRA to the individual who is expected to carry out the bulk of the work in
-   an epic, this does not provide sufficient granularity for those cases when
-   more than one person will be contributing.
+   Although it is possible—indeed, encouraged—to set the
+   :jira_field:`assignee` field in JIRA to the individual who is expected to
+   carry out the bulk of the work in an epic, this does not provide sufficient
+   granularity for those cases when more than one person will be contributing.
 
 .. note::
 
@@ -760,11 +774,11 @@ Closing the Cycle
 -----------------
 
 Assuming everything has gone to plan, by the end of a cycle all deliverables
-should be verified and the corresponding epics should be marked as “done”.
-Marking an epic as done asserts that the concrete deliverable associated with
-the epic has been provided. The total cost of that functionality—the
-:term:`BCWS`, calculated as per :ref:`sec-sps-to-bcws`\—is now claimed as
-value earned.
+should be verified and the corresponding epics should be marked as
+:jira_field:`done`. Marking an epic as :jira_field:`done` asserts that the
+concrete deliverable associated with the epic has been provided. The total
+cost of that functionality—the :term:`BCWS`, calculated as per
+:ref:`sec-sps-to-bcws`\—is now claimed as value earned.
 
 Epics which are in progress at the end of the cycle cannot be closed until
 they have been completed. These epics will spill over into the subsequent
@@ -857,10 +871,10 @@ Broadly, executing a sprint falls into three stages:
 
    Stories should be executed following the instructions in the `Developer
    Guide`_ as regards workflow, coding standards, review requirements, and so
-   on. It is important to ensure that completed stories are marked as “done”:
-   experience suggests that this can easily be forgotten as developers rush on
-   to the next challenge, but it is required to enable us to properly
-   :ref:`track earned value <sec-cycle-value>`.
+   on. It is important to ensure that completed stories are marked as
+   :jira_field:`done`: experience suggests that this can easily be forgotten
+   as developers rush on to the next challenge, but it is required to enable
+   us to properly :ref:`track earned value <sec-cycle-value>`.
 
    .. note::
 
@@ -907,7 +921,7 @@ as appropriate: the former is suitable for planned development activities
 Completing Epics
 ----------------
 
-An epic may be marked as “done” when:
+An epic may be marked as :jira_field:`done` when:
 
 #. It contains at least one completed story;
 #. There are no more incomplete stories defined within it;
@@ -975,8 +989,8 @@ are for convenience only, and are not rigorously enforced.
 
 In particular, note that all issue types are equivalent in terms of the data
 which is loaded to :term:`PMCS`: it makes no distinction between them. Marking
-a bug or improvement as done has exactly the same impact on the global earned
-value state as would completing an equivalent story.
+a bug or improvement as :jira_field:`done` has exactly the same impact on the
+global earned value state as would completing an equivalent story.
 
 Scheduling
 ^^^^^^^^^^
@@ -984,15 +998,17 @@ Scheduling
 In some cases, a ticket may describe emergent work which must be immediately
 by adding it to a :ref:`bucket epic <sec-bucket>`. In other cases, it can be
 deferred to a later cycle, or, after appropriate discussion, may be regarded
-as inappropriate (and can be tagged as Invalid or Won't Fix). This is a
-management decision. When closing a ticket as inappropriate, please take a
-moment to describe why—the individual who reported it will appreciate an
-explanation of why it has been rejected, and it will serve as a useful
-reference the next time somebody suggests the same thing.
+as inappropriate (and can be tagged as :jira_field:`invalid` or
+:jira_field:`won't fix`). This is a management decision. When closing a
+ticket as inappropriate, please take a moment to describe why—the individual
+who reported it will appreciate an explanation of why it has been rejected,
+and it will serve as a useful reference the next time somebody suggests the
+same thing.
 
 A special case of inappropriate tickets are those that duplicate work which
-has already been described elsewhere. Please close these as Invalid, and add a
-JIRA link of type "duplicates" to the original ticket.
+has already been described elsewhere. Please close these as
+:jira_field:`invalid`, and add a JIRA link of type :jira_field:`duplicates`
+to the original ticket.
 
 Relationship to Earned Value
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1028,8 +1044,9 @@ completeness of an epic. That is, if an epic has a total SP count of
 :math:`X`, and the total of stories marked as complete within it is :math:`Y`,
 then :math:`BCWP = BCWS \times Y / X`.
 
-Be aware that stories that marked as “invalid” or “won't fix” in JIRA are not
-included in this calculation: they earn no value.
+Be aware that stories that marked as :jira_field:`invalid` or
+:jira_field:`won't fix` in JIRA are not included in this calculation: they
+earn no value.
 
 :ref:`As we have seen <sec-defining-stories>`, it is not required that the
 total SPs of all the stories contained within an epic (the “planned SPs”) is
