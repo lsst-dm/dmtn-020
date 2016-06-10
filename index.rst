@@ -375,7 +375,7 @@ Milestones are defined at a number of levels: see :ldm:`472` for details. To
 summarize:
 
 Level 1
-   These are chosen by the :term:`NSF`.
+   These are chosen by the :term:`NSF` from a list defined by the Project.
 
 Level 2
    These reflect cross-subsystem commitments. As such, they must be defined in
