@@ -150,10 +150,10 @@ The Control Account Manager
 
 A :term:`control account` is the intersection between the WBS and the OBS.
 Each control account falls under the purview of a :term:`CAM`. Typically
-within DM, a single CAM is responsible for the whole of a third level WBS. That
-is, the manager at the lead institution for a particular component is
-responsible for all work performed on that WBS element, even if that work is
-performed at another institution.
+within DM, a single CAM is responsible for the whole of a third level WBS.
+That is, the manager at the lead institution for a particular component is
+responsible for all work performed on that WBS element, even if some of that
+work is performed at another institution.
 
 .. _sec-evms:
 
