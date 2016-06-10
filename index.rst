@@ -733,9 +733,10 @@ Closing the Cycle
 
 Assuming everything has gone to plan, by the end of a cycle all deliverables
 should be verified and the corresponding epics should be marked as “done”.
-When an epic is marked as done, it is equivalent to having delivered the
-required functionality. The total cost of that functionality—the :term:`BCWS`,
-calculated as per :ref:`sec-sps-to-bcws`\—is now claimed as value earned.
+Marking an epic as done asserts that the concrete deliverable associated with
+the epic has been provided. The total cost of that functionality—the
+:term:`BCWS`, calculated as per :ref:`sec-sps-to-bcws`\—is now claimed as
+value earned.
 
 Epics which are in progress at the end of the cycle cannot be closed until
 they have been completed. These epics will spill over into the subsequent
