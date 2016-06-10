@@ -369,7 +369,7 @@ Level 3
    These reflect cross-third-level WBS commitments. As such, they must be
    defined in discussion between two or more technical managers.
 
-Level 3
+Level 4
    These are internal to a particular third-level WBS, and can therefore be
    specified by a single technical manager.
 
