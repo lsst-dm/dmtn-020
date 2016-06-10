@@ -181,9 +181,9 @@ for each component.
 The total value of work which *should* have been completed by a particular
 date is the :term:`BCWS`. The total value of work which has *actually* been
 completed by the date is the :term:`BCWP`. The total sum expended on the work
-is the :term:`ACWP`. If estimates of both cost and time for every component
-of the system are accurate, at the end of construction, all of these three
-quantities will be equal.
+is the :term:`ACWP`. Theoretically, if estimates of both cost and time for
+every component of the system are accurate, at the end of construction, all of
+these three quantities will be equal.
 
 In practice, estimation is rarely perfect. Imperfect estimates are exposed as
 variances. Specifically, we can show either :term:`SV` (defined as BCWP-BCWS;
