@@ -296,10 +296,23 @@ the remainder of their time to personal research.
 .. note::
 
    Personal research time is *not* chargeable to LSST under any WBS or
-   account. In particular, it is not counted as level of effort. The Project
-   expects to pay the full rate for an individual with research time who
-   contributes 1,440 hours to the project, and does not require any accounting
-   of the remaining 360 hours. See also the discussion in :lpm:`81` section 7.
+   account, including level of effort. The Project expects to pay the full
+   rate for an individual with research time who contributes 1,440 hours to
+   the project, and does not require any accounting of the remaining 360
+   hours.
+
+   When :ref:`reporting actual costs <sec-actuals>`, it may be helpful to
+   consider the following examples:
+
+   A developer for which the total annual cost (salary, overheads, etc) is
+   :math:`$A` charges an hourly rate of :math:`$A / 1800`.
+
+   A scientist with total annual cost :math:`$B` charges an hourly rate of
+   :math:`$B / 1440`.
+
+   No further corrections are necessary. In particular, there is no difference
+   in the way working hours are measured, or the conversion of story points
+   (:term:`SP`\s; discussed below) to hours.
 
 .. note::
 
