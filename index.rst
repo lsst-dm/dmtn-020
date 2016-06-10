@@ -728,7 +728,7 @@ Revising the Plan
 
 During the cycle, it is possible that changing circumstances will cause
 reality not to exactly match with the plan. This will ultimately cause a
-:ref:`variance <sec-evms>`, which should be avoided and which—if it becomes
+:ref:`variance <sec-evms>`, which should be minimized and which—if it becomes
 significant enough—will require a narrative.
 
 After the plan for the cycle has been entered into JIRA, it is under change
