@@ -996,6 +996,11 @@ has already been described elsewhere. Please close these as
 :jira_field:`invalid`, and add a JIRA link of type :jira_field:`duplicates`
 to the original ticket.
 
+Tickets which are obviously filed by mistake may simply be deleted rather than
+setting a special status. Please only do this when you are sure there is no
+value to leaving an audit trail, and when you have verified that the original
+author of the ticket is aware of and understands the outcome.
+
 Relationship to Earned Value
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
