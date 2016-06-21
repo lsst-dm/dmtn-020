@@ -1163,6 +1163,12 @@ relevant AURA contracts officer (check with the :ref:`project manager
 <sec-sprinting>`, it is *not* appropriate to simply allocate actual costs
 based on SP totals.
 
+Typically, expenses are accrued at a broadly constant rate for each
+individual: salaries do not vary much from month to month. However, in some
+months, a given developer may be significantly less productive than others (for
+example, due to paid vacation). In these cases, it is appropriate to spread
+the cost across all the WBSs elements the developer has been working on.
+
 A typical invoice breakout should be supplied in a spreadsheet similar to that
 shown in :numref:`tab-invoice`.
 
