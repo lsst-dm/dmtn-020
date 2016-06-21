@@ -838,9 +838,10 @@ involving the wider team. This is a management decision.
 
 It is not required to break all epics down into stories before the cycle
 begins: it may be more appropriate to first schedule a few exploratory stories
-and use them to inform the development of the rest of the epic. However, it is
-required that all stories which will be :ref:`worked in an upcoming sprint
-<sec-sprinting>` are defined before the sprint starts.
+and use them to inform the development of the rest of the epic. However, do
+break epics down to describe the stories which will be :ref:`worked in an
+upcoming sprint <sec-sprinting>` before the sprint starts. When doing so, you
+may wish to leave some spare time to handle :ref:`emergent work <sec-bugs>`.
 
 Note that there is no relationship enforced between the SP total estimated for
 the epic and the sum of the SPs of its constituent stories. It is therefore
