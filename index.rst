@@ -505,7 +505,7 @@ changed at any time, without any sort of approval process. Of course, for this
 process to be practically useful, these epics should fit within the scope and
 budget of the relevant planning package.
 
-Fine grained planning of this sort can be usefiul for "bottom-up" analysis of
+Fine grained planning of this sort can be useful for "bottom-up" analysis of
 the work to be performed and validation of the resources needed to implement a
 particular planning package. Thinking through the plan in this way can help in
 building up a detailed plan in a flexible, agile way, while also ensuring that
@@ -1010,15 +1010,15 @@ global earned value state as would completing an equivalent story.
 Scheduling
 ^^^^^^^^^^
 
-In some cases, a ticket may describe emergent work which must be immediately
-by adding it to a :ref:`bucket epic <sec-bucket>`. In other cases, it can be
-deferred to a later cycle, or, after appropriate discussion, may be regarded
-as inappropriate (and can be tagged as :jira_field:`invalid` or
-:jira_field:`won't fix`). This is a management decision. When closing a
-ticket as inappropriate, please take a moment to describe why—the individual
-who reported it will appreciate an explanation of why it has been rejected,
-and it will serve as a useful reference the next time somebody suggests the
-same thing.
+In some cases, a ticket may describe emergent work which must be addressed
+immediately by adding it to a :ref:`bucket epic <sec-bucket>`. In other cases,
+it can be deferred to a later cycle, or, after appropriate discussion, may be
+regarded as inappropriate (and can be tagged as :jira_field:`invalid` or
+:jira_field:`won't fix`). This is a management decision. When closing a ticket
+as inappropriate, please take a moment to describe why—the individual who
+reported it will appreciate an explanation of why it has been rejected, and it
+will serve as a useful reference the next time somebody suggests the same
+thing.
 
 A special case of inappropriate tickets are those that duplicate work which
 has already been described elsewhere. Please close these as
