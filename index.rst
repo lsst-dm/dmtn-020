@@ -522,6 +522,37 @@ cycle, technical managers work with the DM Project Manager and the Project
 Controls Specialist to ensure their plan for the cycle is well defined in both
 :term:`JIRA` and :term:`PMCS`.
 
+.. _sec-cycle-cadence:
+
+Cycle Cadence & Release Planning
+--------------------------------
+
+At the end of a cycle, the :term:`SQuaRE` team will coordinate a public
+release of the codebase. This release will consist of a coherent, well tested
+set of packages, together with release notes, documentation and performance
+characterization.
+
+In order to make this possible, the release will be tagged two weeks before
+the end of the cycle. All work which is destined for the release must have
+been merged to the ``master`` branch by this point. For the remainder of the
+cycle, the priority is to provide bug fixes, documentation and other material
+in support of the release as requested by SQuaRE. In so far as it does not
+interfere with that priority, other work may continue as normal, with the
+caveat that new development will not be included in a release until the end of
+the subsequent cycle.
+
+Throughout this process, the SQuaRE technical manager will advertise the
+current state of the release to all interested parties using the `LSST
+Community Forum`_.
+
+Technical managers of the other groups are responsible for providing to SQuaRE
+such material as is required to support the release. This will include a set
+of release notes which provide a summary of work performed over the course of
+the cycle. Please liase with SQuaRE in advance to establish the appropriate
+format and granularity of these notes.
+
+.. _LSST Community Forum: https://community.lsst.org/
+
 Defining The Plan
 -----------------
 
@@ -541,6 +572,9 @@ While developing the cycle, please:
   before this cycle is complete;
 - Leave time for other necessary activities, such as cross-team collaboration
   meetings and writing documentation.
+- Per the :ref:`cycle cadence <sec-cycle-cadence>`, ensure the that new
+  development will conclude (or, at a minimum, be in a releasable state) in
+  time for the end of cycle release.
 
 Obviously, ensure that the programme of work being developed is achievable by
 your team in the time available: ultimately, you will want to compare the
@@ -1351,6 +1385,12 @@ Glossary
    Sprint
       A defined period of work for a particular team. Typically, sprints are
       one calendar month long, but this is not required.
+
+   SQuaRE
+      Science Quality and Reliability Engineering. One of the teams which
+      makes up the Data Management Group. SQuaRE coordinates the end-of-cycle
+      release of the codebase (refer to the :ref:`sec-cycle-cadence`), and
+      therefore plays a pivotal role in planning.
 
    Story
       A JIRA issue type describing a scheduled, self-contained task worked as
