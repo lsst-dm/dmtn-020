@@ -26,3 +26,4 @@ if subprocess.check_output(["git", "status", "--porcelain"]).decode().strip():
 g['html_context']['last_revised'] = "%s" % (git_date,)
 
 extensions.append("documenteer.sphinxext")
+intersphinx_mapping['dmdev'] = ('https://developer.lsst.io', None)

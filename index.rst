@@ -566,6 +566,15 @@ into the plan must have:
 - The :jira_field:`Story Points` field set to a (non-zero!) estimate of the
   effort required to complete the epic in terms of :term:`SP`\s (see
   :ref:`above <sec-effort>`).
+- For non-bucket epics, two named individuals listed in the
+  :jira_field:`reviewers` field. The reviewers should:
+
+    - Be from a team other than that which is scheduled to work on the epic;
+    - Have agreed to act as reviewers for the epic;
+    - Check and confirm the epic deliverable before it is loaded to the plan.
+
+  See :ref:`sec-epic-done` for a detailed description of the epic review
+  process.
 
 Be aware that:
 
@@ -790,18 +799,19 @@ Closing the Cycle
 Assuming everything has gone to plan, by the end of a cycle all deliverables
 should be verified and the corresponding epics should be marked as
 :jira_field:`done`. Marking an epic as :jira_field:`done` asserts that the
-concrete deliverable associated with the epic has been provided. The total
-cost of that functionality—the :term:`BCWS`, calculated as per
+concrete deliverable associated with the epic has been provided; both
+:ref:`reviewers <sec-epic-done>` must agree that the epic has been completed.
+The total cost of that functionality—the :term:`BCWS`, calculated as per
 :ref:`sec-sps-to-bcws`\—is now claimed as value earned.
 
 Epics which are in progress at the end of the cycle cannot be closed until
 they have been completed. These epics will spill over into the subsequent
 cycle. It is *not* appropriate to close an in-progress epic with a concrete
-deliverable until that deliverable has been achieved: instead, a variance will
-be shown until the epic can be closed. Obviously, this will impact the labor
-available for other activities in the next cycle. (This does not apply to
-:ref:`bucket epics <sec-bucket>`, which are, by their nature,
-:term:`timebox`\ed within the cycle).
+deliverable until that epic has successfully passed review: a variance will be
+shown until the epic can be closed. A natural consequence of this is that
+epics should be submitted for review well in advance of the end of the cycle.
+(This does not apply to :ref:`bucket epics <sec-bucket>`, which are, by their
+nature, :term:`timebox`\ed within the cycle).
 
 Similar logic applies to epics which *have not been started*: if the planned
 start date is in the past, they :ref:`can no longer be rescheduled
@@ -933,10 +943,26 @@ as appropriate: the former is suitable for planned development activities
 
 .. _sec-epic-done:
 
-Completing Epics
-----------------
+Reviewing and Completing Epics
+------------------------------
 
-An epic may be marked as :jira_field:`done` when:
+In order to ensure that work is properly described and is performed to an
+appropriate standard, all non-bucket epics are required to undergo peer review
+before they may be marked as :jira_field:`done`.
+
+When :ref:`each epic is defined <sec-planning-epics>`, the responsible
+technical manager is required to recruit two reviewers who will carry out the
+review of that epic. These reviewers must be from a team other than that which
+will carry out the work; managers are encouraged to consult their peers in
+other teams in order to identify suitable individuals.
+
+When reviewers have been identified, the technical manager should discuss the
+epic with them. In particular, *before the epic is scheduled*, the reviewers
+should verify that it has concrete, well-defined, well-understood goals and
+deliverables, and that they are comfortable they will be able to verify when
+those goals has been achieved.
+
+An epic is ready for review when:
 
 #. It contains at least one completed story;
 #. There are no more incomplete stories defined within it;
@@ -945,10 +971,37 @@ An epic may be marked as :jira_field:`done` when:
    deliverable has been achieved.
 
 Note that it is not permitted to close an epic without defining at least one
-story within it. Empty epics can never be completed.
+story within it: empty epics can never be completed.
 
-When an epic is marked as complete, :ref:`all of its value is earned
-<sec-cycle-value>`.
+At this point, the technical manager should mark it as :jira:`in review`. The
+reviewers are now responsible for verifying that the epic has been completed.
+In particular, they should verify the existence of test cases, documentation,
+runnable code, reports and/or other artefacts which verify the work has been
+done to the level previously agreed.
+
+Review at this level is not expected to include detailed comments on the code:
+while reviewers are free to discuss any concerns, the expectation is that code
+review has been carried out :ref:`in the usual way
+<dmdev:workflow-code-review>` as the work was carried out.
+
+This review is explicitly *not* a design review: assuming the end result of
+the epic meets its goal, it is not appropriate for reviewers to request the
+work be rethought or redesigned to match their preferences. (Note, though,
+that it is appropriate at the outset for reviewers to request that one of the
+concrete goals for an epic be a successful design review.)
+
+*Both* reviewers are required to sign off on the epic before it can be marked
+as complete; they should indicate their agreement on the relevant JIRA ticket.
+We do not mandate any particular mechanism by which reviewers should divide
+the work between them: at their discretion, they may choose to work
+independently, or to split review tasks between themselves.
+
+If the reviewers do not agree that the epic has been completed successfully,
+they should collaborate with the technical manager to define more stories to
+address the outstanding issues.
+
+When both reviewers agree, the epic can be marked as :jira_field:`done`. At
+this point, :ref:`all of its value is earned <sec-cycle-value>`.
 
 .. _sec-bugs:
 
