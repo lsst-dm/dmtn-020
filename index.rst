@@ -582,6 +582,14 @@ Specialist.
    the contents of the epic in enough detail to provide an overall SP
    estimate and deliverables, though.
 
+With the agreement of the Project Manager and Project Controls Specialist, it
+is acceptable to load the plan for a cycle in three month "chunks". That is,
+the plan for the first three months of the cycle is loaded before the start of
+the cycle, and the remaining part of the plan covering the final three months
+is loaded before the start of the fourth month. This approach provides an
+opportunity to fine-tune the plan for the second half of the cycle, without
+requiring a formal :ref:`change request <sec-cycle-change>`.
+
 .. _Google Drive: https://drive.google.com/drive/u/0/folders/0BxgFbTQURmr6TmxXSm5Dc1JJWk0
 
 .. _sec-bucket:
