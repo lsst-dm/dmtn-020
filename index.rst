@@ -491,6 +491,26 @@ take :math:`A` or :math:`B` two cycles.
 BCWP and BCWS are both :math:`$6X`. At this point, the project is complete:
 there is no schedule variance, and a cost variance of :math:`+$1.5X`.
 
+Epic-Based Long Term Plans
+--------------------------
+
+As per :ref:`sec-cycle-plan`, the :term:`epic` is the standard level of
+granularity for planning work over the relatively short term (periods of
+several months). However, epics may also be valuable for longer-term,
+fine-grained planning. When a detailed description of work for a given
+planning package is known, it can and should be described in JIRA through a
+series of epics assigned to the appropriate cycles. As long as they have not
+been scheduled for the current cycle, these epics can be freely created and
+changed at any time, without any sort of approval process. Of course, for this
+process to be practically useful, these epics should fit within the scope and
+budget of the relevant planning package.
+
+Fine grained planning of this sort can be usefiul for "bottom-up" analysis of
+the work to be performed and validation of the resources needed to implement a
+particular planning package. Thinking through the plan in this way can help in
+building up a detailed plan in a flexible, agile way, while also ensuring that
+scope, cost and schedule are carefully controlled.
+
 .. _sec-cycle-plan:
 
 Short Term Planning
