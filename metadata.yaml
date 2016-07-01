@@ -17,7 +17,15 @@ doc_title: 'Project Management Guide'
 
 # Author names, ordered as a list. Each author name should be formatted as 'First Last'
 authors:
+    - 'Jacek Becla'
+    - 'Frossie Economou'
+    - 'Margaret Gelman'
+    - 'Jeff Kantor'
+    - 'Simon Krughoff'
+    - 'Kevin Long'
+    - 'Fritz Mueller'
     - 'John Swinbank'
+    - 'Xiuqin Wu'
 
 # Current document version
 last_revised: None  # Will be derived from git commit history.

@@ -1,15 +1,24 @@
 .. vim: ts=3:sts=3
 
+.. Define a role for formatting text (roughly)
+   as it appears in JIRA status fields.
+
+.. role:: jira_field
+
+.. raw:: html
+
+   <style> .jira-field { text-transform: uppercase;
+                         font-size: smaller;
+                         border: 1px solid;
+                         border-radius: 4px;
+                         padding: 2px; }
+   </style>
+
 :tocdepth: 1
-
-.. warning::
-
-   This document is still under revision: see :jira:`DM-6447` for current work
-   in progress.
 
 This document provides an informal guide to the everyday mechanisms
 underpinning LSST Data Management's approach to project management. It is
-intended to be read in conjunction with :ldm:`465`, which provides a formal
+intended to be read in conjunction with :ldm:`472`, which provides a formal
 description of the project management process and requirements.
 
 Important Documents
@@ -25,18 +34,28 @@ Management.
 
 :lpm:`43`, :lpm:`44`
    *WBS Structure* and *WBS Dictionary*, respectively. The former shows the
-   overall work breakdown structure for the whole project.
+   overall work breakdown structure for the whole project. Note that these
+   documents are periodically extracted from the master :term:`PMCS` system,
+   and therefore occasionally do not reflect the most recent changes.
 
 :lpm:`98`
    *LSST Project Controls System Description*. Describes and defines the
    components of the :term:`PMCS` used to manage and report on the overall
    LSST Project.
 
-:ldm:`465`
+:ldm:`472`
    *LSST DM Project Management and Tools*. The formal, high-level document
    which defines the project management process used by LSST DM. The present
    document may be thought of as a guide to applying the principles defined
-   in :ldm:`465` in practice.
+   in :ldm:`472` in practice.
+
+In addition, you should be familiar with the `EVMS Training – CAM 101`_
+presented by the :ref:`Project Controls Specialist <sec-contacts>` at the
+`LSST 2014 Meeting`_. `Slides are available as a PDF`_ for easy reference.
+
+.. _EVMS Training – CAM 101: https://project.lsst.org/meetings/lsst2014/node/100
+.. _LSST 2014 Meeting: https://project.lsst.org/meetings/lsst2014/
+.. _Slides are available as a PDF: _static/EVMS_Training.pdf
 
 .. _sec-contacts:
 
@@ -55,7 +74,7 @@ Technical Managers
 ==================
 
 This guide is primarily aimed at the LSST DM technical managers. Technical
-managers report directly to the DM Project Manager. Per :ldm:`465`, they are
+managers report directly to the DM Project Manager. Per :ldm:`472`, they are
 expected to:
 
 - Assemble the team capable of delivering work scoped through the :term:`WBS`
@@ -126,8 +145,8 @@ Organization Breakdown Structure
 --------------------------------
 
 In parallel with the WBS, we have an :term:`OBS`, which assigns each
-institution involved in the project a unique numeric identifier. Those
-directly relevant to DM are:
+institution involved in the project a unique numeric identifier. The OBS is
+defined in :lpm:`98`. Those institutions directly relevant to DM include:
 
 ==== ========================
 OBS  Institution
@@ -145,10 +164,10 @@ The Control Account Manager
 
 A :term:`control account` is the intersection between the WBS and the OBS.
 Each control account falls under the purview of a :term:`CAM`. Typically
-within DM, a single CAM is responsible for the whole of a third level WBS. That
-is, the manager at the lead institution for a particular component is
-responsible for all work performed on that WBS element, even if that work is
-performed at another institution.
+within DM, a single CAM is responsible for the whole of a third level WBS.
+That is, the manager at the lead institution for a particular component is
+responsible for all work performed on that WBS element, even if some of that
+work is performed at another institution.
 
 .. _sec-evms:
 
@@ -176,9 +195,9 @@ for each component.
 The total value of work which *should* have been completed by a particular
 date is the :term:`BCWS`. The total value of work which has *actually* been
 completed by the date is the :term:`BCWP`. The total sum expended on the work
-is the :term:`ACWP`. If estimates of both cost and time for every component
-of the system are accurate, at the end of construction, all of these three
-quantities will be equal.
+is the :term:`ACWP`. Theoretically, if estimates of both cost and time for
+every component of the system are accurate, at the end of construction, all of
+these three quantities will be equal.
 
 In practice, estimation is rarely perfect. Imperfect estimates are exposed as
 variances. Specifically, we can show either :term:`SV` (defined as BCWP-BCWS;
@@ -202,29 +221,31 @@ Labor Costs
 Our methodology is designed to avoid exposing individual salaries to the wider
 project. Therefore, when calculating labor costs for earned value purposes, we
 do not rely on a known cost per individual. Instead, all staff are assigned to
-one of a small number of types (scientist, senior scientist, developer, senior
-developer), each of which is assigned a nominal cost level which does not vary
-between individuals, or, indeed, across institutions. This nominal cost does
-not correspond to a particular individual, but is a broadly defined
-expectation.
+one of a number of types (typically within DM we use scientist, senior
+scientist, developer or senior developer, but there are a several alternatives
+available at the project level: see :lpm:`81` table 5-2 for the full list),
+each of which is assigned a nominal cost level according to institution: it
+does not vary between individuals of the same type within the same
+institution. This nominal cost does not, therefore, correspond to a particular
+individual, but is a broadly defined expectation. See :lpm:`81` for details.
 
 .. _sec-variance-narrative:
 
 Variance Narratives
 -------------------
 
-.. caution:: Confirm exact thresholds with Kevin.
-
-   There's some talk of a 10% threshold, but I believe (per input from Jacek)
-   that it's not currently enforced. Waiting for Kevin to respond to enquiry.
-
 Every month, the :term:`eCAM` tool is updated from PMCS to reflect the latest
-earned value status. If either schedule or cost variance (SV or CV) is more
-than -$100k, you will be required to provide a “narrative”. This is divided
-into two parts: you must explain why the variance arose, and what action will
-be taken to correct it (e.g. slipping work into the future, or diverting
-resources from elsewhere to make up the shortfall). The narrative is entered
-directly into eCAM.
+earned value status. If either cost or schedule is behind schedule by more
+than either $100,000 or 10% you are required to provide a “narrative”. This is
+divided into two parts: you must explain why the variance arose, and what
+action will be taken to correct it (e.g. slipping work into the future, or
+diverting resources from elsewhere to make up the shortfall). The narrative is
+entered directly into eCAM.
+
+.. note::
+
+   In future, narratives may also be required for positive variances (i.e.
+   running ahead of schedule).
 
 Variance is calculated on a monthly basis; variance narratives are due in the
 second week of the calendar month following that to which they apply (refer to
@@ -243,12 +264,12 @@ may be particularly the case for technical managers or others in leadership
 roles within the project. This work is referred to as :term:`LOE`: it is
 assumed to earn value simply through the passage of time.
 
-:ldm:`465` provides a detailed definition of the types of work it is
+:ldm:`472` provides a detailed definition of the types of work it is
 permissible to regard as LOE. In general, we strive to minimize the fraction
 of our effort which is devoted to LOE activities and favour those which are
 more directly accountable.
 
-The assumption encoded in :ldm:`465` is that developers will spent 30% of
+The assumption encoded in :ldm:`472` is that developers will spent 30% of
 their time on LOE type activities, and the remaining 70% of their effort is
 tracked against concrete deliverables.
 
@@ -271,6 +292,37 @@ devote this effort directly to LSST.
 Appointment as a “scientist” includes a 20% personal research time allowance.
 That is, scientists are expected to devote 1,440 hours per year to LSST, and
 the remainder of their time to personal research.
+
+.. note::
+
+   Personal research time is *not* chargeable to LSST under any WBS or
+   account, including level of effort. The Project expects to pay the full
+   rate for an individual with research time who contributes 1,440 hours to
+   the project, and does not require any accounting of the remaining 360
+   hours.
+
+   When :ref:`reporting actual costs <sec-actuals>`, it may be helpful to
+   consider the following examples:
+
+   A developer for which the total annual cost (salary, overheads, etc) is
+   :math:`$A` charges an hourly rate of :math:`$A / 1800`.
+
+   A scientist with total annual cost :math:`$B` charges an hourly rate of
+   :math:`$B / 1440`.
+
+   No further corrections are necessary. In particular, there is no difference
+   in the way working hours are measured, or the conversion of story points
+   (:term:`SP`\s; discussed below) to hours.
+
+.. note::
+
+   Some individuals serve roles within DM which are referred to as
+   “scientist”, such as the Project Scientist and Pipelines Scientist. These
+   roles are not equivalent to being granted personal research time, but
+   reflect a level of scientific oversight within the project. Time spent
+   performing this role must be accounted for in the usual way (either as LOE
+   or as providing deliverables), and charged to an account agreed with the
+   :ref:`DM Project Manager <sec-contacts>`.
 
 Our base assumption is that 30% of an individual's LSST time (i.e. 540
 hours/year for a developer, 432 hours/year for a scientist) are devoted to
@@ -330,15 +382,7 @@ when :term:`resource loading`.
 Long Term Planning
 ==================
 
-.. caution::
-
-   I'm providing just a brief description and references to :ldm:`465` here
-   because the DMBP project isn't yet in place. I don't think it's appropriate
-   for this document to be normative (i.e. it should describe, rather than
-   define, procedure), and there aren't yet a list of questions or gotchas to
-   address.
-
-Refer to :ldm:`465` for a description of the long-term planning system. In
+Refer to :ldm:`472` for a description of the long-term planning system. In
 brief, the plan for the duration of construction is embodied in:
 
 #. A series of *planning packages*, which describe major pieces of technical
@@ -355,11 +399,11 @@ at 1.02C.04.02, see the material on the :ref:`sec-wbs`). They may not cut
 across the WBS structure, but rather must refer to that particular
 fourth-level element and its children.
 
-Milestones are defined at a number of levels: see :ldm:`465` for details. To
+Milestones are defined at a number of levels: see :ldm:`472` for details. To
 summarize:
 
 Level 1
-   These are chosen by the :term:`NSF`.
+   These are chosen by the :term:`NSF` from a list defined by the Project.
 
 Level 2
    These reflect cross-subsystem commitments. As such, they must be defined in
@@ -379,16 +423,24 @@ use within DM, but even here properly adhering to the plan is vital: your
 colleagues in other teams will use these milestones to align their schedules
 with yours, so they rely on you to be accurate.
 
+.. _sec-long-term-research:
+
+Planning Research Work
+----------------------
+
+In order for the DM system to reach its science goals, new algorithmic or
+engineering approaches must sometimes be researched. It is appropriate to
+budget time for this research work in planning packages. However, areas where
+successful delivery of the DM system is dependent on speculative research are
+a source of :term:`risk`: wherever possible, the plan should also provide for
+a fallback option to be taken when research objectives are not achieved. When
+fallback options are not available, discuss how to account for this risk with
+the :ref:`DM Project Manager <sec-contacts>`.
+
 .. _sec-long-term-value:
 
 Earned Value and Planning Packages
 ----------------------------------
-
-.. caution::
-
-   This is my attempt to think through the issues and figure out the
-   mechanism. It needs Jacek and/or Kevin to confirm if this is what we're
-   actually doing.
 
 A planning package has a duration and a staff assignment (it is “resource
 loaded”). Given a (nominal) cost per unit time of the staff involved (see
@@ -407,36 +459,37 @@ in progress.
 
 An example may serve to illustrate.
 
-Planning package ``P`` is baselined to start at the beginning of F17 and run
-through to the end of F18, i.e. a total of three cycles, or 18 months. It has
-two members of staff\—``A`` and ``A``\— assigned to it full time. Both share the same
-nominal cost of ``$X`` per cycle.
+Planning package :math:`P` is baselined to start at the beginning of F17 and
+run through to the end of F18, i.e. a total of three cycles, or 18 months. It
+has two members of staff\—:math:`A` and :math:`B`\— assigned to it full time.
+Both share the same nominal cost of :math:`$X` per cycle.
 
 The BCWS for the total planning package is the cost per cycle multiplied by
-the number of cycles: ``3 * $2X = $6X``.
+the number of cycles: :math:`3 \times $2X = $6X`.
 
 In F17, both members of staff are assigned to six-month epic derived from
-``P``. The BCWS of the epic is ``$2X``. The remaining value in the planning
-package is ``$4X``.
+:math:`P`. The BCWS of the epic is :math:`$2X`. The remaining value in the
+planning package is :math:`$4X`.
 
-At the end of F17, the epic is completed. The BCWP and ACWP are both ``$2X``.
-The work is on cost and on schedule: there is no variance.
+At the end of F17, the epic is completed. The BCWP and ACWP are both
+:math:`$2X`.  The work is on cost and on schedule: there is no variance.
 
-In S18, ``A`` is reassigned and is unable to work on a new epic derived from
-``P``. ``B`` continues the work alone, completing an epic worth ``$X`` by the
-end of the cycle. The BCWP and ACWP are now both ``$3X``; there is no cost
-variance.  However, the BCWS is ``$4X``: compared to the original schedule for
-the planning package, there is a schedule variance of ``-$X``. There is a
-total of ``$3K`` left in the planning package.
+In S18, :math:`A` is reassigned and is unable to work on a new epic derived
+from :math:`P`. :math:`B` continues the work alone, completing an epic worth
+:math:`$X` by the end of the cycle. The BCWP and ACWP are now both
+:math:`$3X`; there is no cost variance.  However, the BCWS is :math:`$4X`:
+compared to the original schedule for the planning package, there is a
+schedule variance of :math:`-$X`. There is a total of :math:`$3K` left in the
+planning package.
 
-In F18, ``C`` joins the project. ``C`` only costs ``$0.5X`` per cycle, but is
-a fast worker: she can complete in one cycle work that would take ``A`` or
-``B`` two cycles.
+In F18, :math:`C` joins the project. :math:`C` only costs :math:`$0.5X` per
+cycle, but is a fast worker: she can complete in one cycle work that would
+take :math:`A` or :math:`B` two cycles.
 
-``B`` and ``C`` work together through F18. The ACWP for the cycle is
-``$1.5X``; the BCWP is ``$3X``. The ACWP to date ``$4.5X``. The BCWP and BCWS
-are both ``$6X``. At this point, the project is complete: there is no schedule
-variance, and a cost variance of ``+$1.5X``.
+:math:`B` and :math:`C` work together through F18. The ACWP for the cycle is
+:math:`$1.5X`; the BCWP is :math:`$3X`. The ACWP to date :math:`$4.5X`. The
+BCWP and BCWS are both :math:`$6X`. At this point, the project is complete:
+there is no schedule variance, and a cost variance of :math:`+$1.5X`.
 
 Epic-Based Long Term Plans
 --------------------------
@@ -452,7 +505,7 @@ changed at any time, without any sort of approval process. Of course, for this
 process to be practically useful, these epics should fit within the scope and
 budget of the relevant planning package.
 
-Fine grained planning of this sort can be usefiul for "bottom-up" analysis of
+Fine grained planning of this sort can be useful for "bottom-up" analysis of
 the work to be performed and validation of the resources needed to implement a
 particular planning package. Thinking through the plan in this way can help in
 building up a detailed plan in a flexible, agile way, while also ensuring that
@@ -463,7 +516,7 @@ scope, cost and schedule are carefully controlled.
 Short Term Planning
 ===================
 
-Per :ldm:`465`, short term planning is carried out in blocks referred to as
+Per :ldm:`472`, short term planning is carried out in blocks referred to as
 :term:`cycle`\s, which (usually) last for six months. Before the start of a
 cycle, technical managers work with the DM Project Manager and the Project
 Controls Specialist to ensure their plan for the cycle is well defined in both
@@ -502,16 +555,17 @@ accurately.
 Defining Epics
 ^^^^^^^^^^^^^^
 
-As described in LDM-465, the plan for a six month cycle fundamentally consists
+As described in :ldm:`472`, the plan for a six month cycle fundamentally consists
 of a set of resource loaded :term:`epic`\s defined in JIRA. Each epic loaded
 into the plan must have:
 
-- A concrete, well defined deliverable *or* be clearly described as a “bucket”;
-- The ``cycle`` field set to the appropriate cycle;
-- The ``WBS`` field set to the appropriate WBS *leaf* element.
-- The ``Story Points`` field set to a (non-zero!) estimate of the effort
-  required to complete the epic in terms of :term:`SP`\s (see :ref:`above
-  <sec-effort>`).
+- A concrete, well defined deliverable *or* be clearly described as a
+  “:ref:`bucket <sec-bucket>`\”;
+- The :jira_field:`cycle` field set to the appropriate cycle;
+- The :jira_field:`WBS` field set to the appropriate WBS *leaf* element.
+- The :jira_field:`Story Points` field set to a (non-zero!) estimate of the
+  effort required to complete the epic in terms of :term:`SP`\s (see
+  :ref:`above <sec-effort>`).
 
 Be aware that:
 
@@ -555,10 +609,17 @@ not captured in JIRA. Specifically, it is necessary to define:
 
 .. note::
 
-   Although it is possible—indeed, encouraged—to set the ``assignee`` field in
-   JIRA to the individual who is expected to carry out the bulk of the work in
-   an epic, this does not provide sufficient granularity for those cases when
-   more than one person will be contributing.
+   Although it is possible—indeed, encouraged—to set the
+   :jira_field:`assignee` field in JIRA to the individual who is expected to
+   carry out the bulk of the work in an epic, this does not provide sufficient
+   granularity for those cases when more than one person will be contributing.
+
+.. note::
+
+   In fact, it is only required to provide a staff assignment in terms of
+   “resource types” (i.e. scientists, senior scientists, developers, senior
+   developers, etc). In practice, to ensure your team is evenly loaded, it is
+   usually necessary to break it down to named individuals.
 
 This information is most conveniently captured in per-team spreadsheets which
 are supplied to the Project Controls Specialist before the start of the
@@ -592,9 +653,36 @@ requiring a formal :ref:`change request <sec-cycle-change>`.
 
 .. _Google Drive: https://drive.google.com/drive/u/0/folders/0BxgFbTQURmr6TmxXSm5Dc1JJWk0
 
+.. _sec-research-epics:
+
+Scheduling Research Work
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+As discussed in :ref:`sec-long-term-research`, research is sometimes required
+to meet our objectives. However, it is not a natural fit to our usual planning
+process, as it is speculative in its nature: it is often impossible to produce
+a series of logical steps that will lead to the required result. We
+acknowledge, therefore, that scheduling an epic to deliver some particular new
+algorithm based on the results of research is impossible: we cannot predict
+with any confidence when the breakthrough will occur.
+
+We therefore schedule research in :term:`timebox`\ed epics: we allocate a
+certain amount of time based on the resources available, rather than on an
+estimate of time to completion. However, note that these timeboxed epics
+should still provide concrete deliverables: they are not open-ended “buckets”
+as discussed elsewhere. Since we cannot rely on the successful completion of
+the research project as a deliverable, we instead require that a summary of
+the research completed to date be delivered at the completion of the time
+allocated. The presentation and format of this report will vary depending on
+the nature of the research (a `technical note`_ is a likely option), and,
+:ref:`as usual <sec-planning-epics>`, should be defined before the epic is
+ingested to :term:`PMCS`.
+
+.. _technical note: https://sqr-000.lsst.io/
+
 .. _sec-bucket:
 
-Bucket epics
+Bucket Epics
 ^^^^^^^^^^^^
 
 Some work is “emergent”: we can predict in advance that it will be necessary,
@@ -618,8 +706,6 @@ really necessary and appropriate.
 
 Mapping SPs to BCWS
 ^^^^^^^^^^^^^^^^^^^
-
-.. caution:: I think this is correct, but please check.
 
 As discussed above, the amount of work to be performed is :ref:`estimated in
 terms of SPs <sec-effort>`, while the :ref:`earned value <sec-evms>` system
@@ -670,7 +756,7 @@ Revising the Plan
 
 During the cycle, it is possible that changing circumstances will cause
 reality not to exactly match with the plan. This will ultimately cause a
-:ref:`variance <sec-evms>`, which should be avoided and which—if it becomes
+:ref:`variance <sec-evms>`, which should be minimized and which—if it becomes
 significant enough—will require a narrative.
 
 After the plan for the cycle has been entered into JIRA, it is under change
@@ -678,7 +764,11 @@ control: it can only be altered through a :term:`LCR` approved by the
 :term:`CCB`. In order to reschedule (or remove entirely from the cycle) an
 epic which has not yet started, the technical manager should work with the
 :ref:`Project Controls Specialist <sec-contacts>` to prepare and submit an
-appropriate LCR to the monthly CCB meeting.
+appropriate LCR to the CCB. The CCB meets on the third Wednesday of the
+calendar month; change requests must be submitted well in advance of this.
+Therefore, it is advisable to take time early in the calendar month to review
+epics due to start in the *following* month and to issue an LCR on them if
+necessary.
 
 Note that it is *not possible* to alter history by means of an LCR. That is,
 if the scheduled start date of an epic is already in the past, it is not
@@ -698,10 +788,11 @@ Closing the Cycle
 -----------------
 
 Assuming everything has gone to plan, by the end of a cycle all deliverables
-should be verified and the corresponding epics should be marked as “done”.
-When an epic is marked as done, it is equivalent to having delivered the
-required functionality. The total cost of that functionality—the :term:`BCWS`,
-calculated as per :ref:`sec-sps-to-bcws`\—is now claimed as value earned.
+should be verified and the corresponding epics should be marked as
+:jira_field:`done`. Marking an epic as :jira_field:`done` asserts that the
+concrete deliverable associated with the epic has been provided. The total
+cost of that functionality—the :term:`BCWS`, calculated as per
+:ref:`sec-sps-to-bcws`\—is now claimed as value earned.
 
 Epics which are in progress at the end of the cycle cannot be closed until
 they have been completed. These epics will spill over into the subsequent
@@ -720,21 +811,6 @@ done.
 
 Execution
 =========
-
-.. caution::
-
-   The description below focuses on a sprint-based monthly cadence. I *think*,
-   based on :ldm:`465`, that this is globally applicable. However, I'm not
-   sure if some teams (NCSA, SQuaRE?) don't sprint, and I'm not sure what
-   subtleties are introduced by Kanban rather than Scrum. Please check!
-
-.. caution::
-
-   The :ldm:`465` draft mentions various concepts that aren't currently
-   standard practice (reports during all hands standups, a central DM board,
-   scripts for monitoring the status of JIRA, etc). This document aims to be
-   descriptive rather than normative, so these are not discussed here. After a
-   fleshed-out policy has been developed, we can add them.
 
 Having :ref:`thus <sec-cycle-plan>` defined the plan for a cycle, we execute
 it by means of a series of month-long sprints. In this section, we detail the
@@ -762,9 +838,10 @@ involving the wider team. This is a management decision.
 
 It is not required to break all epics down into stories before the cycle
 begins: it may be more appropriate to first schedule a few exploratory stories
-and use them to inform the development of the rest of the epic. However, it is
-required that all stories which will be :ref:`worked in an upcoming sprint
-<sec-sprinting>` are defined before the sprint starts.
+and use them to inform the development of the rest of the epic. However, do
+break epics down to describe the stories which will be :ref:`worked in an
+upcoming sprint <sec-sprinting>` before the sprint starts. When doing so, you
+may wish to leave some spare time to handle :ref:`emergent work <sec-bugs>`.
 
 Note that there is no relationship enforced between the SP total estimated for
 the epic and the sum of the SPs of its constituent stories. It is therefore
@@ -809,10 +886,18 @@ Broadly, executing a sprint falls into three stages:
 
    Stories should be executed following the instructions in the `Developer
    Guide`_ as regards workflow, coding standards, review requirements, and so
-   on. It is important to ensure that completed stories are marked as “done”:
-   experience suggests that this can easily be forgotten as developers rush on
-   to the next challenge, but it is required to enable us to properly
-   :ref:`track earned value <sec-cycle-value>`.
+   on. It is important to ensure that completed stories are marked as
+   :jira_field:`done`: experience suggests that this can easily be forgotten
+   as developers rush on to the next challenge, but it is required to enable
+   us to properly :ref:`track earned value <sec-cycle-value>`.
+
+   .. note::
+
+      When completing a story we do not change the number of SPs assigned to
+      it: the SP total reflects our initial estimate of the work involved, not
+      the total time invested. This makes it possible to review the quality of
+      our estimates at the end of the sprint.
+
 
    Avoid adding more stories to a sprint in progress unless it is unavoidable
    (for example, the story describes a critical bug that must be addressed
@@ -845,6 +930,25 @@ as appropriate: the former is suitable for planned development activities
 .. _Agile: https://www.atlassian.com/software/jira/agile
 .. _Scrum: https://en.wikipedia.org/wiki/Scrum_(software_development)
 .. _Kanban: https://en.wikipedia.org/wiki/Kanban_(development)
+
+.. _sec-epic-done:
+
+Completing Epics
+----------------
+
+An epic may be marked as :jira_field:`done` when:
+
+#. It contains at least one completed story;
+#. There are no more incomplete stories defined within it;
+#. There are no plans to add more stories;
+#. (If applicable, i.e. it is not a :ref:`bucket <sec-bucket>`) its concrete
+   deliverable has been achieved.
+
+Note that it is not permitted to close an epic without defining at least one
+story within it. Empty epics can never be completed.
+
+When an epic is marked as complete, :ref:`all of its value is earned
+<sec-cycle-value>`.
 
 .. _sec-bugs:
 
@@ -900,24 +1004,31 @@ are for convenience only, and are not rigorously enforced.
 
 In particular, note that all issue types are equivalent in terms of the data
 which is loaded to :term:`PMCS`: it makes no distinction between them. Marking
-a bug or improvement as done has exactly the same impact on the global earned
-value state as would completing an equivalent story.
+a bug or improvement as :jira_field:`done` has exactly the same impact on the
+global earned value state as would completing an equivalent story.
 
 Scheduling
 ^^^^^^^^^^
 
-In some cases, a ticket may describe emergent work which must be immediately
-by adding it to a :ref:`bucket epic <sec-bucket>`. In other cases, it can be
-deferred to a later cycle, or, after appropriate discussion, may be regarded
-as inappropriate (and can be tagged as Invalid or Won't Fix). This is a
-management decision. When closing a ticket as inappropriate, please take a
-moment to describe why—the individual who reported it will appreciate an
-explanation of why it has been rejected, and it will serve as a useful
-reference the next time somebody suggests the same thing.
+In some cases, a ticket may describe emergent work which must be addressed
+immediately by adding it to a :ref:`bucket epic <sec-bucket>`. In other cases,
+it can be deferred to a later cycle, or, after appropriate discussion, may be
+regarded as inappropriate (and can be tagged as :jira_field:`invalid` or
+:jira_field:`won't fix`). This is a management decision. When closing a ticket
+as inappropriate, please take a moment to describe why—the individual who
+reported it will appreciate an explanation of why it has been rejected, and it
+will serve as a useful reference the next time somebody suggests the same
+thing.
 
 A special case of inappropriate tickets are those that duplicate work which
-has already been described elsewhere. Please close these as Invalid, and add a
-JIRA link of type "duplicates" to the original ticket.
+has already been described elsewhere. Please close these as
+:jira_field:`invalid`, and add a JIRA link of type :jira_field:`duplicates`
+to the original ticket.
+
+Tickets which are obviously filed by mistake may simply be deleted rather than
+setting a special status. Please only do this when you are sure there is no
+value to leaving an audit trail, and when you have verified that the original
+author of the ticket is aware of and understands the outcome.
 
 Relationship to Earned Value
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -945,16 +1056,17 @@ The basic procedure for earning value during the cycle is akin to that
 
 In short, :ref:`as we have seen <sec-sps-to-bcws>`, the :term:`BCWS` for a
 particular epic is defined by its *estimated* (i.e. attached to the epic
-before work commences) SP total and its staff assignment. When an epic is
-marked as complete, this is the value that is earned.
+before work commences) SP total and its staff assignment. When :ref:`an epic
+is marked as complete <sec-epic-done>`, this is the value that is earned.
 
 The :term:`BCWP` for an epic is calculated based on the fractional
-completeness of an epic. That is, if an epic has a total SP count of ``X``,
-and the total of stories marked as complete within it is ``Y``, then ``BCWP =
-BCWS * Y / X``.
+completeness of an epic. That is, if an epic has a total SP count of
+:math:`X`, and the total of stories marked as complete within it is :math:`Y`,
+then :math:`BCWP = BCWS \times Y / X`.
 
-Be aware that stories that marked as “invalid” or “won't fix” in JIRA are not
-included in this calculation: they earn no value.
+Be aware that stories that marked as :jira_field:`invalid` or
+:jira_field:`won't fix` in JIRA are not included in this calculation: they
+earn no value.
 
 :ref:`As we have seen <sec-defining-stories>`, it is not required that the
 total SPs of all the stories contained within an epic (the “planned SPs”) is
@@ -988,10 +1100,10 @@ emergent work which cannot be deferred, refer to :ref:`sec-bugs`.
 Coordination Standup
 --------------------
 
-.. attention::
+.. note::
 
-   I've not included the meeting URL here, since the tech note will be
-   publicly available.
+   The meeting URL is not included here since this note is publicly available.
+   Contact the Project Manager for details.
 
 The technical managers meet with the :ref:`Project Manager <sec-contacts>` and
 interested others (it is not a closed meeting) twice every week. This is a
@@ -1034,7 +1146,7 @@ Reporting Actuals
 In order to comply with the :ref:`earned value management system <sec-evms>`,
 it is necessary to track the actual cost of work being performed (the
 “actuals”) in each leaf element of the WBS. That is, whenever an invoice is
-issue from a subcontracting institution to AURA, it must be broken down into
+issued from a subcontracting institution to AURA, it must be broken down into
 dollar charges against individual WBS elements.
 
 Some institutions rigorously track how staff are spending their time (e.g. by
@@ -1046,7 +1158,16 @@ Other institutions do not rigorously check staff activity and/or do not supply
 this information to AURA when invoicing. In this case, the technical manager
 is responsible for breaking down the invoice by WBS and forwarding that to the
 relevant AURA contracts officer (check with the :ref:`project manager
-<sec-contacts>` if you are unsure who that is).
+<sec-contacts>` if you are unsure who that is). Note that, since
+:ref:`story points reflect estimated, not actual, time spent on work
+<sec-sprinting>`, it is *not* appropriate to simply allocate actual costs
+based on SP totals.
+
+Typically, expenses are accrued at a broadly constant rate for each
+individual: salaries do not vary much from month to month. However, in some
+months, a given developer may be significantly less productive than others (for
+example, due to paid vacation). In these cases, it is appropriate to spread
+the cost across all the WBSs elements the developer has been working on.
 
 A typical invoice breakout should be supplied in a spreadsheet similar to that
 shown in :numref:`tab-invoice`.
@@ -1070,15 +1191,6 @@ mapping from dollar values to individuals who did the work. However, it is
 important to note that, should the Project be audited in the future, it is
 perfectly possible that they will wish to examine such a mapping. You should
 therefore keep records which will enable you to provide it upon request.
-
-Note that when loading the plan at the start of a cycle (as described
-:ref:`here <sec-cycle-plan>`), you are expected to provide the names of the
-individuals who will be carrying out the work. It is not, in general,
-appropriate to charge for labor from individuals who have not been named in
-this way, even if the total sum comes in below the budgeted amount specified
-in your contract. In some special cases (e.g. temporary work carried out by
-summer students) it may be possible to make an exception: please discuss this
-with the :ref:`project manager <sec-contacts>` on a case-by-case basis.
 
 .. _sec-monthly-cycle:
 
@@ -1194,7 +1306,7 @@ Glossary
 
    LOE
       Level of Effort. LOE work is that which does not correspond to a
-      specific deliverable. A detailed definition is provided in :ldm:`465`;
+      specific deliverable. A detailed definition is provided in :ldm:`472`;
       see also the discussion :ref:`above <sec-loe>`.
 
    MREFC
@@ -1208,6 +1320,13 @@ Glossary
    OBS
       Organizational Breakdown Structure; see the definition :ref:`above
       <sec-obs>`.
+
+   Risk
+      Risks are (per ISO 31000) “the effect of uncertainty upon objectives”.
+      For the purposes of this document, that corresponds to the impact of
+      unplanned or unpredictable events upon the cost or schedule of the
+      Project. The Project maintains a register of risks, which includes
+      probability estimates and possible mitigations.
 
    PMCS
       Project Management Control System. The PMCS is not a single piece of
