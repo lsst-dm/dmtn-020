@@ -28,11 +28,11 @@ authors:
     - 'Xiuqin Wu'
 
 # Current document version
-last_revised: None  # Will be derived from git commit history.
+#last_revised: None  # Will be derived from git commit history.
 
 # Version. Use Semvar, e.g., 1.0, including .dev, as necessary
 # This version string should correspond to the git tag when the document is published on Zenodo
-version: '1.0'
+#version: None  # Will be derived from git commit history.
 
 # Digital Object Identifier (DOI). Uncomment if available.
 # Keep this DOI updated as new releases are pushed to Zenodo
