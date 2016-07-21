@@ -16,13 +16,4 @@ with open(metadata_path, 'r') as f:
 g = globals()
 g.update(confs)
 
-# Set last revision date based on git history
-git_date = subprocess.check_output(["git", "log", "-1", "--date=short",
-                                    "--pretty=%ad"]).decode().strip()
-git_version = subprocess.check_output(["git", "log", "-1", "--date=short",
-                                       "--pretty=%h"]).decode().strip()
-if subprocess.check_output(["git", "status", "--porcelain"]).decode().strip():
-    git_version += "-dirty"
-g['html_context']['last_revised'] = "%s" % (git_date,)
-
 extensions.append("documenteer.sphinxext")
