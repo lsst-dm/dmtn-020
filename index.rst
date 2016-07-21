@@ -511,6 +511,30 @@ particular planning package. Thinking through the plan in this way can help in
 building up a detailed plan in a flexible, agile way, while also ensuring that
 scope, cost and schedule are carefully controlled.
 
+.. _sec-software-release:
+
+Software Releases
+-----------------
+
+Per :ref:`sec-cycle-cadence`, a series of software releases will be made
+throughout LSST construction. These will provide a stable basis upon which
+external users (other subsystems, science collaborations and the wider
+community) can base their work.
+
+Our releases follow a strictly time-based cadence. That is, they are made on a
+pre-defined schedule which tracks our :ref:`short-term plan <sec-cycle-plan>`,
+rather than being guaranteed to provide a particular set of functionality.
+For this reason, individual releases will not be exposed as milestones above
+level 3 (exposing them at level 3 or below for internal use is optional).
+Other parts of the project which depend on certain functions being available
+should depend on a milestone describing that function, rather than on a
+particular release of the software.
+
+In addition to this cyclical official release process, we may provide packaged
+distributions of the codebase at more frequent intervals in support of
+commissioning or other activities that require a higher release cadence or
+timely delivery of particular features.
+
 .. _sec-cycle-plan:
 
 Short Term Planning
