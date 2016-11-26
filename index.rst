@@ -423,6 +423,13 @@ use within DM, but even here properly adhering to the plan is vital: your
 colleagues in other teams will use these milestones to align their schedules
 with yours, so they rely on you to be accurate.
 
+Relationships may be defined between milestones and between milestones and
+planning packages. Often, as described in :ldm:`472`, these are blocking
+relationships: a particular activity cannot proceed until all the work which
+blocks it has been completed. It is also possible to identify a non-specific
+relationship between activities. This should be taken to mean that they share
+some common aspects and hence it may be appropriate to consider them together.
+
 .. _sec-long-term-research:
 
 Planning Research Work
