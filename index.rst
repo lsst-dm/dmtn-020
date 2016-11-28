@@ -760,6 +760,13 @@ resources assigned to them. If more than a relatively small fraction of the
 work for a cycle is assigned to bucket epics, please consider whether this is
 really necessary and appropriate.
 
+Be aware that even bucket epics must be assigned to a specific *leaf* element
+of the WBS. That is, it is not in general possible to define an epic which
+handles bug reports or emergent feature requests across the whole of the
+codebase unless a specific WBS leaf element is devoted to maintenance
+activities of this type. Instead, it may be necessary to define a different
+bucket epic for each leaf of the WBS tree.
+
 .. _sec-sps-to-bcws:
 
 Mapping SPs to BCWS
