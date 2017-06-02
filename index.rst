@@ -62,8 +62,8 @@ presented by the :ref:`Project Controls Specialist <sec-contacts>` at the
 Useful Contacts
 ===============
 
-The LSST DM Project Manager is Jacek Becla. He is the first point of contact
-for all issues regarding project management within DM.
+The LSST DM Project Manager is William O’Mullane and the Deputy PM is John Swinbank. They are the first point of contact
+for all issues regarding project management within DM.  The Subsystem Scientist is Mario Juric who is the first point of contact for science or scientist related questions. 
 
 The LSST Project Controls Specialist is Kevin Long. He is responsible for the
 :term:`PMCS` and, in particular, for ensuring that DM properly complies with
@@ -74,23 +74,11 @@ Technical Managers
 ==================
 
 This guide is primarily aimed at the LSST DM technical managers. Technical
-managers report directly to the DM Project Manager. Per :ldm:`472`, they are
-expected to:
-
-- Assemble the team capable of delivering work scoped through the :term:`WBS`
-  on-time and within budget. Provide daily technical management and leadership
-  for the team, monitor and optimize team performance.
-
-- Work closely with the DM Project Manager on defining short and long-term
-  plan and schedule for their teams. Direct the execution of their team's
-  plan, ensuring the team delivers on-time and within budget.
-
-- Report group's activities as required, including reporting to the
-  :term:`EVMS` used by LSST, and providing input for monthly status reports.
-
-In short, technical managers are, in general, expected to act as :term:`CAM`
-and technical lead for their groups; as such, they are sometimes referred to
-as “T/CAMs”. The role of CAM is defined in detail :ref:`below
+managers report directly to the DM Project Manager. Technical managers are, in general, expected to act as :term:`CAM`
+and technical lead for their WBS elements; as such, they are sometimes referred to
+as “T/CAMs”. The TCAM role is described in
+:ldm:`294`.
+The role of CAM is defined in detail :ref:`below
 <sec-structure>`.
 
 .. _sec-structure:
@@ -251,6 +239,11 @@ Variance is calculated on a monthly basis; variance narratives are due in the
 second week of the calendar month following that to which they apply (refer to
 the :ref:`sec-monthly-cycle` for details).
 
+Variance is perfectly normal in a project and we should not be afraid to have them 
+and provide narratives about them. We should take care the narrative is not always the 
+same i.e. if we have a negative variance every month and it is because we did not plan for something 
+we should do better planning.
+
 .. _sec-loe:
 
 Level of Effort Work
@@ -266,18 +259,15 @@ assumed to earn value simply through the passage of time.
 
 :ldm:`472` provides a detailed definition of the types of work it is
 permissible to regard as LOE. In general, we strive to minimize the fraction
-of our effort which is devoted to LOE activities and favour those which are
-more directly accountable.
+of our effort which is devoted to LOE activities and favor those which are
+more directly accountable. In certain cases such as operations of pipelines or 
+other systems LOE is perfectly acceptable.
 
 The assumption encoded in :ldm:`472` is that developers will spent 30% of
 their time on LOE type activities, and the remaining 70% of their effort is
-tracked against concrete deliverables.
+tracked against concrete deliverables. This does not have to be used as a rule however, 
+if we can plan activities to more than 70% of the time we should do so. 
 
-All LOE work should be invoiced to the “00” fourth-level WBS element
-(1.02C.03.00, 1.02C.04.00, etc), which is reserved for “management engineering
-and integration”. Per the :ref:`effort estimation procedure <sec-effort>`,
-this means that *at least* 30% of every individual's time will be invoiced to
-the 00 element.
 
 .. _sec-effort:
 
@@ -316,19 +306,29 @@ the remainder of their time to personal research.
 
 .. note::
 
-   Some individuals serve roles within DM which are referred to as
-   “scientist”, such as the Project Scientist and Pipelines Scientist. These
+   Some individuals serve “Science Lead” (SL) roles within DM which , such as the Project Scientist and Pipelines Scientist. These
    roles are not equivalent to being granted personal research time, but
    reflect a level of scientific oversight within the project. Time spent
    performing this role must be accounted for in the usual way (either as LOE
    or as providing deliverables), and charged to an account agreed with the
-   :ref:`DM Project Manager <sec-contacts>`.
+   :ref:`DM Project Manager <sec-contacts>`. They generally serve as the Product Owners for parts of the system their respective institutions have been tasked to deliver (not all products, as we discussed). While SLs report to the Subsystem Scientist , they primarily provide a service to the local TCAM.
+
+
+Science leads are typically not 100%  and as a rough guide we consider they 
+spend about half their allocated time serving the Subsystem Scientist and half
+serving the TCAM. As much work as possible should be accounted for in stories. 
+
 
 Our base assumption is that 30% of an individual's LSST time (i.e. 540
 hours/year for a developer, 432 hours/year for a scientist) are devoted to
 overhead for meetings, ad-hoc discussions and other interruptions. This work
 is counted as :term:`LOE` (and, as such, is charged to the relevant “00”
 fourth level WBS element, as described :ref:`here <sec-loe>`).
+However meeting attendance is well understood - on the planning  side we 
+should allocate stories and points for individuals attending and preparing for meetings. 
+If we fail to correctly visualize this work we loose track of it.
+If we bill less to LOE and have to fill a variance narrative that is fine. 
+ 
 
 Some individuals—notably technical managers themselves, as well as others in
 leadership roles—are expected to have a larger fraction of their time devoted
@@ -377,6 +377,10 @@ In either case, the total number of SPs which will will be generated by the
 team in a given time interval is reduced. This should be taken into account
 when :term:`resource loading`.
 
+
+For every story we should record the points we actually spent on the story versus 
+the planned points. We must all monitor this as individuals to improve our 
+planning performance. 
 .. _sec-long-term-plan:
 
 Long Term Planning
@@ -1398,7 +1402,7 @@ Glossary
       For the purposes of this document, that corresponds to the impact of
       unplanned or unpredictable events upon the cost or schedule of the
       Project. The Project maintains a register of risks, which includes
-      probability estimates and possible mitigations.
+      probability estimates and possible mitigation.
 
    PMCS
       Project Management Control System. The PMCS is not a single piece of
