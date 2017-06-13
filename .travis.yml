@@ -14,13 +14,12 @@ script:
 after_success:
           - pip install -r deployment/requirements.txt
           - cp DMTN-020.pdf deployment/_build/DMTN-020.pdf
-          - cp ProductTree.pdf deployment/_build/ProductTree.pdf
           - python deployment/build.py deployment/index.jinja2 deployment/_build/
           - ltd-mason-travis --html-dir deployment/_build
 env:
 
   global:
-    - LTD_MASON_BUILD=true  # disable builds in regular text matrix
+    - LTD_MASON_BUILD=true  
     - LTD_MASON_PRODUCT="dmtn-020"
     - secure: "q9Ni8LkjzQIWGhKY7Vzlg+op7Wq3eX1bzGa6+SCnLMOfcZ9zzDpU0SqFAaOiX5PmyzkWPbbsV9Jjin8zYQiuYmKRMQiWKfmKEaP4CgtnIZn1DpvSNOt4C1KiINynPxyYZgYejqsQJ9xGGi6RrC0F2SoBrF8Lx4lp3rvFgU33MT9Ft6La0H/fRlF/HrIfdKneHm3H1fyqBAZAm+21FurICwAsbMONLFUPwzFt8R6lI3SWDMnL/lyyoMnUozAC8UE2JVon2fismJxtsR8bRLptG5LpvcABnUKpWeJWqAbLcXOe8OJCrC55Nx30MWlecLuuW5SOkudHY7lcCBLWE9+9m3i8YZLIK/Dv6nqm7sm7EcXlKwIp95cbMEuXmuACgFqFgS/B5NWQNA/k/5TUpaJUS55ecaHe0YOnia6KWj23xciO3ql6S/GSml7ypcMK/2b9CIefdEeafgqZolgRX5oeopIQrys8SCALhVLEi11Y46vCHnnxLqY+KpCsofXEWKqKcYGiVGo34bbHMUi8gBqULKhRWrSngnSAkMPpjwhyrT1bWQ7g83LxTw0YUhObTxNWo2tmDfc6aB+lOfMFYVvDqu7wj7HuliloCxgHVpXU1yJSHKfbDTma+mWwQxdnfnx0R1gyP2AJR8aAcBIoU+oqZqW2xwhL6+GUkDKL+m97BiU="
     - secure: "xxVbdGEFxmpmH4EN0nXtdY8j3R8MqJGDpEihkXSsQVZhzl8qAUYQuJcMuq+rJgFKhKNFgdKw59SHVIqOwDE7eHg2ggdTmvCfOhFdxiTBuxT56lEGqvJiQKoLI0CGKoBI+qZeCmq6oK7i8CM4aM4ZTVtpfd3Y2kiehHX9wf7fSRyfM3wJRPnm6WEcbt/g4+K+DSArO66YqHnaeGHnlgtFYPc4DabowgGGFFO+yFsv+C4hMOfLOa1KPtsFZ7Si/azsd3VApXcTnlZM4l6+0PDzyp3BZHpl8rfNUD0jAksRpeyCnMFx0YEA7+Qbj+Bc0ysjw+HGsQScka9hsX2cMF9YVJuZJp93x8T05VnBak/VxMjjkdFkskTKzFrIDC5KGiX1NCGzoI0ccQDzxkoiWxHy5rCmBz3Pf5/gAJRb0iGMXfJ4MQhrmr4YXN8s5rslqFWKVfultmTsvhlcXsCTguEkBsDpnRu2Qo0go7UCG+d1h916atyjW7H1Zrgs7J9Nx/KTfwL9HGoBSQnYusGGFvdlMeFcNotzbZIo68MlEg8caPplKzM70SiLrpiq/tRoCipUtidKJYDE+LGcGsjB1e2vvTze1ZvNzajikfhKk/SfATkke9AfNBBMJmvhMQF3sp8tt29RCd5a5G7hKY7Ru497UxuiOvkTjboKfJGu+SiASSM="

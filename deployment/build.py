@@ -42,9 +42,8 @@ def main():
     html = template.render(
         branch_name=os.getenv('TRAVIS_BRANCH'),
         pacific_timestring=pacific_dt.strftime('%Y-%m-%d %H:%M:%S %Z%z'),
-        page_title='LDM-294: Data Management Organization and Management',
-        page_description='Draft of LDM-294, the LSST Data Management '
-                         'Organization and Management document.'
+        page_title='DMTN-020: Data Management Project Management Guide',
+        page_description='Draft DMTN-020 '
     )
     index_html_path = os.path.join(args.deploy_dirname, 'index.html')
     with open(index_html_path, mode='w') as f:
