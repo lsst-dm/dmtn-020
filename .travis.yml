@@ -1,25 +1,21 @@
 sudo: true
 dist: trusty
+services:
+  - docker
 language: python
-matrix:
-include:
-      - python: "3.5"
+python:
+  - '3.5'
 before_install:
-          - "sudo apt-get update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended latexmk poppler-utils latex-xcolor lmodern texlive-xetex texlive-generic-recommended texlive-full"
+  - "pip install 'lander>=0.1.0,<0.2'"
 script:
-          - git clone https://github.com/lsst/lsst-texmf
-          - export TEXMFHOME=./lsst-texmf/texmf
-          - rm -f DMTN-020.pdf
-          - make
+  # Compile PDF using containerized lsst-texmf
+  - "docker run --rm -v `pwd`:/workspace -w /workspace lsstsqre/lsst-texmf:latest sh -c 'make'"
 after_success:
-          - pip install -r deployment/requirements.txt
-          - cp DMTN-020.pdf deployment/_build/DMTN-020.pdf
-          - python deployment/build.py deployment/index.jinja2 deployment/_build/
-          - ltd-mason-travis --html-dir deployment/_build
+  # Deploy website. See https://github.com/lsst-sqre/lander for CLI options
+  - "lander --pdf DMTN-020.pdf --upload --lsstdoc DMTN-020.tex --env=travis --ltd-product $PRODUCT"
 env:
-
   global:
-    - LTD_MASON_BUILD=true  
-    - LTD_MASON_PRODUCT="dmtn-020"
-    - secure: "q9Ni8LkjzQIWGhKY7Vzlg+op7Wq3eX1bzGa6+SCnLMOfcZ9zzDpU0SqFAaOiX5PmyzkWPbbsV9Jjin8zYQiuYmKRMQiWKfmKEaP4CgtnIZn1DpvSNOt4C1KiINynPxyYZgYejqsQJ9xGGi6RrC0F2SoBrF8Lx4lp3rvFgU33MT9Ft6La0H/fRlF/HrIfdKneHm3H1fyqBAZAm+21FurICwAsbMONLFUPwzFt8R6lI3SWDMnL/lyyoMnUozAC8UE2JVon2fismJxtsR8bRLptG5LpvcABnUKpWeJWqAbLcXOe8OJCrC55Nx30MWlecLuuW5SOkudHY7lcCBLWE9+9m3i8YZLIK/Dv6nqm7sm7EcXlKwIp95cbMEuXmuACgFqFgS/B5NWQNA/k/5TUpaJUS55ecaHe0YOnia6KWj23xciO3ql6S/GSml7ypcMK/2b9CIefdEeafgqZolgRX5oeopIQrys8SCALhVLEi11Y46vCHnnxLqY+KpCsofXEWKqKcYGiVGo34bbHMUi8gBqULKhRWrSngnSAkMPpjwhyrT1bWQ7g83LxTw0YUhObTxNWo2tmDfc6aB+lOfMFYVvDqu7wj7HuliloCxgHVpXU1yJSHKfbDTma+mWwQxdnfnx0R1gyP2AJR8aAcBIoU+oqZqW2xwhL6+GUkDKL+m97BiU="
-    - secure: "xxVbdGEFxmpmH4EN0nXtdY8j3R8MqJGDpEihkXSsQVZhzl8qAUYQuJcMuq+rJgFKhKNFgdKw59SHVIqOwDE7eHg2ggdTmvCfOhFdxiTBuxT56lEGqvJiQKoLI0CGKoBI+qZeCmq6oK7i8CM4aM4ZTVtpfd3Y2kiehHX9wf7fSRyfM3wJRPnm6WEcbt/g4+K+DSArO66YqHnaeGHnlgtFYPc4DabowgGGFFO+yFsv+C4hMOfLOa1KPtsFZ7Si/azsd3VApXcTnlZM4l6+0PDzyp3BZHpl8rfNUD0jAksRpeyCnMFx0YEA7+Qbj+Bc0ysjw+HGsQScka9hsX2cMF9YVJuZJp93x8T05VnBak/VxMjjkdFkskTKzFrIDC5KGiX1NCGzoI0ccQDzxkoiWxHy5rCmBz3Pf5/gAJRb0iGMXfJ4MQhrmr4YXN8s5rslqFWKVfultmTsvhlcXsCTguEkBsDpnRu2Qo0go7UCG+d1h916atyjW7H1Zrgs7J9Nx/KTfwL9HGoBSQnYusGGFvdlMeFcNotzbZIo68MlEg8caPplKzM70SiLrpiq/tRoCipUtidKJYDE+LGcGsjB1e2vvTze1ZvNzajikfhKk/SfATkke9AfNBBMJmvhMQF3sp8tt29RCd5a5G7hKY7Ru497UxuiOvkTjboKfJGu+SiASSM="
+    - PRODUCT="dmtn-020"
+    # Add LSST the Docs credentials
+    - secure: "xHGey2Fty9XqSEEUzwURddLCQTZQxp8R/mROCAF9OCIOdVBTd0Hzc3Pa+A5btfy3WPlcqalu3NUnCP7Oz6/NqiccYhwAqll/eZez+LU9UZJQCyHleLedC/D3aewESTACUjdZXuUsMe6wyeEJdKJneEZ5x9CjcTXGJWGgi2AE61pYNOYHi576teI8btVaOwLyhXuSRFw53L/6zQY/1Yme0HpRB4gfhUi3RKjYMMX/6qfTZqOOeY5cx14PtKL2vKENG1bJia0188G9LhTG5Winn5sgRDAX+VbUOdYKi+esgic/iJE9je2JTHMEbJ3r/7rg7FZ+tRhGNhYyc7KSs9hU8uC/BqiHFi1UPvrJ6faTb0fwh4uK8fhZN3hwsf6hcYI0W8U+IpFPd/H6tNNdp32i2zGtsAYuirRBGAndolIwi6nXFdmFqnWdQQ+HmS6VlH+zn4CDKzCcmtmHDaTk0VJYIbgJn3S5+kLsSMSuBDs9yaNuSSApb38LfGg8wQEJPCOeJB1aaj+aTIJJaSQ7idzXugkRvSN2FBPgZnL5m1YtjBpLXVepVx1L8irJ57e1qNscB8aSFx3ZcgLiBX33iKSGXJ0AXZPVemQzpSmIXF/0/cO96q8r/IFZnlF/lbl42+2bHKyWuMpwysM9y56iW09EbhjCh7l6KwsF/hEPKc17L4Q="
+    - secure: "iXJJxGWYkcN7gO2+5TtEBcl0DdfQNAEQ2C3HAV1yL7gvQDWBxNirM56EbpTe1+qt2wNlxnabB4OT2cvXd0c9U7ismVTXntCjznljS9u62KztwBY9joUwbgT+Jz287bOXfGbIXx/4WqhUSweBqui8RrbiTyWqEaQrlnXTx9/BneDihvzqHEcBzEgDd6PlI3/9ksDoW/xw/x2cXPZsFIIb+MmDb9Xz4O2d1T/J3oJgTErz1eNkIPSdEyi++FnWPJdERK29RUp+xKQDkIEQtFK7vBbUjNpCLvZuGaTPI/MYZOIsrhBABXEu26OQiQySCHL9KeE8x3yQKvEXt2byrG2e0rJjXrZZa990h1XvSxVp6crkHCwxu/RDAMCMFNltMtuB/JQFXQm5wTgnnt5TEEzilWfBsF01mM8Y8+iHLHUj/QH04VTdp1A2voxjAet6u61PivqdKlrVlFrIhxSBP6pTK4ENLcR+bEDmZjpxtrGaHmEMb0cWtuMq+BnsPIn9pcyAByskiml53JvB1CknIQnAc6o726j8RjNIz3tFZ1si1Afhw1pZYydQWRtX93KIq2abYPkbEmyaks+YLjeXEPS7JdehrMgQf+BcYvcajDUxBaeF1fwXGMBh8NbQev/kZir9mFd61pwGnIxvMtLTfZGtbrGAkBB+TGUbsFl5k6b/gG4="
