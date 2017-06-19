@@ -1,76 +1,60 @@
 \section{Introduction}
-This document provides an informal guide to the everyday mechanisms
-underpinning LSST Data Management's approach to project management. It
-is intended to be read in conjunction with 472, which provides a formal
-description of the project management process and requirements.
 
-\section{Important Documents}\label{important-documents}
+This document provides an informal guide to the everyday mechanisms underpinning LSST Data Management's approach to project management.
+It is intended to be read in conjunction with \citeds{LDM-472}, which provides a formal description of the project management process and requirements.
 
-Wherever a conflict arises, baselined project documentation takes
-precedence over this note. You are encouraged to submit bug reports so
-that this document can be made compliant.
+\section{Important Documents}
+\label{sec:documents}
 
-Be aware of prefixes: ``LDM-'' documents refer specifically to the Data
-Management subsystem, ``LSE-'' to Systems Engineering, ``LPM-'' to
-Project Management.
+Wherever a conflict arises, baselined project documentation takes precedence over this note.
+You are encouraged to submit bug reports so that this document can be made compliant.
 
-\begin{description}
-	\item \citeds{LPM-43,LPM-44}
-\emph{WBS Structure} and \emph{WBS Dictionary}, respectively. The former
-shows the overall work breakdown structure for the whole project. Note
-that these documents are periodically extracted from the master PMCS
-system, and therefore occasionally do not reflect the most recent
-changes.
-\item \citeds{LPM-98}
-\emph{LSST Project Controls System Description}. Describes and defines
-the components of the PMCS used to manage and report on the overall LSST
-Project.
-\item \citeds{LDM-472}
-\emph{LSST DM Project Management and Tools}. The formal, high-level
-document which defines the project management process used by LSST DM.
-The present document may be thought of as a guide to applying the
-principles defined in \citeds{LDM-472} in practice.
-\end{description}
+Be aware of prefixes: ``LDM-'' documents refer specifically to the Data Management subsystem, ``LSE-'' to Systems Engineering, ``LPM-'' to Project Management.
 
-In addition, you should be familiar with the
-\href{https://project.lsst.org/meetings/lsst2014/node/100}{EVMS Training
--- CAM 101} presented by the
-Project Controls Specialist \textless{}sec-contacts\textgreater{} at the
-\href{https://project.lsst.org/meetings/lsst2014/}{LSST 2014 Meeting}.
-\href{_static/EVMS_Training.pdf}{Slides are available as a PDF} for easy
-reference.
+\paragraph*{\citeds{LPM-43, LPM-44}}
+\emph{WBS Structure} and \emph{WBS Dictionary}, respectively.
+The former shows the overall work breakdown structure for the whole project.
+Note that these documents are periodically extracted from the master \gls{pmcs} system, and therefore occasionally do not reflect the most recent changes.
 
-\section{Useful Contacts}\label{useful-contacts}
+\paragraph*{\citeds{LPM-98}}
+\emph{LSST Project Controls System Description}.
+Describes and defines the components of the \gls{pmcs} used to manage and report on the overall LSST Project.
 
-The LSST DM Project Manager is William O'Mullane and the Deputy PM is
-John Swinbank. They are the first point of contact for all issues
-regarding project management within DM. The Subsystem Scientist is Mario
-Juric who is the first point of contact for science or scientist related
-questions.
+\paragraph*{\citeds{LDM-472}}
+\emph{LSST DM Project Management and Tools}.
+The formal, high-level document which defines the project management process used by LSST DM.
+The present document may be thought of as a guide to applying the principles defined in \citeds{LDM-472} in practice.
 
-The LSST Project Controls Specialist is Kevin Long. He is responsible
-for the PMCS and, in particular, for ensuring that DM properly complies
-with our earned value management requirements. He is the first point of
-contact for all questions about the PMCS system.
+In addition, you should be familiar with the \href{https://project.lsst.org/meetings/lsst2014/node/100}{EVMS Training -- CAM 101} slides presented by the Project Controls Specialist (\S\ref{sec:contacts}) at the \href{https://project.lsst.org/meetings/lsst2014/}{LSST 2014 Meeting}.
 
-\section{Technical Managers}\label{technical-managers}
+\section{Useful Contacts}
+\label{sec:contacts}
+
+The LSST DM Project Manager is William O'Mullane and the Deputy PM is John Swinbank.
+They are the first point of contact for all issues regarding project management within DM.
+The Subsystem Scientist is Mario Juric who is the first point of contact for science or scientist related questions.
+
+The LSST Project Controls Specialist is Kevin Long.
+He is responsible for the \gls{pmcs} and, in particular, for ensuring that DM properly complies with our earned value management requirements.
+He is the first point of contact for all questions regarding \gls{pmcs}.
+
+\section{Technical Managers}
+\label{sec:tcam}
 
 This guide is primarily aimed at the LSST DM technical managers.
 Technical managers report directly to the DM Project Manager. Technical
 managers are, in general, expected to act as CAM and technical lead for
 their WBS elements; as such, they are sometimes referred to as
 ``T/CAMs''. The TCAM role is described in 294. The role of CAM is
-defined in detail below
-\textless{}sec-structure\textgreater{}.
+defined in detail in \S\ref{sec:structure}.
 
-\section{Formal Organizational
-Structure}\label{formal-organizational-structure}
+\section{Formal Organizational Structure}
+\label{sec:structure}
 
-\subsection{Work Breakdown Structure}\label{work-breakdown-structure}
+\subsection{Work Breakdown Structure}
+\label{sec:wbs}
 
-The LSST WBS is defined in 43 (see also 44 for an extended---but not
-universally illuminating---definition of what each level of the
-breakdown consists of).
+The LSST WBS is defined in \citeds{LPM-43} (see also \citeds{LPM-44} for an extended---but not universally illuminating---definition of what each level of the breakdown consists of).
 
 The WBS provides a hierarchical index of all hardware, software,
 services, and other deliverables which are required to complete the LSST
@@ -108,7 +92,7 @@ in this form, they are referred to as ``third level''.
 
 All of these third level WBS elements are subdivided, forming a fourth
 level. The fourth level always contains a ``00'' element, which is used
-to capture management and sec-loe, and may contain other fourth level,
+to capture management and \gls{loe} work, and may contain other fourth level,
 or even deeper, structure. Nodes in the WBS tree are referred to as
 elements.
 
@@ -143,7 +127,8 @@ the manager at the lead institution for a particular component is
 responsible for all work performed on that WBS element, even if some of
 that work is performed at another institution.
 
-\section{Earned Value Principles}\label{earned-value-principles}
+\section{Earned Value Principles}
+\label{sec:evms}
 
 LSST DM is funded by as an NSF MREFC project. Under the terms of the
 MREFC award, we are required to follow an \emph{earned value} approach
@@ -186,7 +171,8 @@ project. Thus, we can talk about value earned across the whole of DM
 (1.02C) or on a specific component (say, the User Workspace Toolkit,
 1.02C.05.05).
 
-\subsection{Labor Costs}\label{labor-costs}
+\subsection{Labor Costs}
+\label{sec:labor-costs}
 
 Our methodology is designed to avoid exposing individual salaries to the
 wider project. Therefore, when calculating labor costs for earned value
@@ -200,7 +186,8 @@ the same type within the same institution. This nominal cost does not,
 therefore, correspond to a particular individual, but is a broadly
 defined expectation. See 81 for details.
 
-\subsection{Variance Narratives}\label{variance-narratives}
+\subsection{Variance Narratives}
+\label{sec:variance-narrative}
 
 Every month, the eCAM tool is updated from PMCS to reflect the latest
 earned value status. If either cost or schedule is behind schedule by
@@ -215,7 +202,7 @@ running ahead of schedule).
 
 Variance is calculated on a monthly basis; variance narratives are due
 in the second week of the calendar month following that to which they
-apply (refer to the sec-monthly-cycle for details).
+apply (refer to \S\ref{sec:reporting-cycle} for details).
 
 Variance is perfectly normal in a project and we should not be afraid to
 have them and provide narratives about them. We should take care the
@@ -223,7 +210,8 @@ narrative is not always the same i.e. if we have a negative variance
 every month and it is because we did not plan for something we should do
 better planning.
 
-\subsection{Level of Effort Work}\label{level-of-effort-work}
+\subsection{Level of Effort Work}
+\label{sec:loe}
 
 The implicit assumption in the earned value technique outlined above is
 that all work corresponds to a specific deliverable. However, parts of
@@ -246,7 +234,8 @@ effort is tracked against concrete deliverables. This does not have to
 be used as a rule however, if we can plan activities to more than 70\%
 of the time we should do so.
 
-\section{Estimating Effort}\label{estimating-effort}
+\section{Estimating Effort}
+\label{sec:effort}
 
 The Project assumes that a full-time individual works for a total of
 1,800 hours per year: this figure is \emph{after} all vacations, sick
@@ -263,7 +252,7 @@ rate for an individual with research time who contributes 1,440 hours to
 the project, and does not require any accounting of the remaining 360
 hours.
 
-When reporting actual costs \textless{}sec-actuals\textgreater{}, it may
+When reporting actual costs (\S\ref{sec:actuals}), it may
 be helpful to consider the following examples:
 
 A developer for which the total annual cost (salary, overheads, etc) is
@@ -282,7 +271,7 @@ not equivalent to being granted personal research time, but reflect a
 level of scientific oversight within the project. Time spent performing
 this role must be accounted for in the usual way (either as LOE or as
 providing deliverables), and charged to an account agreed with the
-DM Project Manager \textless{}sec-contacts\textgreater{}. They generally
+DM Project Manager (\S\ref{sec:contacts}). They generally
 serve as the Product Owners for parts of the system their respective
 institutions have been tasked to deliver (not all products, as we
 discussed). While SLs report to the Subsystem Scientist , they primarily
@@ -298,7 +287,7 @@ hours/year for a developer, 432 hours/year for a scientist) are devoted
 to overhead for meetings, ad-hoc discussions and other interruptions.
 This work is counted as LOE (and, as such, is charged to the relevant
 ``00'' fourth level WBS element, as described
-here \textless{}sec-loe\textgreater{}). However meeting attendance is
+in \S\ref{sec:loe}). However meeting attendance is
 well understood - on the planning side we should allocate stories and
 points for individuals attending and preparing for meetings. If we fail
 to correctly visualize this work we loose track of it. If we bill less
@@ -343,12 +332,13 @@ account when resource loading.
 
 For every story we should record the points we actually spent on the
 story versus the planned points. We must all monitor this as individuals
-to improve our planning performance. .. \_sec-long-term-plan:
+to improve our planning performance.
 
-\section{Long Term Planning}\label{long-term-planning}
+\section{Long Term Planning}
+\label{sec:long-term-plan}
 
-Refer to 472 for a description of the long-term planning system. In
-brief, the plan for the duration of construction is embodied in:
+Refer to \citeds{LDM-472} for a description of the long-term planning system.
+In brief, the plan for the duration of construction is embodied in:
 
 \begin{enumerate}
 \item
@@ -365,7 +355,7 @@ brief, the plan for the duration of construction is embodied in:
 \end{enumerate}
 
 Planning packages are defined at the fourth level of the WBS breakdown
-(e.g. at 1.02C.04.02, see the material on the sec-wbs). They may not cut
+(e.g. at 1.02C.04.02; see \S\ref{sec:wbs}). They may not cut
 across the WBS structure, but rather must refer to that particular
 fourth-level element and its children.
 
@@ -400,7 +390,8 @@ non-specific relationship between activities. This should be taken to
 mean that they share some common aspects and hence it may be appropriate
 to consider them together.
 
-\subsection{Planning Research Work}\label{planning-research-work}
+\subsection{Planning Research Work}
+\label{sec:long-term-research}
 
 In order for the DM system to reach its science goals, new algorithmic
 or engineering approaches must sometimes be researched. It is
@@ -410,18 +401,18 @@ on speculative research are a source of risk: wherever possible, the
 plan should also provide for a fallback option to be taken when research
 objectives are not achieved. When fallback options are not available,
 discuss how to account for this risk with the
-DM Project Manager \textless{}sec-contacts\textgreater{}.
+DM Project Manager (\S\ref{sec:contacts}).
 
-\subsection{Earned Value and Planning
-Packages}\label{earned-value-and-planning-packages}
+\subsection{Earned Value and Planning Packages}
+\label{sec:long-term-value}
 
 A planning package has a duration and a staff assignment (it is
 ``resource loaded''). Given a (nominal) cost per unit time of the staff
-involved (see sec-labor-costs), this translates directly to a BCWS.
+involved (see \S\ref{sec:labor-costs}), this translates directly to a BCWS.
 
-During sec-cycle-plan, effort is drawn from the budget embodied in the
+During the cycle planning process (\S\ref{sec:cycle-plan}), effort is drawn from the budget embodied in the
 planning packages to generate the cycle plan, described in terms of
-epics: see sec-planning-epics for details. Each epic itself has a
+epics: see \S\ref{sec:planning-epics} for details. Each epic itself has a
 particular budget. This budget is subtracted from that available in the
 planning package at the point when the epic is defined.
 
@@ -466,7 +457,7 @@ no schedule variance, and a cost variance of (+\$1.5X).
 \subsection{Epic-Based Long Term
 Plans}\label{epic-based-long-term-plans}
 
-As per sec-cycle-plan, the epic is the standard level of granularity for
+As per \S\ref{sec:cycle-plan}, the epic is the standard level of granularity for
 planning work over the relatively short term (periods of several
 months). However, epics may also be valuable for longer-term,
 fine-grained planning. When a detailed description of work for a given
@@ -487,14 +478,14 @@ carefully controlled.
 
 \subsection{Software Releases}\label{software-releases}
 
-Per sec-cycle-cadence, a series of software releases will be made
+Per \S\ref{sec:cycle-cadence}, a series of software releases will be made
 throughout LSST construction. These will provide a stable basis upon
 which external users (other subsystems, science collaborations and the
 wider community) can base their work.
 
 Our releases follow a strictly time-based cadence. That is, they are
 made on a pre-defined schedule which tracks our
-short-term plan \textless{}sec-cycle-plan\textgreater{}, rather than
+short-term plan (\S\ref{sec:cycle-plan}), rather than
 being guaranteed to provide a particular set of functionality. For this
 reason, individual releases will not be exposed as milestones above
 level 3 (exposing them at level 3 or below for internal use is
@@ -507,16 +498,14 @@ packaged distributions of the codebase at more frequent intervals in
 support of commissioning or other activities that require a higher
 release cadence or timely delivery of particular features.
 
-\section{Short Term Planning}\label{short-term-planning}
+\section{Short Term Planning}
+\label{sec:cycle-plan}
 
-Per 472, short term planning is carried out in blocks referred to as
-cycles, which (usually) last for six months. Before the start of a
-cycle, technical managers work with the DM Project Manager and the
-Project Controls Specialist to ensure their plan for the cycle is well
-defined in both JIRA and PMCS.
+Per \citeds{LDM-472}, short term planning is carried out in blocks referred to as cycles, which (usually) last for six months.
+Before the start of a cycle, technical managers work with the DM Project Manager and the Project Controls Specialist to ensure their plan for the cycle is well defined in both JIRA and PMCS.
 
-\subsection{Cycle Cadence \& Release
-Planning}\label{cycle-cadence-release-planning}
+\subsection{Cycle Cadence \& Release Planning}
+\label{sec:cycle-cadence}
 
 At the end of a cycle, a release manager appointed from within the
 SQuaRE team will coordinate a public release of the codebase. This
@@ -547,12 +536,8 @@ establish the appropriate format and granularity of these notes.
 
 \subsubsection{Scoping Work}\label{scoping-work}
 
-The first essential step of developing the short term plan is to produce
-an outline of the programme of work to be executed. In general, this
-should flow directly from the
-long term plan \textless{}sec-long-term-plan\textgreater{}, ensuring
-that the expected planning packages are being worked on and milestones
-being hit.
+The first essential step of developing the short term plan is to produce an outline of the programme of work to be executed.
+In general, this should flow directly from the long term plan (\S\ref{sec:long-term-plan}), ensuring that the expected planning packages are being worked on and milestones being hit.
 
 While developing the cycle, please:
 
@@ -569,7 +554,7 @@ While developing the cycle, please:
   Leave time for other necessary activities, such as cross-team
   collaboration meetings and writing documentation.
 \item
-  Per the cycle cadence \textless{}sec-cycle-cadence\textgreater{},
+  Per the cycle cadence (\S\ref{sec:cycle-cadence}),
   ensure that new development will conclude (or, at a minimum, be in a
   releasable state) in time for the end of cycle release.
 \end{itemize}
@@ -577,56 +562,49 @@ While developing the cycle, please:
 Obviously, ensure that the programme of work being developed is
 achievable by your team in the time available: ultimately, you will want
 to compare the
-number of SPs your team is able to deliver \textless{}sec-effort\textgreater{}
+number of SPs your team is able to deliver (\S\ref{sec:effort})
 with the sum of the SPs in the
-epics \textless{}sec-planning-epics\textgreater{} you have scheduled,
+epics you have scheduled (\S\ref{sec:planning-epics}),
 while also considering the skills and availability of your team. It is
 better to under-commit and over-deliver than vice-versa, but, ideally,
 aim to estimate accurately.
 
-\subsubsection{Defining Epics}\label{defining-epics}
+\subsubsection{Defining Epics}
+\label{sec:planning-epics}
 
-As described in 472, the plan for a six month cycle fundamentally
-consists of a set of resource loaded epics defined in JIRA. Each epic
-loaded into the plan must have:
+As described in \citeds{LDM-472}, the plan for a six month cycle fundamentally consists of a set of resource loaded epics defined in JIRA.
+Each epic loaded into the plan must have:
 
 \begin{itemize}
 \item
-  A concrete, well defined deliverable \emph{or} be clearly described as
-  a ``bucket \textless{}sec-bucket\textgreater{}'';
+  A concrete, well defined deliverable \emph{or} be clearly described as a ``bucket'' (\S\ref{sec:bucket});
 \item
   The :jira\_field:cycle field set to the appropriate cycle;
 \item
   The :jira\_field:WBS field set to the appropriate WBS \emph{leaf}
   element.
 \item
-  The :jira\_field:Story Points field set to a (non-zero!) estimate of
-  the effort required to complete the epic in terms of SPs (see
-  above \textless{}sec-effort\textgreater{}).
+  The :jira\_field:Story Points field set to a (non-zero!) estimate of the effort required to complete the epic in terms of SPs (see \S\ref{sec:effort}).
 \end{itemize}
 
 Be aware that:
 
 \begin{itemize}
 \item
-  An epic may only be assigned to a single cycle. It is not possible to
-  define an epic that crosses the cycle boundary (see sec-cycle-close
-  for the procedure when an epic is not complete by the end of the
-  cycle).
+  An epic may only be assigned to a single cycle.
+  It is not possible to define an epic that crosses the cycle boundary (see \S\ref{sec:cycle-close} for the procedure when an epic is not complete by the end of the cycle).
 \item
-  An epic may only be assigned to a single WBS leaf element. It is not
-  possible to define epics that cover multiple WBS elements. See
-  sec-cross-team for information on scheduling work which requires
-  resources from multiple elements.
+  An epic may only be assigned to a single WBS leaf element.
+  It is not possible to define epics that cover multiple WBS elements.
+  See \S\ref{sec:cross-team} for information on scheduling work which requires resources from multiple elements.
 \item
-  An epic must descend from a single planning package (see
-  sec-long-term-plan).
+  An epic must descend from a single planning package (see \S\ref{sec:long-term-plan}).
 \item
-  Although LOE work should be charged to the 00 fourth-level element
-  \textless{}sec-loe\textgreater{}, this does not imply that other work
+  Although \gls{loe} work should be charged to the 00 fourth-level element
+  \S\ref{sec:loe}, this does not imply that other work
   cannot be charged here. Indeed, where possible management activities
   \emph{should} be scheduled as epics with concrete deliverables in this
-  element rather than being handled as LOE.
+  element rather than being handled as \gls{loe}.
 \item
   The epic should be at an appropriate level of granularity. While short
   epics (a few SPs) may be suitable for some activities, in general
@@ -635,9 +613,9 @@ Be aware that:
   accurately estimated.
 \end{itemize}
 
-The Project Controls Specialist \textless{}sec-contacts\textgreater{}
+The Project Controls Specialist (\S\ref{sec:contacts})
 will periodically
-\textless{}sec-monthly-cycle\textgreater{} pull information from JIRA to
+(per \S\ref{sec:reporting-cycle}) pull information from JIRA to
 populate PMCS with the plan.
 
 All epics which have WBS and cycle defined will be loaded into PMCS (and
@@ -678,7 +656,7 @@ a template.
 
 The spreadsheets used capture epic start and end dates at monthly
 granularity. This can lead to a
-variance \textless{}sec-evms\textgreater{} when monthly results are
+variance (see \S\ref{sec:evms}) when monthly results are
 tabulated (it assumes that work for an epic is evenly distributed across
 all the months in which it is scheduled). In practice, this variance is
 likely to be small, and should average out by the end of the cycle, when
@@ -688,7 +666,7 @@ the Project Controls Specialist.
 
 When loading epics at the start of a cycle, it is not necessary that
 they be fully
-loaded with stories \textless{}sec-defining-stories\textgreater{}: these
+loaded with stories (defined as per \S\ref{sec:defining-stories}): these
 can be defined during the cycle. You do, of course, need to have thought
 through the contents of the epic in enough detail to provide an overall
 SP estimate and deliverables, though.
@@ -700,11 +678,11 @@ loaded before the start of the cycle, and the remaining part of the plan
 covering the final three months is loaded before the start of the fourth
 month. This approach provides an opportunity to fine-tune the plan for
 the second half of the cycle, without requiring a formal
-change request \textless{}sec-cycle-change\textgreater{}.
+change request (\S\ref{sec:cycle-change}).
 
 \subsubsection{Scheduling Research Work}\label{scheduling-research-work}
 
-As discussed in sec-long-term-research, research is sometimes required
+As discussed in \S\ref{sec:long-term-research}, research is sometimes required
 to meet our objectives. However, it is not a natural fit to our usual
 planning process, as it is speculative in its nature: it is often
 impossible to produce a series of logical steps that will lead to the
@@ -723,10 +701,11 @@ instead require that a summary of the research completed to date be
 delivered at the completion of the time allocated. The presentation and
 format of this report will vary depending on the nature of the research
 (a \href{https://sqr-000.lsst.io/}{technical note} is a likely option),
-and, as usual \textless{}sec-planning-epics\textgreater{}, should be
+and, as usual (\S\ref{sec:planning-epics}), should be
 defined before the epic is ingested to PMCS.
 
-\subsubsection{Bucket Epics}\label{bucket-epics}
+\subsubsection{Bucket Epics}
+\label{sec:bucket}
 
 Some work is ``emergent'': we can predict in advance that it will be
 necessary, but we cannot predict exactly what form it will take. The
@@ -754,26 +733,28 @@ devoted to maintenance activities of this type. Instead, it may be
 necessary to define a different bucket epic for each leaf of the WBS
 tree.
 
-\subsubsection{Mapping SPs to BCWS}\label{mapping-sps-to-bcws}
+\subsubsection{Mapping SPs to BCWS}
+\label{sec:sps-to-bcws}
 
 As discussed above, the amount of work to be performed is estimated in
-terms of SPs \textless{}sec-effort\textgreater{}, while the
-earned value \textless{}sec-evms\textgreater{} system accounts for work
+terms of SPs (\S\ref{sec:effort}), while the
+earned value (\S\ref{sec:evms}) system accounts for work
 in terms of budgeted cost (BCWS). In order to estimate the value earned
 by completing an epic, it is necessary to map from one to the other.
 
 The outline of the calculation here is straightforward: SPs map to
 developer hours. Given the
-staff assignment \textless{}sec-planning-epics\textgreater{} for the
-epic, the number of hours scheduled per developer can be calculated.
-Given the nominal costs \textless{}sec-labor-costs\textgreater{}
+staff assignment for the
+epic (see \S\ref{sec:planning-epics}), the number of hours scheduled per developer can be calculated.
+Given the nominal costs (per \S\ref{sec:labor-costs})
 associated with each developer, the total labor cost can be estimated.
 
 Therefore, we calculate the number of hours of each staffing grade being
 assigned to the epic, multiply that by the cost per hour of that grade,
 and that provides the cost of the work scheduled.
 
-\subsubsection{Cross Team Work}\label{cross-team-work}
+\subsubsection{Cross Team Work}
+\label{sec:cross-team}
 
 Planning epics are always assigned to a particular WBS leaf element:
 they do not span elements or teams. It is therefore impossible to
@@ -793,7 +774,7 @@ to approach this problem:
   detached from one team and explicitly work for another team for some
   defined period. One technical manager is therefore responsible for
   defining and scheduling their work. Their ``home'' manager will charge
-  actuals \textless{}sec-actuals\textgreater{} against the WBS supplied
+  actuals (\S\ref{sec:actuals} against the WBS supplied
   by the manager manager of the receiving team.
 \end{itemize}
 
@@ -802,18 +783,19 @@ especially careful to ensure that cross-team work is well defined.
 Usually, it is convenient for a single manager to take ultimate
 responsibility for ensuring that it is successfully delivered.
 
-\subsection{Revising the Plan}\label{revising-the-plan}
+\subsection{Revising the Plan}
+\label{sec:cycle-change}
 
 During the cycle, it is possible that changing circumstances will cause
 reality not to exactly match with the plan. This will ultimately cause a
-variance \textless{}sec-evms\textgreater{}, which should be minimized
+variance (see \S\ref{sec:evms}), which should be minimized
 and which---if it becomes significant enough---will require a narrative.
 
 After the plan for the cycle has been entered into JIRA, it is under
 change control: it can only be altered through a LCR approved by the
 CCB. In order to reschedule (or remove entirely from the cycle) an epic
 which has not yet started, the technical manager should work with the
-Project Controls Specialist \textless{}sec-contacts\textgreater{} to
+Project Controls Specialist (\S\ref{sec:contacts}) to
 prepare and submit an appropriate LCR to the CCB. The CCB meets on the
 third Wednesday of the calendar month; change requests must be submitted
 well in advance of this. Therefore, it is advisable to take time early
@@ -825,7 +807,7 @@ That is, if the scheduled start date of an epic is already in the past,
 it is not possible to move it into the future using a change request. In
 this case, there is no option but to carry the variance related to the
 late start of the epic into the future, to describe that with narratives
-\textless{}sec-variance-narrative\textgreater{} where necessary, and to
+(\S\ref{sec:variance-narrative}) where necessary, and to
 attempt to address the variance as soon as is possible.
 
 Based on the above, it is clear that technical managers should closely
@@ -833,14 +815,15 @@ track performance relative to the plan throughout the cycle, and
 proactively file change requests to avoid running variances wherever
 possible.
 
-\subsection{Closing the Cycle}\label{closing-the-cycle}
+\subsection{Closing the Cycle}
+\label{sec:cycle-close}
 
 Assuming everything has gone to plan, by the end of a cycle all
 deliverables should be verified and the corresponding epics should be
 marked as :jira\_field:done. Marking an epic as :jira\_field:done
 asserts that the concrete deliverable associated with the epic has been
 provided. The total cost of that functionality---the BCWS, calculated as
-per sec-sps-to-bcws---is now claimed as value earned.
+per \S\ref{sec:sps-to-bcws}---is now claimed as value earned.
 
 Epics which are in progress at the end of the cycle cannot be closed
 until they have been completed. These epics will spill over into the
@@ -849,26 +832,25 @@ epic with a concrete deliverable until that deliverable has been
 achieved: instead, a variance will be shown until the epic can be
 closed. Obviously, this will impact the labor available for other
 activities in the next cycle. (This does not apply to
-bucket epics \textless{}sec-bucket\textgreater{}, which are, by their
+bucket epics (\S\ref{sec:bucket}), which are, by their
 nature, timeboxed within the cycle).
 
 Similar logic applies to epics which \emph{have not been started}: if
 the planned start date is in the past, they can no longer be rescheduled
-\textless{}sec-cycle-change\textgreater{} by means of an LCR. They must
+by means of an LCR (\S\ref{sec:cycle-change}). They must
 be completed at the earliest possible opportunity; you will show a
 variance until this has been done.
 
 \section{Execution}\label{execution}
 
-Having thus \textless{}sec-cycle-plan\textgreater{} defined the plan for
-a cycle, we execute it by means of a series of month-long sprints. In
-this section, we detail the procedures teams are expected to follow
-during the cycle.
+Having defined defined the plan for a cycle following \S\ref{sec:cycle-plan}, we execute it by means of a series of month-long sprints.
+In this section, we detail the procedures teams are expected to follow during the cycle.
 
-\subsection{Defining Stories}\label{defining-stories}
+\subsection{Defining Stories}
+\label{sec:defining-stories}
 
-Epics have already been defined \textless{}sec-planning-epics\textgreater{}
-as part of the cycle plan. However, the epic is not at an appropriate
+Epics have already been defined
+as part of the cycle plan (see \S\ref{sec:planning-epics}). However, the epic is not at an appropriate
 level for scheduling day-to-day work. Rather, each epic is broken down
 into a series of self-contained ``stories''. A story describes a planned
 activity worth between a small fraction of a SP and several SPs (more
@@ -888,17 +870,18 @@ begins: it may be more appropriate to first schedule a few exploratory
 stories and use them to inform the development of the rest of the epic.
 However, do break epics down to describe the stories which will be
 worked in an
-upcoming sprint \textless{}sec-sprinting\textgreater{} before the sprint
+upcoming sprint (\S\ref{sec:sprinting}) before the sprint
 starts. When doing so, you may wish to leave some spare time to handle
-emergent work \textless{}sec-bugs\textgreater{}.
+emergent work (discussed in \S\ref{sec:bugs}).
 
 Note that there is no relationship enforced between the SP total
 estimated for the epic and the sum of the SPs of its constituent
 stories. It is therefore possible to over- or under-load an epic. This
-will have obvious ramifications for the schedule. See sec-cycle-value
-for its impact on earned value.
+will have obvious ramifications for the schedule. See \S\ref{sec:cycle-value}
+for a discussion of its impact on earned value.
 
-\subsection{Sprinting}\label{sprinting}
+\subsection{Sprinting}
+\label{sec:sprinting}
 
 Each team organizes its work around periods of work called sprints. A
 sprint comprises a defined collection of stories which will be addressed
@@ -912,12 +895,8 @@ Broadly, executing a sprint falls into three stages:
 \item
   Preparation.
 
-  The team assigns the work that will be addressed during the sprint by
-  choosing from the
-  pre-defined stories \textless{}sec-defining-stories\textgreater{}.
-  Each team member should be assigned a plausible amount of work, based
-  on the per-story SP estimates and the likely working rate of the
-  developer (see sec-effort).
+  The team assigns the work that will be addressed during the sprint by choosing from the pre-defined stories (\S\ref{sec:defining-stories}).
+  Each team member should be assigned a plausible amount of work, based on the per-story SP estimates and the likely working rate of the developer (see \S\ref{sec:effort}).
 
   The process by which work is assigned to team members is a local
   management decision: the orthodox approach is to call a team-wide
@@ -942,7 +921,7 @@ Broadly, executing a sprint falls into three stages:
   ensure that completed stories are marked as :jira\_field:`done`:
   experience suggests that this can easily be forgotten as developers
   rush on to the next challenge, but it is required to enable us to
-  properly track earned value \textless{}sec-cycle-value\textgreater{}.
+  properly track earned value as per\S\ref{sec:cycle-value}.
 
   When completing a story we do not change the number of SPs assigned to
   it: the SP total reflects our initial estimate of the work involved,
@@ -981,7 +960,8 @@ style work as appropriate: the former is suitable for planned
 development activities (e.g. Science Pipelines development); the latter
 for servicing user requests (e.g. providing developer support).
 
-\subsection{Completing Epics}\label{completing-epics}
+\subsection{Completing Epics}
+\label{sec:epic-done}
 
 An epic may be marked as :jira\_field:done when:
 
@@ -993,26 +973,21 @@ An epic may be marked as :jira\_field:done when:
 \item
   There are no plans to add more stories;
 \item
-  (If applicable, i.e. it is not a
-  bucket \textless{}sec-bucket\textgreater{}) its concrete deliverable
-  has been achieved.
+  (If applicable, i.e. it is not a bucket, as defined in \S\ref{sec:bucket}) its concrete deliverable has been achieved.
 \end{enumerate}
 
 Note that it is not permitted to close an epic without defining at least
 one story within it. Empty epics can never be completed.
 
-When an epic is marked as complete, all of its value is earned
-\textless{}sec-cycle-value\textgreater{}.
+When an epic is marked as complete, all of its value is earned (\S\ref{sec:cycle-value}).
 
-\subsection{Handling Bugs \& Emergent
-Work}\label{handling-bugs-emergent-work}
+\subsection{Handling Bugs \& Emergent Work}
+\label{sec:bugs}
 
 \subsubsection{Receiving Bug Reports}\label{receiving-bug-reports}
 
-Members of the project who have access to JIRA may report bugs or make
-feature requests directly using JIRA. As discussed under
-sec-jira-maintenance, technical managers should regularly monitor JIRA
-for relevant tickets and ensure they are handled appropriately.
+Members of the project who have access to JIRA may report bugs or make feature requests directly using JIRA.
+As discussed in \S\ref{sec:jira-maintenance}, technical managers should regularly monitor JIRA for relevant tickets and ensure they are handled appropriately.
 
 Our code repositories are exposed to the world in general through
 \href{https://github.com/lsst/}{GitHub}. Each repository on GitHub has a
@@ -1068,7 +1043,7 @@ equivalent story.
 
 In some cases, a ticket may describe emergent work which must be
 addressed immediately by adding it to a
-bucket epic \textless{}sec-bucket\textgreater{}. In other cases, it can
+bucket epic (\S\ref{sec:bucket}). In other cases, it can
 be deferred to a later cycle, or, after appropriate discussion, may be
 regarded as inappropriate (and can be tagged as :jira\_field:invalid or
 :jira\_field:won't fix). This is a management decision. When closing a
@@ -1105,17 +1080,16 @@ We expect that no more than around 30\% of schedulable developer time
 will be dedicated addressing bugs and performing maintenance: any more
 than this must be carefully justified.
 
-\subsection{Earning Value}\label{earning-value}
+\subsection{Earning Value}
+\label{sec:cycle-value}
 
-The basic procedure for earning value during the cycle is akin to that
-discussed earlier \textless{}sec-long-term-value\textgreater{} for long
-term planning.
+The basic procedure for earning value during the cycle is akin to that discussed in \S\ref{sec:long-term-value} for long term planning.
 
-In short, as we have seen \textless{}sec-sps-to-bcws\textgreater{}, the
+In short, as we saw in \S\ref{sec:sps-to-bcws}, the
 BCWS for a particular epic is defined by its \emph{estimated} (i.e.
 attached to the epic before work commences) SP total and its staff
 assignment. When an epic
-is marked as complete \textless{}sec-epic-done\textgreater{}, this is
+is marked as complete (following the criteria in \S\ref{sec:epic-done}, this is
 the value that is earned.
 
 The BCWP for an epic is calculated based on the fractional completeness
@@ -1127,7 +1101,7 @@ Be aware that stories that marked as :jira\_field:invalid or
 :jira\_field:won't fix in JIRA are not included in this calculation:
 they earn no value.
 
-As we have seen \textless{}sec-defining-stories\textgreater{}, it is not
+As we saw in \S\ref{sec:defining-stories}, it is not
 required that the total SPs of all the stories contained within an epic
 (the ``planned SPs'') is equal to the total SP estimate of the epic
 itself (``estimated SPs''). Further, it is permitted to add stories to
@@ -1147,7 +1121,8 @@ In order to meet these criteria, the relative weights of stories will be
 automatically adjusted on ingest to the PMCS. The detailed algorithm by
 which this adjustment is made is not publicly documented.
 
-\subsection{JIRA Maintenance}\label{jira-maintenance}
+\subsection{JIRA Maintenance}
+\label{sec:jira-maintenance}
 
 At any time, new tickets may be added to JIRA by team members. Please
 remind your team of the best practice in this respect (RFC-147). It is
@@ -1156,7 +1131,7 @@ handled appropriately, updating the schedule to include them where
 necessary. It is required that the \texttt{Team} field be set to the
 appropriate team (RFC-145). Please regularly monitor JIRA for incomplete
 tickets and update them appropriately. Where tickets describe bugs or
-other urgent emergent work which cannot be deferred, refer to sec-bugs.
+other urgent emergent work which cannot be deferred, refer to \S\ref{sec:bugs}.
 
 \subsection{Coordination Standup}\label{coordination-standup}
 
@@ -1164,7 +1139,7 @@ The meeting URL is not included here since this note is publicly
 available. Contact the Project Manager for details.
 
 The technical managers meet with the
-Project Manager \textless{}sec-contacts\textgreater{} and interested
+Project Manager (\S\ref{sec:contacts}) and interested
 others (it is not a closed meeting) twice every week. This is a forum to
 discuss general project management issues, but, in particular, to
 resolve issues which cut across team boundaries and are relevant for the
@@ -1174,13 +1149,13 @@ Meetings take place using \href{https://hangouts.google.com/}{Google
 Hangouts} at a pre-arranged URL. Meetings take place at 11:00 (11 a.m.)
 Project (Pacific) Time on Tuesdays and Fridays.
 
-\subsection{Monthly Progress
-Narratives}\label{monthly-progress-narratives}
+\subsection{Monthly Progress Narratives}
+\label{sec:monthly-narrative}
 
 Every calendar month, each technical manager is required to support the
 Project Manager with a report on the activities of their group. This
 report should be generally submitted no later than tenth of the month
-(refer to the sec-monthly-cycle), but this may be moved earlier on
+(refer to \S\ref{sec:reporting-cycle}), but this may be moved earlier on
 occasion. You are encouraged to submit your report as early in the month
 as possible.
 
@@ -1195,10 +1170,11 @@ upcoming month, as well as describing any recruitment activities
 to previous reports for examples of the style used (but note that they
 are not not always consistent).
 
-\section{Reporting Actuals}\label{reporting-actuals}
+\section{Reporting Actuals}
+\label{sec:actuals}
 
 In order to comply with the
-earned value management system \textless{}sec-evms\textgreater{}, it is
+earned value management system (\S\ref{sec:evms}), it is
 necessary to track the actual cost of work being performed (the
 ``actuals'') in each leaf element of the WBS. That is, whenever an
 invoice is issued from a subcontracting institution to AURA, it must be
@@ -1213,11 +1189,11 @@ Other institutions do not rigorously check staff activity and/or do not
 supply this information to AURA when invoicing. In this case, the
 technical manager is responsible for breaking down the invoice by WBS
 and forwarding that to the relevant AURA contracts officer (check with
-the project manager
-\textless{}sec-contacts\textgreater{} if you are unsure who that is).
+the Project Manager
+(\S\ref{sec:contacts}) if you are unsure who that is).
 Note that, since
 story points reflect estimated, not actual, time spent on work
-\textless{}sec-sprinting\textgreater{}, it is \emph{not} appropriate to
+(\S\ref{sec:sprinting}), it is \emph{not} appropriate to
 simply allocate actual costs based on SP totals.
 
 Typically, expenses are accrued at a broadly constant rate for each
@@ -1237,7 +1213,8 @@ the future, it is perfectly possible that they will wish to examine such
 a mapping. You should therefore keep records which will enable you to
 provide it upon request.
 
-\section{Standard Reporting Cycle}\label{standard-reporting-cycle}
+\section{Standard Reporting Cycle}
+\label{sec:reporting-cycle}
 
 \begin{itemize}
 \item
@@ -1252,11 +1229,9 @@ provide it upon request.
   \begin{quote}
   \begin{itemize}
   \item
-    sec-variance-narrative, where necessary, must be submitted through
-    eCAM.
+    Variance narratives (\S\ref{sec:variance-narrative}), where necessary, must be submitted through eCAM.
   \item
-    sec-monthly-narrative must be submitted through Google Docs by the
-    tenth day of the month.
+    The monthly progress narrative (\S\ref{sec:monthly-narrative}) must be submitted through Google Docs by the tenth day of the month.
   \end{itemize}
   \end{quote}
 \item
