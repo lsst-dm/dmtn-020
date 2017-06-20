@@ -495,12 +495,11 @@ Each \gls{epic} loaded into the plan must have:
 \item
   A concrete, well defined deliverable \emph{or} be clearly described as a ``bucket'' (\S\ref{sec:bucket});
 \item
-  The :jira\_field:cycle field set to the appropriate \gls{cycle};
+  The \texttt{cycle} field set to the appropriate \gls{cycle};
 \item
-  The :jira\_field:\gls{wbs} field set to the appropriate \gls{wbs} \emph{leaf}
-  \gls{element}.
+  The \texttt{wbs} field set to the appropriate \gls{wbs} \emph{leaf} \gls{element}.
 \item
-  The :jira\_field:Story Points field set to a (non-zero!) estimate of the effort required to complete the \gls{epic} in terms of \glspl{sp} (see \S\ref{sec:effort}).
+  The \texttt{Story Points} field set to a (non-zero!) estimate of the effort required to complete the \gls{epic} in terms of \glspl{sp} (see \S\ref{sec:effort}).
 \end{itemize}
 
 Be aware that:
@@ -541,7 +540,7 @@ Specifically, it is necessary to define:
   Staff assignments.
 \end{itemize}
 
-Although it is possible---indeed, encouraged---to set the :jira\_field:assignee field in \gls{jira} to the individual who is expected to carry out the bulk of the work in an \gls{epic}, this does not provide sufficient granularity for those cases when more than one person will be contributing.
+Although it is possible---indeed, encouraged---to set the \texttt{assignee} field in \gls{jira} to the individual who is expected to carry out the bulk of the work in an \gls{epic}, this does not provide sufficient granularity for those cases when more than one person will be contributing.
 
 In fact, it is only required to provide a staff assignment in terms of ``resource types'' (i.e. scientists, senior scientists, developers, senior developers, etc).
 In practice, to ensure your team is evenly loaded, it is usually necessary to break it down to named individuals.
@@ -659,8 +658,8 @@ Based on the above, it is clear that technical managers should closely track per
 \subsection{Closing the Cycle}
 \label{sec:cycle-close}
 
-Assuming everything has gone to plan, by the end of a \gls{cycle} all deliverables should be verified and the corresponding \glspl{epic} should be marked as :jira\_field:done.
-Marking an \gls{epic} as :jira\_field:done asserts that the concrete deliverable associated with the \gls{epic} has been provided.
+Assuming everything has gone to plan, by the end of a \gls{cycle} all deliverables should be verified and the corresponding \glspl{epic} should be marked as \texttt{done}.
+Marking an \gls{epic} as \texttt{done} asserts that the concrete deliverable associated with the \gls{epic} has been provided.
 The total cost of that functionality---the \gls{bcws}, calculated as per \S\ref{sec:sps-to-bcws}---is now claimed as value earned.
 
 Epics which are in progress at the end of the \gls{cycle} cannot be closed until they have been completed.
@@ -742,7 +741,7 @@ Broadly, executing a sprint falls into three stages:
   Stories should be executed following the instructions in the
   \href{http://developer.lsst.io/}{Developer Guide} as regards workflow,
   coding standards, review requirements, and so on. It is important to
-  ensure that completed stories are marked as :jira\_field:`done`:
+  ensure that completed stories are marked as \texttt{done}:
   experience suggests that this can easily be forgotten as developers
   rush on to the next challenge, but it is required to enable us to
   properly track earned value as per\S\ref{sec:cycle-value}.
@@ -787,7 +786,7 @@ for servicing user requests (e.g. providing developer support).
 \subsection{Completing Epics}
 \label{sec:epic-done}
 
-An \gls{epic} may be marked as :jira\_field:done when:
+An \gls{epic} may be marked as \texttt{done} when:
 
 \begin{enumerate}
 \item
@@ -839,32 +838,25 @@ Per RFC-43, the semantics of the various issue types are:
 \item
   A \gls{story} is the result of breaking down an \gls{epic} into workable units;
 \item
-  A bug describes a fault or error in code which has already been
-  accepted to master;
+  A bug describes a fault or error in code which has already been accepted to master;
 \item
-  An improvement describes a feature request or enhancement which has
-  not been derived by breaking down the long term plan (i.e., it is an
-  ad-hoc developer or user request).
+  An improvement describes a feature request or enhancement which has not been derived by breaking down the long term plan (i.e., it is an ad-hoc developer or user request).
 \end{itemize}
 
-The three issue types are functionally equivalent: these semantic
-distinctions are for convenience only, and are not rigorously enforced.
+The three issue types are functionally equivalent: these semantic distinctions are for convenience only, and are not rigorously enforced.
 
-In particular, note that all issue types are equivalent in terms of the
-data which is loaded to the \gls{pmcs}: it makes no distinction between them.
-Marking a bug or improvement as :jira\_field:done has exactly the same
-impact on the global earned value state as would completing an
-equivalent \gls{story}.
+In particular, note that all issue types are equivalent in terms of the data which is loaded to the \gls{pmcs}: it makes no distinction between them.
+Marking a bug or improvement as \texttt{done} has exactly the same impact on the global earned value state as would completing an equivalent \gls{story}.
 
 \subsubsection{Scheduling}\label{scheduling}
 
 In some cases, a ticket may describe emergent work which must be addressed immediately by adding it to a bucket \gls{epic} (\S\ref{sec:bucket}).
-In other cases, it can be deferred to a later \gls{cycle}, or, after appropriate discussion, may be regarded as inappropriate (and can be tagged as :jira\_field:invalid or :jira\_field:won't fix).
+In other cases, it can be deferred to a later \gls{cycle}, or, after appropriate discussion, may be regarded as inappropriate (and can be tagged as \texttt{invalid} or \texttt{won't fix}).
 This is a management decision.
 When closing a ticket as inappropriate, please take a moment to describe why---the individual who reported it will appreciate an explanation of why it has been rejected, and it will serve as a useful reference the next time somebody suggests the same thing.
 
 A special case of inappropriate tickets are those that duplicate work which has already been described elsewhere.
-Please close these as :jira\_field:invalid, and add a \gls{jira} link of type :jira\_field:duplicates to the original ticket.
+Please close these as \texttt{invalid}, and add a \gls{jira} link of type \texttt{duplicates} to the original ticket.
 
 Tickets which are obviously filed by mistake may simply be deleted
 rather than setting a special status. Please only do this when you are
@@ -895,7 +887,7 @@ When an \gls{epic} is marked as complete (following the criteria in \S\ref{sec:e
 
 The \gls{bcwp} for an \gls{epic} is calculated based on the fractional completeness of an \gls{epic}. That is, if an \gls{epic} has a total SP count of \(X\), and the total of stories marked as complete within it is \(Y\), then \(BCWP = BCWS \times Y / X\).
 
-Be aware that stories that marked as :jira\_field:invalid or :jira\_field:won't fix in \gls{jira} are not included in this calculation: they earn no value.
+Be aware that stories that marked as \texttt{invalid} or \texttt{won't fix} in \gls{jira} are not included in this calculation: they earn no value.
 
 As we saw in \S\ref{sec:defining-stories}, it is not required that the total \glspl{sp} of all the stories contained within an \gls{epic} (the ``planned \glspl{sp}'') is equal to the total SP estimate of the \gls{epic} itself (``estimated \glspl{sp}''). Further, it is permitted to add stories to (or, indeed, remove stories from) the \gls{epic} during the \gls{cycle}. In these cases, we hold to two basic tenets:
 
