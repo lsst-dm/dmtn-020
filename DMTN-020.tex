@@ -1,13 +1,7 @@
 \documentclass[DM,lsstdraft,TN,toc]{lsstdoc}
-%Replace the CUx here and all \CU will resolve below.
 
-%\usepackage{glossaries}
-%\makeglossaries
-%\setacronymstyle{long-short}
-%\newacronym{svm}{SVM}{support vector machine}
-%\newacronym{dm}{DM}{Data Management}
-%\usepackage{gwp}
-%\usepackage{risk}
+\usepackage[nonumberlist,nogroupskip,toc,numberedsection=autolabel]{glossaries}
+\makeglossaries
 
 \setDocChangeRecord{%
 \addtohist{2}{2014-01-01}{Update from original }{JB,JS}
@@ -16,7 +10,9 @@
 
 \begin{document}
 
-\title[DM PM guide]{Data Management Project Management Guide }
+\input{glossary}
+
+\title[DM PM Guide]{Data Management Project Management Guide }
 
 \author{Jacek Becla, Frossie Economou, Margaret Gelman, Jeff Kantor, Simon Krughoff, Kevin Long, Fritz Mueller, William O Mullane, John Swinbank, Xiuqin Wu}
 
@@ -34,11 +30,11 @@
 %
 \maketitle
 
-%\printnoidxglossaries
 %
 % It's all yours from here on
 %
 \input{body}
+\printglossary[style=index]
 \section{References\label{sect:references}}
 \renewcommand{\refname}{}
 \bibliography{local,lsst,gaia_livelink_valid,refs,books,refs_ads}
