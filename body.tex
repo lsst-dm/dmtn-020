@@ -267,7 +267,21 @@ time to compensate.
 
 Rather than working in hours, our \gls{jira} based system uses \glspl{sp}, with one \gls{sp} being defined as equivalent to four hours of effort by a competent developer.
 Thus, we expect developers and scientists to produce 26.25 and 21 \glspl{sp} per \emph{average} month respectively.
-This is summarized in tab-working-rate.
+This is summarized in Table \ref{tab:working-rate}.
+
+\begin{table}
+\begin{longtable}[]{@{}lrrr@{}}
+\hline
+          & \multicolumn{2}{c}{Hours} & \multicolumn{1}{c}{\glspl{sp}} \\
+          & Per year & Per month      & Per month \\
+\hline
+Developer & 1800     & 105            & 26.25 \\
+Scientist & 1440     &  84            & 21.00 \\
+\hline
+\end{longtable}
+\caption{Expected working rates for developers and scientists.}
+\label{tab:working-rate}
+\end{table}
 
 On occasion, it may be appropriate to tailor the number of \glspl{sp} expected per unit time from a particular individual.
 For example:
