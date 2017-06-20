@@ -6,7 +6,7 @@
 
 \newglossaryentry{unit}
 {
- name={Budgeted (labor) unit},
+ name={budgeted (labor) unit},
  description={An hour of work}
 }
 
@@ -23,7 +23,7 @@
 
 \newglossaryentry{ca}
 {
- name={Control Account},
+ name={control account},
  description={An intersection point between the \gls{wbs} and the \gls{obs}.
               For example, work performed at IPAC (1.03) on the Science User Interface (1.02C.05) is managed by a single control account}
 }
@@ -38,7 +38,7 @@
 
 \newglossaryentry{cycle}
 {
- name=Cycle,
+ name=cycle,
  description={The time period over which detailed, short-term plans are defined and executed.
               Normally, cycles run for six months, and culminate in a new release of the LSST Software Stack, however this need not always be the case}
 }
@@ -52,20 +52,19 @@
 
 \newglossaryentry{element}
 {
- name=Element,
+ name=element,
  description={A node in the hierarchical project \gls{wbs}}
 }
 
 \newglossaryentry{epic}
 {
- name=Epic,
+ name=epic,
  description={A self contained work with a concrete deliverable which my be scheduled to take place with a single \gls{cycle} and \gls{wbs} \gls{element}}
 }
 
 \newacronym
  [description={Earned Value Management System. See the brief description in \S\ref{sec:evms}, or refer to formal training}]
  {evms}{EVMS}{Earned Value Management System}
-
 
 \newglossaryentry{jira}
 {
@@ -98,7 +97,7 @@
 
 \newglossaryentry{risk}
 {
- name=Risk,
+ name=risk,
  description={Risks are (per ISO 31000) ``the effect of uncertainty upon objectives''.
               For the purposes of this document, that corresponds to the impact of unplanned or unpredictable events upon the cost or schedule of the Project.
               The Project maintains a register of risks, which includes probability estimates and possible mitigations}
@@ -114,7 +113,7 @@
 
 \newglossaryentry{resloading}
 {
- name={Resource Loading},
+ name={resource loading},
  description={Assigning particular resources (in software development, almost always staffing) to particular tasks.
               A ``resource loaded plan'' provides a mapping of resources to the plan throughout execution}
 }
@@ -131,7 +130,7 @@
 
 \newglossaryentry{sprint}
 {
- name=Sprint,
+ name=sprint,
  description={A defined period of work for a particular team.
                Typically, sprints are one calendar month long, but this is not required}
 }
@@ -144,10 +143,11 @@
 
 \newglossaryentry{story}
 {
- name=Story,
+ name=story,
  description={A \gls{jira} issue type describing a scheduled, self-contained task worked as part of an \gls{epic}.
               Typically, stories are appropriate for work worth between a fraction of a \gls{sp} and 10 \glspl{sp}; beyond that, the work is insufficiently fine-grained to schedule as a story.
-              While fractional \glspl{sp} are fine, all stories involve work, so the \glspl{sp} total of an in progress or completed story should not be 0}
+              While fractional \glspl{sp} are fine, all stories involve work, so the \glspl{sp} total of an in progress or completed story should not be 0},
+ plural=stories
 }
 
 \newacronym
@@ -157,7 +157,7 @@
 
 \newglossaryentry{timebox}
 {
- name=Timebox,
+ name=timebox,
  description={A limited time period assigned to a piece of work or other activity.
               Useful in scheduling work which is not otherwise easily limited in scope, for example research projects or servicing user requests}
 }

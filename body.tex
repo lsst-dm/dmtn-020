@@ -12,7 +12,7 @@ You are encouraged to submit bug reports so that this document can be made compl
 Be aware of prefixes: ``LDM-'' documents refer specifically to the Data Management subsystem, ``LSE-'' to Systems Engineering, ``LPM-'' to Project Management.
 
 \paragraph*{\citeds{LPM-43, LPM-44}}
-\emph{WBS Structure} and \emph{WBS Dictionary}, respectively.
+\emph{\gls{wbs}} and \emph{\gls{wbs} Dictionary}, respectively.
 The former shows the overall work breakdown structure for the whole project.
 Note that these documents are periodically extracted from the master \gls{pmcs} system, and therefore occasionally do not reflect the most recent changes.
 
@@ -42,11 +42,11 @@ He is the first point of contact for all questions regarding \gls{pmcs}.
 \label{sec:tcam}
 
 This guide is primarily aimed at the LSST DM technical managers.
-Technical managers report directly to the DM Project Manager. Technical
-managers are, in general, expected to act as CAM and technical lead for
-their WBS elements; as such, they are sometimes referred to as
-``T/CAMs''. The TCAM role is described in 294. The role of CAM is
-defined in detail in \S\ref{sec:structure}.
+Technical managers report directly to the DM Project Manager.
+Technical managers are, in general, expected to act as \gls{cam} and technical lead for their \gls{wbs} \glspl{element}; as such, they are sometimes referred to as ``T/CAMs''.
+
+The T/CAM role is described in \citeds{ldm-294}.
+The role of \gls{cam} is defined in detail in \S\ref{sec:structure}.
 
 \section{Formal Organizational Structure}
 \label{sec:structure}
@@ -54,20 +54,19 @@ defined in detail in \S\ref{sec:structure}.
 \subsection{Work Breakdown Structure}
 \label{sec:wbs}
 
-The LSST WBS is defined in \citeds{LPM-43} (see also \citeds{LPM-44} for an extended---but not universally illuminating---definition of what each level of the breakdown consists of).
+The LSST \gls{wbs} is defined in \citeds{LPM-43} (see also \citeds{LPM-44} for an extended---but not universally illuminating---definition of what each level of the breakdown consists of).
 
-The WBS provides a hierarchical index of all hardware, software,
-services, and other deliverables which are required to complete the LSST
-Project. It consists of alphanumeric strings separated by periods. The
-first component is always ``1'', referring the LSST Construction
-Project. ``02C'' in the second component corresponds to Data Management
-Construction. Subdivisions thereof are indicated by further digits.
+The \gls{wbs} provides a hierarchical index of all hardware, software, services, and other deliverables which are required to complete the LSST Project.
+It consists of alphanumeric strings separated by periods.
+The first component is always ``1'', referring the LSST Construction Project.
+``02C'' in the second component corresponds to Data Management Construction.
+Subdivisions thereof are indicated by further digits.
 Subdivisions at this level correspond to teams within the DM project.
 Thus:
 
 \begin{longtable}[]{@{}lll@{}}
 \hline
-WBS & Description & Lead Institution\tabularnewline
+\gls{wbs} & Description & Lead Institution\tabularnewline
 \hline
 \endhead
 1.02C.01 & System Management & LSST\tabularnewline
@@ -86,26 +85,23 @@ LSST\tabularnewline
 \hline
 \end{longtable}
 
-These subdivisions are referred to as the \emph{third level WBS}. Often,
-they are quoted without the leading ``1'' (e.g. ``02C.01''), but, even
-in this form, they are referred to as ``third level''.
+These subdivisions are referred to as the \emph{third level \gls{wbs}}.
+Often, they are quoted without the leading ``1'' (e.g. ``02C.01''), but, even in this form, they are referred to as ``third level''.
 
-All of these third level WBS elements are subdivided, forming a fourth
-level. The fourth level always contains a ``00'' element, which is used
-to capture management and \gls{loe} work, and may contain other fourth level,
-or even deeper, structure. Nodes in the WBS tree are referred to as
-elements.
+All of these third level \gls{wbs} \glspl{element} are subdivided, forming a fourth level.
+The fourth level always contains a ``00'' \gls{element}, which is used to capture management and \gls{loe} work, and may contain other fourth level, or even deeper, structure.
+Nodes in the \gls{wbs} tree are referred to as \glspl{element}.
 
 \subsection{Organization Breakdown
 Structure}\label{organization-breakdown-structure}
 
-In parallel with the WBS, we have an OBS, which assigns each institution
-involved in the project a unique numeric identifier. The OBS is defined
-in 98. Those institutions directly relevant to DM include:
+In parallel with the \gls{wbs}, we have an \gls{obs}, which assigns each institution involved in the project a unique numeric identifier.
+The \gls{obs} is defined in \citeds{LPM-98}.
+Those institutions directly relevant to DM include:
 
 \begin{longtable}[]{@{}ll@{}}
 \hline
-OBS & Institution\tabularnewline
+\gls{obs} & Institution\tabularnewline
 \hline
 \endhead
 1.01 & LSST\tabularnewline
@@ -120,21 +116,18 @@ OBS & Institution\tabularnewline
 \subsection{The Control Account
 Manager}\label{the-control-account-manager}
 
-A control account is the intersection between the WBS and the OBS. Each
-control account falls under the purview of a CAM. Typically within DM, a
-single CAM is responsible for the whole of a third level WBS. That is,
-the manager at the lead institution for a particular component is
-responsible for all work performed on that WBS element, even if some of
-that work is performed at another institution.
+A \gls{ca} is the intersection between the \gls{wbs} and the \gls{obs}.
+Each \gls{ca} falls under the purview of a \gls{cam}.
+Typically within DM, a single \gls{cam} is responsible for the whole of a third level \gls{wbs}.
+That is, the manager at the lead institution for a particular component is responsible for all work performed on that \gls{wbs} \gls{element}, even if some of that work is performed at another institution.
 
 \section{Earned Value Principles}
 \label{sec:evms}
 
-LSST DM is funded by as an NSF MREFC project. Under the terms of the
-MREFC award, we are required to follow an \emph{earned value} approach
-to project management. A full description of the earned value approach
-is outside the scope of this document (the project will provide formal
-training). We provide a brief aide-mémoire for convenience only.
+LSST DM is funded by as an \gls{nsf} \gls{mrefc} project.
+Under the terms of the \gls{mrefc} award, we are required to follow an \emph{earned value} approach to project management.
+A full description of the earned value approach is outside the scope of this document: the project will provide formal training.
+We provide a brief aide-m\'emoire for convenience only.
 
 The earned value technique assigns each component of the system with a
 dollar value corresponding to its expected cost of production. In a
@@ -148,28 +141,20 @@ is a proxy for the amount of labor required to produce it.
 As well as a cost, the plan includes a start date and a completion date
 for each component.
 
-The total value of work which \emph{should} have been completed by a
-particular date is the BCWS. The total value of work which has
-\emph{actually} been completed by the date is the BCWP. The total sum
-expended on the work is the ACWP. Theoretically, if estimates of both
-cost and time for every component of the system are accurate, at the end
-of construction, all of these three quantities will be equal.
+The total value of work which \emph{should} have been completed by a particular date is the \gls{bcws}.
+The total value of work which has \emph{actually} been completed by the date is the \gls{bcwp}.
+The total sum expended on the work is the \gls{acwp}.
+Theoretically, if estimates of both cost and time for every component of the system are accurate, at the end of construction, all of these three quantities will be equal.
 
-In practice, estimation is rarely perfect. Imperfect estimates are
-exposed as variances. Specifically, we can show either SV (defined as
-BCWP-BCWS; a negative value means that less of the system has been
-delivered to date than planned) or CV (defined as BCWP-ACWP; a negative
-value means that the work delivered to date has been more expensive than
-predicted). Related quantities, SPI and CPI, express the same
-information as ratios rather than sums. In general, we strive to achieve
-variances of near zero: even a positive variance (corresponding being
-ahead of schedule or being cheaper than expected) is indicative of an
-inaccurate plan.
+In practice, estimation is rarely perfect.
+Imperfect estimates are exposed as variances.
+Specifically, we can show either \gls{sv}---a negative value means that less
+of the system has been delivered to date than planned---or \gls{cv}---a negative value means that the work delivered to date has been more expensive than predicted.
+Related quantities, \gls{spi} and \gls{cpi}, express the same information as ratios rather than sums.
+In general, we strive to achieve variances of near zero: even a positive variance (corresponding to being ahead of schedule or being cheaper than expected) is indicative of an inaccurate plan.
 
-All of these indices can be applied to any WBS element within the
-project. Thus, we can talk about value earned across the whole of DM
-(1.02C) or on a specific component (say, the User Workspace Toolkit,
-1.02C.05.05).
+All of these indices can be applied to any \gls{wbs} \gls{element} within the project.
+Thus, we can talk about value earned across the whole of DM (1.02C) or on a specific component (say, the User Workspace Toolkit, 1.02C.05.05).
 
 \subsection{Labor Costs}
 \label{sec:labor-costs}
@@ -189,50 +174,31 @@ defined expectation. See 81 for details.
 \subsection{Variance Narratives}
 \label{sec:variance-narrative}
 
-Every month, the eCAM tool is updated from PMCS to reflect the latest
-earned value status. If either cost or schedule is behind schedule by
-more than either \$100,000 or 10\% you are required to provide a
-``narrative''. This is divided into two parts: you must explain why the
-variance arose, and what action will be taken to correct it (e.g.
-slipping work into the future, or diverting resources from elsewhere to
-make up the shortfall). The narrative is entered directly into eCAM.
+Every month, the \gls{ecam} tool is updated from the \gls{pmcs} to reflect the latest earned value status.
+If either cost or schedule is behind schedule by more than either \$100,000 or 10\% you are required to provide a ``narrative''.
+This is divided into two parts: you must explain why the variance arose, and what action will be taken to correct it (e.g.  slipping work into the future, or diverting resources from elsewhere to make up the shortfall).
+The narrative is entered directly into \gls{ecam}.
 
-In future, narratives may also be required for positive variances (i.e.
-running ahead of schedule).
+In future, narratives may also be required for positive variances (i.e. running ahead of schedule).
 
-Variance is calculated on a monthly basis; variance narratives are due
-in the second week of the calendar month following that to which they
-apply (refer to \S\ref{sec:reporting-cycle} for details).
+Variance is calculated on a monthly basis; variance narratives are due in the second week of the calendar month following that to which they apply (refer to \S\ref{sec:reporting-cycle} for details).
 
-Variance is perfectly normal in a project and we should not be afraid to
-have them and provide narratives about them. We should take care the
-narrative is not always the same i.e. if we have a negative variance
-every month and it is because we did not plan for something we should do
-better planning.
+Variance is perfectly normal in a project and we should not be afraid to have them and provide narratives about them. We should take care the narrative is not always the same i.e. if we have a negative variance every month and it is because we did not plan for something we should do better planning.
 
 \subsection{Level of Effort Work}
 \label{sec:loe}
 
-The implicit assumption in the earned value technique outlined above is
-that all work corresponds to a specific deliverable. However, parts of
-our work do not: every member of the team will find it necessary to
-attend meetings or take part in other activities which do not directly
-map to deployed code. This may be particularly the case for technical
-managers or others in leadership roles within the project. This work is
-referred to as LOE: it is assumed to earn value simply through the
-passage of time.
+The implicit assumption in the earned value technique outlined above is that all work corresponds to a specific deliverable.
+However, parts of our work do not: every member of the team will find it necessary to attend meetings or take part in other activities which do not directly map to deployed code.
+This may be particularly the case for technical managers or others in leadership roles within the project.
+This work is referred to as \gls{loe}: it is assumed to earn value simply through the passage of time.
 
-472 provides a detailed definition of the types of work it is
-permissible to regard as LOE. In general, we strive to minimize the
-fraction of our effort which is devoted to LOE activities and favor
-those which are more directly accountable. In certain cases such as
-operations of pipelines or other systems LOE is perfectly acceptable.
+\citeds{LDM-472} provides a detailed definition of the types of work it is permissible to regard as \gls{loe}.
+In general, we strive to minimize the fraction of our effort which is devoted to \gls{loe} activities and favor those which are more directly accountable.
+In certain cases such as operations of pipelines or other systems \gls{loe} is perfectly acceptable.
 
-The assumption encoded in 472 is that developers will spent 30\% of
-their time on LOE type activities, and the remaining 70\% of their
-effort is tracked against concrete deliverables. This does not have to
-be used as a rule however, if we can plan activities to more than 70\%
-of the time we should do so.
+The assumption encoded in \citeds{LDM-472} is that developers will spent 30\% of their time on \gls{loe} type activities, and the remaining 70\% of their effort is tracked against concrete deliverables.
+This does not have to be used as a rule however, if we can plan activities to more than 70\% of the time we should do so.
 
 \section{Estimating Effort}
 \label{sec:effort}
@@ -246,7 +212,7 @@ Appointment as a ``scientist'' includes a 20\% personal research time
 allowance. That is, scientists are expected to devote 1,440 hours per
 year to LSST, and the remainder of their time to personal research.
 
-Personal research time is \emph{not} chargeable to LSST under any WBS or
+Personal research time is \emph{not} chargeable to LSST under any \gls{wbs} or
 account, including level of effort. The Project expects to pay the full
 rate for an individual with research time who contributes 1,440 hours to
 the project, and does not require any accounting of the remaining 360
@@ -263,39 +229,34 @@ A scientist with total annual cost (B) charges an hourly rate of
 
 No further corrections are necessary. In particular, there is no
 difference in the way working hours are measured, or the conversion of
-story points (SPs; discussed below) to hours.
+\glspl{sp} to hours.
 
 Some individuals serve ``Science Lead'' (SL) roles within DM which ,
 such as the Project Scientist and Pipelines Scientist. These roles are
 not equivalent to being granted personal research time, but reflect a
 level of scientific oversight within the project. Time spent performing
-this role must be accounted for in the usual way (either as LOE or as
+this role must be accounted for in the usual way (either as \gls{loe} or as
 providing deliverables), and charged to an account agreed with the
 DM Project Manager (\S\ref{sec:contacts}). They generally
 serve as the Product Owners for parts of the system their respective
 institutions have been tasked to deliver (not all products, as we
-discussed). While SLs report to the Subsystem Scientist , they primarily
-provide a service to the local TCAM.
+discussed). While SLs report to the Subsystem Scientist, they primarily
+provide a service to the local T/CAM.
 
 Science leads are typically not 100\% and as a rough guide we consider
 they spend about half their allocated time serving the Subsystem
-Scientist and half serving the TCAM. As much work as possible should be
+Scientist and half serving the T/CAM. As much work as possible should be
 accounted for in stories.
 
-Our base assumption is that 30\% of an individual's LSST time (i.e. 540
-hours/year for a developer, 432 hours/year for a scientist) are devoted
-to overhead for meetings, ad-hoc discussions and other interruptions.
-This work is counted as LOE (and, as such, is charged to the relevant
-``00'' fourth level WBS element, as described
-in \S\ref{sec:loe}). However meeting attendance is
-well understood - on the planning side we should allocate stories and
-points for individuals attending and preparing for meetings. If we fail
-to correctly visualize this work we loose track of it. If we bill less
-to LOE and have to fill a variance narrative that is fine.
+Our base assumption is that 30\% of an individual's LSST time (i.e. 540 hours/year for a developer, 432 hours/year for a scientist) are devoted to overhead for meetings, ad-hoc discussions and other interruptions.
+This work is counted as \gls{loe} (and, as such, is charged to the relevant ``00'' fourth level \gls{wbs} \gls{element}, as described in \S\ref{sec:loe}).
+However meeting attendance is well understood:  on the planning side we should allocate stories and points for individuals attending and preparing for meetings.
+If we fail to correctly visualize this work we loose track of it.
+If we bill less to \gls{loe} and have to fill a variance narrative that is fine.
 
 Some individuals---notably technical managers themselves, as well as
 others in leadership roles---are expected to have a larger fraction of
-their time devoted to LOE work.
+their time devoted to \gls{loe} work.
 
 Assuming no variation throughout the year, we therefore expect 105 hours
 of productive work from a developer, or 84 hours from a scientist, per
@@ -304,35 +265,27 @@ those containing major holidays, will naturally involve less working
 time than others: the remainder will necessarily include more working
 time to compensate.
 
-Rather than working in hours, our JIRA based system uses ``story
-points'' (SPs), with one SP being defined as equivalent to four hours of
-effort by a competent developer. Thus, we expect developers and
-scientists to produce 26.25 and 21 SPs per \emph{average} month
-respectively. This is summarized in tab-working-rate.
+Rather than working in hours, our \gls{jira} based system uses \glspl{sp}, with one \gls{sp} being defined as equivalent to four hours of effort by a competent developer.
+Thus, we expect developers and scientists to produce 26.25 and 21 \glspl{sp} per \emph{average} month respectively.
+This is summarized in tab-working-rate.
 
-On occasion, it may be appropriate to tailor the number of SPs expected
-per unit time from a particular individual. For example:
+On occasion, it may be appropriate to tailor the number of \glspl{sp} expected per unit time from a particular individual.
+For example:
 
 \begin{itemize}
 \item
-  Individuals in leadership roles may assign a larger fraction of their
-  time to LOE type work, and therefore spend fewer hours generating SPs.
-  The ratio of hours to story points remains constant, but the number of
-  hours decreases.
+  Individuals in leadership roles may assign a larger fraction of their time to \gls{loe} type work, and therefore spend fewer hours generating \glspl{sp}.
+  The ratio of hours to \glspl{sp} remains constant, but the number of hours decreases.
 \item
-  New or inexperienced developers, even when devoting their full
-  attention to story-pointed work, will likely be less productive than
-  their more experienced peers. In this case, the ratio of hours to SPs
-  increases, but the number of hours remains constant.
+  New or inexperienced developers, even when devoting their full attention to story-pointed work, will likely be less productive than their more experienced peers.
+  In this case, the ratio of hours to \glspl{sp} increases, but the number of hours remains constant.
 \end{itemize}
 
-In either case, the total number of SPs which will will be generated by
-the team in a given time interval is reduced. This should be taken into
-account when resource loading.
+In either case, the total number of \glspl{sp} which will will be generated by the team in a given time interval is reduced.
+This should be taken into account when \gls{resloading}.
 
-For every story we should record the points we actually spent on the
-story versus the planned points. We must all monitor this as individuals
-to improve our planning performance.
+For every \gls{story} we should record the points we actually spent on the \gls{story} versus the planned points.
+We must all monitor this as individuals to improve our planning performance.
 
 \section{Long Term Planning}
 \label{sec:long-term-plan}
@@ -354,25 +307,25 @@ In brief, the plan for the duration of construction is embodied in:
   may contain other milestones describing intermediate results.
 \end{enumerate}
 
-Planning packages are defined at the fourth level of the WBS breakdown
+Planning packages are defined at the fourth level of the \gls{wbs} breakdown
 (e.g. at 1.02C.04.02; see \S\ref{sec:wbs}). They may not cut
-across the WBS structure, but rather must refer to that particular
-fourth-level element and its children.
+across the \gls{wbs} structure, but rather must refer to that particular
+fourth-level \gls{element} and its children.
 
 Milestones are defined at a number of levels: see 472 for details. To
 summarize:
 
 \begin{description}
 \item[Level 1]
-These are chosen by the NSF from a list defined by the Project.
+These are chosen by the \gls{nsf} from a list defined by the Project.
 \item[Level 2]
 These reflect cross-subsystem commitments. As such, they must be defined
 in consultation with the DM Project Manager.
 \item[Level 3]
-These reflect cross-third-level WBS commitments. As such, they must be
+These reflect cross-third-level \gls{wbs} commitments. As such, they must be
 defined in discussion between two or more technical managers.
 \item[Level 4]
-These are internal to a particular third-level WBS, and can therefore be
+These are internal to a particular third-level \gls{wbs}, and can therefore be
 specified by a single technical manager.
 \end{description}
 
@@ -393,81 +346,59 @@ to consider them together.
 \subsection{Planning Research Work}
 \label{sec:long-term-research}
 
-In order for the DM system to reach its science goals, new algorithmic
-or engineering approaches must sometimes be researched. It is
-appropriate to budget time for this research work in planning packages.
-However, areas where successful delivery of the DM system is dependent
-on speculative research are a source of risk: wherever possible, the
-plan should also provide for a fallback option to be taken when research
-objectives are not achieved. When fallback options are not available,
-discuss how to account for this risk with the
-DM Project Manager (\S\ref{sec:contacts}).
+In order for the DM system to reach its science goals, new algorithmic or engineering approaches must sometimes be researched.
+It is appropriate to budget time for this research work in planning packages.
+However, areas where successful delivery of the DM system is dependent on speculative research are a source of \gls{risk}: wherever possible, the plan should also provide for a fallback option to be taken when research objectives are not achieved.
+When fallback options are not available, discuss how to account for this \gls{risk} with the DM Project Manager (\S\ref{sec:contacts}).
 
 \subsection{Earned Value and Planning Packages}
 \label{sec:long-term-value}
 
-A planning package has a duration and a staff assignment (it is
-``resource loaded''). Given a (nominal) cost per unit time of the staff
-involved (see \S\ref{sec:labor-costs}), this translates directly to a BCWS.
+A planning package has a duration and a staff assignment (it is ``resource loaded'').
+Given a (nominal) cost per unit time of the staff involved (see \S\ref{sec:labor-costs}), this translates directly to a \gls{bcws}.
 
-During the cycle planning process (\S\ref{sec:cycle-plan}), effort is drawn from the budget embodied in the
-planning packages to generate the cycle plan, described in terms of
-epics: see \S\ref{sec:planning-epics} for details. Each epic itself has a
-particular budget. This budget is subtracted from that available in the
-planning package at the point when the epic is defined.
+During the \gls{cycle} planning process (\S\ref{sec:cycle-plan}), effort is drawn from the budget embodied in the planning packages to generate the \gls{cycle} plan, described in terms of \glspl{epic}: see \S\ref{sec:planning-epics} for details.
+Each \gls{epic} itself has a particular budget.
+This budget is subtracted from that available in the planning package at the point when the \gls{epic} is defined.
 
-At any given time, the BCWP of a planning package consists of the sum of
-the BCWP of all epics derived from that package which have been marked
-complete, together with the fractions of value earned from all epics
-currently in progress.
+At any given time, the \gls{bcwp} of a planning package consists of the sum of the \gls{bcwp} of all \glspl{epic} derived from that package which have been marked complete, together with the fractions of value earned from all \glspl{epic} currently in progress.
 
 An example may serve to illustrate.
 
-Planning package (P) is baselined to start at the beginning of F17 and
-run through to the end of F18, i.e. a total of three cycles, or 18
-months. It has two members of staff---(A) and (B)--- assigned to it
-full time. Both share the same nominal cost of (\$X) per cycle.
+Planning package (P) is baselined to start at the beginning of F17 and run through to the end of F18, i.e. a total of three \glspl{cycle}, or 18 months. It has two members of staff---(A) and (B)---assigned to it full time.
+Both share the same nominal cost of (\$X) per \gls{cycle}.
 
-The BCWS for the total planning package is the cost per cycle multiplied
-by the number of cycles: $(3 \times \$2X = \$6X)$.
+The \gls{bcws} for the total planning package is the cost per \gls{cycle} multiplied by the number of \glspl{cycle}: $(3 \times \$2X = \$6X)$.
 
-In F17, both members of staff are assigned to six-month epic derived
-from (P). The BCWS of the epic is (\$2X). The remaining value in the
-planning package is (\$4X).
+In F17, both members of staff are assigned to six-month \gls{epic} derived from (P).
+The \gls{bcws} of the \gls{epic} is (\$2X).
+The remaining value in the planning package is (\$4X).
 
-At the end of F17, the epic is completed. The BCWP and ACWP are both
-(\$2X). The work is on cost and on schedule: there is no variance.
+At the end of F17, the \gls{epic} is completed.
+The \gls{bcwp} and \gls{acwp} are both (\$2X).
+The work is on cost and on schedule: there is no variance.
 
-In S18, (A) is reassigned and is unable to work on a new epic derived
-from (P). (B) continues the work alone, completing an epic worth
-(\$X) by the end of the cycle. The BCWP and ACWP are now both (\$3X);
-there is no cost variance. However, the BCWS is (\$4X): compared to the
-original schedule for the planning package, there is a schedule variance
-of (-\$X). There is a total of (\$3K) left in the planning package.
+In S18, (A) is reassigned and is unable to work on a new \gls{epic} derived from (P).
+(B) continues the work alone, completing an \gls{epic} worth (\$X) by the end of the \gls{cycle}.
+The \gls{bcwp} and \gls{acwp} are now both (\$3X); there is no cost variance.
+However, the \gls{bcws} is (\$4X): compared to the original schedule for the planning package, there is a schedule variance of (-\$X).
+There is a total of (\$3K) left in the planning package.
 
-In F18, (C) joins the project. (C) only costs (\$0.5X) per cycle,
-but is a fast worker: she can complete in one cycle work that would take
-(A) or (B) two cycles.
+In F18, (C) joins the project.
+(C) only costs (\$0.5X) per \gls{cycle}, but is a fast worker: she can complete in one \gls{cycle} work that would take (A) or (B) two \glspl{cycle}.
 
-(B) and (C) work together through F18. The ACWP for the cycle is
-(\$1.5Xx); the BCWP is (\$3X). The ACWP to date (\$4.5X). The BCWP and
-BCWS are both (\$6X). At this point, the project is complete: there is
-no schedule variance, and a cost variance of (+\$1.5X).
+(B) and (C) work together through F18.
+The \gls{acwp} for the \gls{cycle} is (\$1.5Xx); the \gls{bcwp} is (\$3X). The \gls{acwp} to date (\$4.5X).
+The \gls{bcwp} and \gls{bcws} are both (\$6X).
+At this point, the project is complete: there is no schedule variance, and a cost variance of (+\$1.5X).
 
-\subsection{Epic-Based Long Term
-Plans}\label{epic-based-long-term-plans}
+\subsection{Epic-Based Long Term Plans}
 
-As per \S\ref{sec:cycle-plan}, the epic is the standard level of granularity for
-planning work over the relatively short term (periods of several
-months). However, epics may also be valuable for longer-term,
-fine-grained planning. When a detailed description of work for a given
-planning package is known, it can and should be described in JIRA
-through a series of epics assigned to the appropriate cycles. As long as
-they have not been scheduled for the current cycle, these epics can be
-freely created and changed at any time, without any sort of approval
-process. Of course, for this process to be practically useful, these
-epics should fit within the scope and budget of the relevant planning
-package.
+As per \S\ref{sec:cycle-plan}, the \gls{epic} is the standard level of granularity for planning work over the relatively short term (periods of several months).
+However, \glspl{epic} may also be valuable for longer-term, fine-grained planning.
+When a detailed description of work for a given planning package is known, it can and should be described in \gls{jira} through a series of \glspl{epic} assigned to the appropriate \glspl{cycle}.
+As long as they have not been scheduled for the current \gls{cycle}, these \glspl{epic} can be freely created and changed at any time, without any sort of approval process.
+Of course, for this process to be practically useful, these \glspl{epic} should fit within the scope and budget of the relevant planning package.
 
 Fine grained planning of this sort can be useful for ``bottom-up''
 analysis of the work to be performed and validation of the resources
@@ -501,36 +432,27 @@ release cadence or timely delivery of particular features.
 \section{Short Term Planning}
 \label{sec:cycle-plan}
 
-Per \citeds{LDM-472}, short term planning is carried out in blocks referred to as cycles, which (usually) last for six months.
-Before the start of a cycle, technical managers work with the DM Project Manager and the Project Controls Specialist to ensure their plan for the cycle is well defined in both JIRA and PMCS.
+Per \citeds{LDM-472}, short term planning is carried out in blocks referred to as \glspl{cycle}, which (usually) last for six months.
+Before the start of a \gls{cycle}, technical managers work with the DM Project Manager and the Project Controls Specialist to ensure their plan for the \gls{cycle} is well defined in both \gls{jira} and the \gls{pmcs}.
 
 \subsection{Cycle Cadence \& Release Planning}
 \label{sec:cycle-cadence}
 
-At the end of a cycle, a release manager appointed from within the
-SQuaRE team will coordinate a public release of the codebase. This
-release will consist of a coherent, well tested set of packages,
-together with release notes, documentation and performance
-characterization.
+At the end of a \gls{cycle}, a release manager appointed from within the \gls{square} team will coordinate a public release of the codebase.
+This release will consist of a coherent, well tested set of packages, together with release notes, documentation and performance characterization.
 
-In order to make this possible, the release will be tagged two weeks
-before the end of the cycle. All work which is destined for the release
-must have been merged to the \texttt{master} branch by this point. For
-the remainder of the cycle, the priority is to provide bug fixes,
-documentation and other material in support of the release as requested
-by SQuaRE. In so far as it does not interfere with that priority, other
-work may continue as normal, with the caveat that new development will
-not be included in a release until the end of the subsequent cycle.
+In order to make this possible, the release will be tagged two weeks before the end of the \gls{cycle}.
+All work which is destined for the release must have been merged to the \texttt{master} branch by this point.
+For the remainder of the \gls{cycle}, the priority is to provide bug fixes, documentation and other material in support of the release as requested by \gls{square}.
+In so far as it does not interfere with that priority, other work may continue as normal, with the caveat that new development will not be included in a release until the end of the subsequent \gls{cycle}.
 
-Throughout this process, the SQuaRE technical manager will advertise the
+Throughout this process, the \gls{square} technical manager will advertise the
 current state of the release to all interested parties using the
 \href{https://community.lsst.org/}{LSST Community Forum}.
 
-Technical managers of the other groups are responsible for providing to
-SQuaRE such material as is required to support the release. This will
-include a set of release notes which provide a summary of work performed
-over the course of the cycle. Please liaise with SQuaRE in advance to
-establish the appropriate format and granularity of these notes.
+Technical managers of the other groups are responsible for providing to \gls{square} such material as is required to support the release.
+This will include a set of release notes which provide a summary of work performed over the course of the \gls{cycle}.
+Please liaise with \gls{square} in advance to establish the appropriate format and granularity of these notes.
 
 \subsection{Defining The Plan}\label{defining-the-plan}
 
@@ -539,146 +461,99 @@ establish the appropriate format and granularity of these notes.
 The first essential step of developing the short term plan is to produce an outline of the programme of work to be executed.
 In general, this should flow directly from the long term plan (\S\ref{sec:long-term-plan}), ensuring that the expected planning packages are being worked on and milestones being hit.
 
-While developing the cycle, please:
+While developing the \gls{cycle}, please:
 
 \begin{itemize}
 \item
-  Do not add \emph{artificial} padding or buffers to make the schedule
-  look good;
+  Do not add \emph{artificial} padding or buffers to make the schedule look good;
 \item
   Do budget appropriate time for handling bugs and emergent issues;
 \item
-  Reserve time for planning the following cycle: it will have to be
-  defined before this cycle is complete;
+  Reserve time for planning the following \gls{cycle}: it will have to be defined before this \gls{cycle} is complete;
 \item
-  Leave time for other necessary activities, such as cross-team
-  collaboration meetings and writing documentation.
+  Leave time for other necessary activities, such as cross-team collaboration meetings and writing documentation.
 \item
-  Per the cycle cadence (\S\ref{sec:cycle-cadence}),
-  ensure that new development will conclude (or, at a minimum, be in a
-  releasable state) in time for the end of cycle release.
+  Per the \gls{cycle} cadence (\S\ref{sec:cycle-cadence}), ensure that new development will conclude (or, at a minimum, be in a releasable state) in time for the end of \gls{cycle} release.
 \end{itemize}
 
-Obviously, ensure that the programme of work being developed is
-achievable by your team in the time available: ultimately, you will want
-to compare the
-number of SPs your team is able to deliver (\S\ref{sec:effort})
-with the sum of the SPs in the
-epics you have scheduled (\S\ref{sec:planning-epics}),
-while also considering the skills and availability of your team. It is
-better to under-commit and over-deliver than vice-versa, but, ideally,
-aim to estimate accurately.
+Obviously, ensure that the programme of work being developed is achievable by your team in the time available: ultimately, you will want to compare the number of \glspl{sp} your team is able to deliver (\S\ref{sec:effort}) with the sum of the \glspl{sp} in the \glspl{epic} you have scheduled (\S\ref{sec:planning-epics}), while also considering the skills and availability of your team.
+It is better to under-commit and over-deliver than vice-versa, but, ideally, aim to estimate accurately.
 
 \subsubsection{Defining Epics}
 \label{sec:planning-epics}
 
-As described in \citeds{LDM-472}, the plan for a six month cycle fundamentally consists of a set of resource loaded epics defined in JIRA.
-Each epic loaded into the plan must have:
+As described in \citeds{LDM-472}, the plan for a six month \gls{cycle} fundamentally consists of a set of resource loaded \glspl{epic} defined in \gls{jira}.
+Each \gls{epic} loaded into the plan must have:
 
 \begin{itemize}
 \item
   A concrete, well defined deliverable \emph{or} be clearly described as a ``bucket'' (\S\ref{sec:bucket});
 \item
-  The :jira\_field:cycle field set to the appropriate cycle;
+  The :jira\_field:cycle field set to the appropriate \gls{cycle};
 \item
-  The :jira\_field:WBS field set to the appropriate WBS \emph{leaf}
-  element.
+  The :jira\_field:\gls{wbs} field set to the appropriate \gls{wbs} \emph{leaf}
+  \gls{element}.
 \item
-  The :jira\_field:Story Points field set to a (non-zero!) estimate of the effort required to complete the epic in terms of SPs (see \S\ref{sec:effort}).
+  The :jira\_field:Story Points field set to a (non-zero!) estimate of the effort required to complete the \gls{epic} in terms of \glspl{sp} (see \S\ref{sec:effort}).
 \end{itemize}
 
 Be aware that:
 
 \begin{itemize}
 \item
-  An epic may only be assigned to a single cycle.
-  It is not possible to define an epic that crosses the cycle boundary (see \S\ref{sec:cycle-close} for the procedure when an epic is not complete by the end of the cycle).
+  An \gls{epic} may only be assigned to a single \gls{cycle}.
+  It is not possible to define an \gls{epic} that crosses the \gls{cycle} boundary (see \S\ref{sec:cycle-close} for the procedure when an \gls{epic} is not complete by the end of the \gls{cycle}).
 \item
-  An epic may only be assigned to a single WBS leaf element.
-  It is not possible to define epics that cover multiple WBS elements.
-  See \S\ref{sec:cross-team} for information on scheduling work which requires resources from multiple elements.
+  An \gls{epic} may only be assigned to a single \gls{wbs} leaf \gls{element}.
+  It is not possible to define \glspl{epic} that cover multiple \gls{wbs} \glspl{element}.
+  See \S\ref{sec:cross-team} for information on scheduling work which requires resources from multiple \glspl{element}.
 \item
-  An epic must descend from a single planning package (see \S\ref{sec:long-term-plan}).
+  An \gls{epic} must descend from a single planning package (see \S\ref{sec:long-term-plan}).
 \item
-  Although \gls{loe} work should be charged to the 00 fourth-level element
-  \S\ref{sec:loe}, this does not imply that other work
-  cannot be charged here. Indeed, where possible management activities
-  \emph{should} be scheduled as epics with concrete deliverables in this
-  element rather than being handled as \gls{loe}.
+  Although \gls{loe} work should be charged to the 00 fourth-level \gls{element} (\S\ref{sec:loe}), this does not imply that other work cannot be charged here.
+  Indeed, where possible management activities \emph{should} be scheduled as \glspl{epic} with concrete deliverables in this \gls{element} rather than being handled as \gls{loe}.
 \item
-  The epic should be at an appropriate level of granularity. While short
-  epics (a few SPs) may be suitable for some activities, in general
-  epics will describe a few months of developer-time. Epics allocated
-  multiple hundreds of story points are likely too broad to be
-  accurately estimated.
+  The \gls{epic} should be at an appropriate level of granularity.
+  While short \glspl{epic} (a few \glspl{sp}) may be suitable for some activities, in general \glspl{epic} will describe a few months of developer-time.
+  \Glspl{epic} allocated multiple hundreds of \gls{story} points are likely too broad to be accurately estimated.
 \end{itemize}
 
-The Project Controls Specialist (\S\ref{sec:contacts})
-will periodically
-(per \S\ref{sec:reporting-cycle}) pull information from JIRA to
-populate PMCS with the plan.
+The Project Controls Specialist (\S\ref{sec:contacts}) will periodically (per \S\ref{sec:reporting-cycle}) pull information from \gls{jira} to populate \gls{pmcs} with the plan.
 
-All epics which have WBS and cycle defined will be loaded into PMCS (and
-must, therefore, have concrete deliverables and plausible SP estimates).
-Epics which do not satisfy these criteria may be defined in JIRA. These
-will not be pulled into PMCS, will not form part of the scheduled plan,
-and will not earn value. However, they may still be useful for
-organizing other work, sketching plans for future cycles, etc: please
-define them as necessary.
+All \glspl{epic} which have \gls{wbs} and \gls{cycle} defined will be loaded into \gls{pmcs} (and must, therefore, have concrete deliverables and plausible \gls{sp} estimates).
+\Glspl{epic} which do not satisfy these criteria may be defined in \gls{jira}.
+These will not be pulled into \gls{pmcs}, will not form part of the scheduled plan, and will not earn value.
+However, they may still be useful for organizing other work, sketching plans for future \glspl{cycle}, etc: please define them as necessary.
 
-In order to fully describe the plan to PMCS, epics require information
-that is not captured in JIRA. Specifically, it is necessary to define:
+In order to fully describe the plan to \gls{pmcs}, \glspl{epic} require information that is not captured in \gls{jira}.
+Specifically, it is necessary to define:
 
 \begin{itemize}
 \item
-  Start and end dates for the epic;
+  Start and end dates for the \gls{epic};
 \item
   Staff assignments.
 \end{itemize}
 
-Although it is possible---indeed, encouraged---to set the
-:jira\_field:assignee field in JIRA to the individual who is expected to
-carry out the bulk of the work in an epic, this does not provide
-sufficient granularity for those cases when more than one person will be
-contributing.
+Although it is possible---indeed, encouraged---to set the :jira\_field:assignee field in \gls{jira} to the individual who is expected to carry out the bulk of the work in an \gls{epic}, this does not provide sufficient granularity for those cases when more than one person will be contributing.
 
-In fact, it is only required to provide a staff assignment in terms of
-``resource types'' (i.e. scientists, senior scientists, developers,
-senior developers, etc). In practice, to ensure your team is evenly
-loaded, it is usually necessary to break it down to named individuals.
+In fact, it is only required to provide a staff assignment in terms of ``resource types'' (i.e. scientists, senior scientists, developers, senior developers, etc).
+In practice, to ensure your team is evenly loaded, it is usually necessary to break it down to named individuals.
 
-This information is most conveniently captured in per-team spreadsheets
-which are supplied to the Project Controls Specialist before the start
-of the cycle. Spreadsheets describing previous cycles are stored in
-\href{https://drive.google.com/drive/u/0/folders/0BxgFbTQURmr6TmxXSm5Dc1JJWk0}{Google
-Drive}: a convenient way to get started would be to use one of those as
-a template.
+This information is most conveniently captured in per-team spreadsheets which are supplied to the Project Controls Specialist before the start of the \gls{cycle}.
+Spreadsheets describing previous \glspl{cycle} are stored in \href{https://drive.google.com/drive/u/0/folders/0BxgFbTQURmr6TmxXSm5Dc1JJWk0}{Google Drive}: a convenient way to get started would be to use one of those as a template.
 
-The spreadsheets used capture epic start and end dates at monthly
-granularity. This can lead to a
-variance (see \S\ref{sec:evms}) when monthly results are
-tabulated (it assumes that work for an epic is evenly distributed across
-all the months in which it is scheduled). In practice, this variance is
-likely to be small, and should average out by the end of the cycle, when
-all epics should be closed on schedule. However, if this becomes a
-problem, it is possible to fine-tune dates by directly consulting with
-the Project Controls Specialist.
+The spreadsheets used capture \gls{epic} start and end dates at monthly granularity.
+This can lead to a variance (see \S\ref{sec:evms}) when monthly results are tabulated (it assumes that work for an \gls{epic} is evenly distributed across all the months in which it is scheduled).
+In practice, this variance is likely to be small, and should average out by the end of the \gls{cycle}, when all \glspl{epic} should be closed on schedule.
+However, if this becomes a problem, it is possible to fine-tune dates by directly consulting with the Project Controls Specialist.
 
-When loading epics at the start of a cycle, it is not necessary that
-they be fully
-loaded with stories (defined as per \S\ref{sec:defining-stories}): these
-can be defined during the cycle. You do, of course, need to have thought
-through the contents of the epic in enough detail to provide an overall
-SP estimate and deliverables, though.
+When loading \glspl{epic} at the start of a \gls{cycle}, it is not necessary that they be fully loaded with \glspl{story} (defined as per \S\ref{sec:defining-stories}): these can be defined during the \gls{cycle}.
+You do, of course, need to have thought through the contents of the \gls{epic} in enough detail to provide an overall \gls{sp} estimate and deliverables, though.
 
-With the agreement of the Project Manager and Project Controls
-Specialist, it is acceptable to load the plan for a cycle in three month
-``chunks''. That is, the plan for the first three months of the cycle is
-loaded before the start of the cycle, and the remaining part of the plan
-covering the final three months is loaded before the start of the fourth
-month. This approach provides an opportunity to fine-tune the plan for
-the second half of the cycle, without requiring a formal
-change request (\S\ref{sec:cycle-change}).
+With the agreement of the Project Manager and Project Controls Specialist, it is acceptable to load the plan for a \gls{cycle} in three month ``chunks''.
+That is, the plan for the first three months of the \gls{cycle} is loaded before the start of the \gls{cycle}, and the remaining part of the plan covering the final three months is loaded before the start of the fourth month.
+This approach provides an opportunity to fine-tune the plan for the second half of the \gls{cycle}, without requiring a formal \gls{lcr} (\S\ref{sec:cycle-change}).
 
 \subsubsection{Scheduling Research Work}\label{scheduling-research-work}
 
@@ -686,95 +561,66 @@ As discussed in \S\ref{sec:long-term-research}, research is sometimes required
 to meet our objectives. However, it is not a natural fit to our usual
 planning process, as it is speculative in its nature: it is often
 impossible to produce a series of logical steps that will lead to the
-required result. We acknowledge, therefore, that scheduling an epic to
+required result. We acknowledge, therefore, that scheduling an \gls{epic} to
 deliver some particular new algorithm based on the results of research
 is impossible: we cannot predict with any confidence when the
 breakthrough will occur.
 
-We therefore schedule research in timeboxed epics: we allocate a certain
-amount of time based on the resources available, rather than on an
-estimate of time to completion. However, note that these timeboxed epics
-should still provide concrete deliverables: they are not open-ended
-``buckets'' as discussed elsewhere. Since we cannot rely on the
-successful completion of the research project as a deliverable, we
-instead require that a summary of the research completed to date be
-delivered at the completion of the time allocated. The presentation and
-format of this report will vary depending on the nature of the research
-(a \href{https://sqr-000.lsst.io/}{technical note} is a likely option),
-and, as usual (\S\ref{sec:planning-epics}), should be
-defined before the epic is ingested to PMCS.
+We therefore schedule research in \gls{timebox}ed \glspl{epic}: we allocate a certain amount of time based on the resources available, rather than on an estimate of time to completion.
+However, note that these \gls{timebox}ed \glspl{epic} should still provide concrete deliverables: they are not open-ended ``buckets'' as discussed elsewhere.
+Since we cannot rely on the successful completion of the research project as a deliverable, we instead require that a summary of the research completed to date be delivered at the completion of the time allocated.
+The presentation and format of this report will vary depending on the nature of the research (a \href{https://sqr-000.lsst.io/}{technical note} is a likely option), and, as usual (\S\ref{sec:planning-epics}), should be defined before the \gls{epic} is ingested to \gls{pmcs}.
 
 \subsubsection{Bucket Epics}
 \label{sec:bucket}
 
-Some work is ``emergent'': we can predict in advance that it will be
-necessary, but we cannot predict exactly what form it will take. The
-typical example of this is fixing bugs: we can reasonably assume that
-bugs will be discovered in the codebase and will need to be addressed,
-but we cannot predict in advance what those bugs will be.
+Some work is ``emergent'': we can predict in advance that it will be necessary, but we cannot predict exactly what form it will take.
+The typical example of this is fixing bugs: we can reasonably assume that bugs will be discovered in the codebase and will need to be addressed, but we cannot predict in advance what those bugs will be.
 
-This can be included in the schedule by defining a ``bucket'' epic in
-which stories can be created when necessary during the course of a
-cycle. Make clear in the description of the epic that this is its
-intended purpose: every epic should either have a concrete deliverable
-or be a bucket.
+This can be included in the schedule by defining a ``bucket'' \gls{epic} in which stories can be created when necessary during the course of a \gls{cycle}.
+Make clear in the description of the \gls{epic} that this is its intended purpose: every \gls{epic} should either have a concrete deliverable or be a bucket.
 
-Bucket epics have some similarities with LOE work. As such, we
-acknowledge that they are necessary, but seek to minimize the fraction
-of our resources assigned to them. If more than a relatively small
-fraction of the work for a cycle is assigned to bucket epics, please
-consider whether this is really necessary and appropriate.
+Bucket \glspl{epic} have some similarities with \gls{loe} work.
+As such, we acknowledge that they are necessary, but seek to minimize the fraction of our resources assigned to them.
+If more than a relatively small fraction of the work for a \gls{cycle} is assigned to bucket \glspl{epic}, please consider whether this is really necessary and appropriate.
 
-Be aware that even bucket epics must be assigned to a specific
-\emph{leaf} element of the WBS. That is, it is not in general possible
-to define an epic which handles bug reports or emergent feature requests
-across the whole of the codebase unless a specific WBS leaf element is
-devoted to maintenance activities of this type. Instead, it may be
-necessary to define a different bucket epic for each leaf of the WBS
-tree.
+Be aware that even bucket \glspl{epic} must be assigned to a specific \emph{leaf} \gls{element} of the \gls{wbs}.
+That is, it is not in general possible to define an \gls{epic} which handles bug reports or emergent feature requests across the whole of the codebase unless a specific \gls{wbs} leaf \gls{element} is devoted to maintenance activities of this type.
+Instead, it may be necessary to define a different bucket \gls{epic} for each leaf of the \gls{wbs} tree.
 
 \subsubsection{Mapping SPs to BCWS}
 \label{sec:sps-to-bcws}
 
-As discussed above, the amount of work to be performed is estimated in
-terms of SPs (\S\ref{sec:effort}), while the
-earned value (\S\ref{sec:evms}) system accounts for work
-in terms of budgeted cost (BCWS). In order to estimate the value earned
-by completing an epic, it is necessary to map from one to the other.
+As discussed above, the amount of work to be performed is estimated in terms of \glspl{sp} (\S\ref{sec:effort}), while the earned value (\S\ref{sec:evms}) system accounts for work in terms of budgeted cost (\gls{bcws}).
+In order to estimate the value earned by completing an \gls{epic}, it is necessary to map from one to the other.
 
-The outline of the calculation here is straightforward: SPs map to
-developer hours. Given the
-staff assignment for the
-epic (see \S\ref{sec:planning-epics}), the number of hours scheduled per developer can be calculated.
-Given the nominal costs (per \S\ref{sec:labor-costs})
-associated with each developer, the total labor cost can be estimated.
+The outline of the calculation here is straightforward: \glspl{sp} map to developer hours.
+Given the staff assignment for the \gls{epic} (see \S\ref{sec:planning-epics}), the number of hours scheduled per developer can be calculated.
+Given the nominal costs (per \S\ref{sec:labor-costs}) associated with each developer, the total labor cost can be estimated.
 
 Therefore, we calculate the number of hours of each staffing grade being
-assigned to the epic, multiply that by the cost per hour of that grade,
+assigned to the \gls{epic}, multiply that by the cost per hour of that grade,
 and that provides the cost of the work scheduled.
 
 \subsubsection{Cross Team Work}
 \label{sec:cross-team}
 
-Planning epics are always assigned to a particular WBS leaf element:
-they do not span elements or teams. It is therefore impossible to
-schedule a single epic which covers cross-team work. There are two ways
-to approach this problem:
+Planning \glspl{epic} are always assigned to a particular \gls{wbs} leaf \gls{element}: they do not span \glspl{element} or teams.
+It is therefore impossible to schedule a single \gls{epic} which covers cross-team work.
+There are two ways to approach this problem:
 
 \begin{itemize}
 \item
-  The technical managers for both teams to be involved in the work
-  schedule epics separately, within their own WBS structure. They are
-  responsible for agreeing start and end dates, deliverables and
-  resourcing between themselves. From the point of view of the PMCS,
-  these epics are independent pieces of work which happen to be
+  The technical managers for both teams to be involved in the work schedule \glspl{epic} separately, within their own \gls{wbs} structure.
+  They are responsible for agreeing start and end dates, deliverables and resourcing between themselves.
+  From the point of view of the \gls{pmcs}, these \glspl{epic} are independent pieces of work which happen to be
   coincident.
 \item
   With agreement between technical managers, an individual may be
   detached from one team and explicitly work for another team for some
   defined period. One technical manager is therefore responsible for
   defining and scheduling their work. Their ``home'' manager will charge
-  actuals (\S\ref{sec:actuals} against the WBS supplied
+  actuals (\S\ref{sec:actuals} against the \gls{wbs} supplied
   by the manager manager of the receiving team.
 \end{itemize}
 
@@ -786,108 +632,80 @@ responsibility for ensuring that it is successfully delivered.
 \subsection{Revising the Plan}
 \label{sec:cycle-change}
 
-During the cycle, it is possible that changing circumstances will cause
-reality not to exactly match with the plan. This will ultimately cause a
-variance (see \S\ref{sec:evms}), which should be minimized
-and which---if it becomes significant enough---will require a narrative.
+During the \gls{cycle}, it is possible that changing circumstances will cause reality not to exactly match with the plan.
+This will ultimately cause a variance (see \S\ref{sec:evms}), which should be minimized and which---if it becomes significant enough---will require a narrative.
 
-After the plan for the cycle has been entered into JIRA, it is under
-change control: it can only be altered through a LCR approved by the
-CCB. In order to reschedule (or remove entirely from the cycle) an epic
-which has not yet started, the technical manager should work with the
-Project Controls Specialist (\S\ref{sec:contacts}) to
-prepare and submit an appropriate LCR to the CCB. The CCB meets on the
-third Wednesday of the calendar month; change requests must be submitted
-well in advance of this. Therefore, it is advisable to take time early
-in the calendar month to review epics due to start in the
-\emph{following} month and to issue an LCR on them if necessary.
+After the plan for the \gls{cycle} has been entered into \gls{jira}, it is under change control: it can only be altered through a \gls{lcr} approved by the \gls{ccb}.
+In order to reschedule (or remove entirely from the \gls{cycle}) an \gls{epic} which has not yet started, the technical manager should work with the Project Controls Specialist (\S\ref{sec:contacts}) to prepare and submit an appropriate \gls{lcr} to the \gls{ccb}.
+The \gls{ccb} meets on the third Wednesday of the calendar month; change requests must be submitted well in advance of this.
+Therefore, it is advisable to take time early in the calendar month to review \glspl{epic} due to start in the \emph{following} month and to issue an \gls{lcr} on them if necessary.
 
-Note that it is \emph{not possible} to alter history by means of an LCR.
-That is, if the scheduled start date of an epic is already in the past,
+Note that it is \emph{not possible} to alter history by means of an \gls{lcr}.
+That is, if the scheduled start date of an \gls{epic} is already in the past,
 it is not possible to move it into the future using a change request. In
 this case, there is no option but to carry the variance related to the
-late start of the epic into the future, to describe that with narratives
+late start of the \gls{epic} into the future, to describe that with narratives
 (\S\ref{sec:variance-narrative}) where necessary, and to
 attempt to address the variance as soon as is possible.
 
-Based on the above, it is clear that technical managers should closely
-track performance relative to the plan throughout the cycle, and
-proactively file change requests to avoid running variances wherever
-possible.
+Based on the above, it is clear that technical managers should closely track performance relative to the plan throughout the \gls{cycle}, and proactively file change requests to avoid running variances wherever possible.
 
 \subsection{Closing the Cycle}
 \label{sec:cycle-close}
 
-Assuming everything has gone to plan, by the end of a cycle all
-deliverables should be verified and the corresponding epics should be
-marked as :jira\_field:done. Marking an epic as :jira\_field:done
-asserts that the concrete deliverable associated with the epic has been
-provided. The total cost of that functionality---the BCWS, calculated as
-per \S\ref{sec:sps-to-bcws}---is now claimed as value earned.
+Assuming everything has gone to plan, by the end of a \gls{cycle} all deliverables should be verified and the corresponding \glspl{epic} should be marked as :jira\_field:done.
+Marking an \gls{epic} as :jira\_field:done asserts that the concrete deliverable associated with the \gls{epic} has been provided.
+The total cost of that functionality---the \gls{bcws}, calculated as per \S\ref{sec:sps-to-bcws}---is now claimed as value earned.
 
-Epics which are in progress at the end of the cycle cannot be closed
-until they have been completed. These epics will spill over into the
-subsequent cycle. It is \emph{not} appropriate to close an in-progress
-epic with a concrete deliverable until that deliverable has been
-achieved: instead, a variance will be shown until the epic can be
-closed. Obviously, this will impact the labor available for other
-activities in the next cycle. (This does not apply to
-bucket epics (\S\ref{sec:bucket}), which are, by their
-nature, timeboxed within the cycle).
+Epics which are in progress at the end of the \gls{cycle} cannot be closed until they have been completed.
+These \glspl{epic} will spill over into the subsequent \gls{cycle}.
+It is \emph{not} appropriate to close an in-progress \gls{epic} with a concrete deliverable until that deliverable has been achieved: instead, a variance will be shown until the \gls{epic} can be closed.
+Obviously, this will impact the labor available for other activities in the next \gls{cycle}.
+(This does not apply to bucket \glspl{epic} (\S\ref{sec:bucket}), which are, by their nature, \gls{timebox}ed within the \gls{cycle}).
 
-Similar logic applies to epics which \emph{have not been started}: if
+Similar logic applies to \glspl{epic} which \emph{have not been started}: if
 the planned start date is in the past, they can no longer be rescheduled
-by means of an LCR (\S\ref{sec:cycle-change}). They must
+by means of an \gls{lcr} (\S\ref{sec:cycle-change}). They must
 be completed at the earliest possible opportunity; you will show a
 variance until this has been done.
 
-\section{Execution}\label{execution}
+\section{Execution}
+\label{sec:execution}
 
-Having defined defined the plan for a cycle following \S\ref{sec:cycle-plan}, we execute it by means of a series of month-long sprints.
+Having defined defined the plan for a \gls{cycle} following \S\ref{sec:cycle-plan}, we execute it by means of a series of month-long sprints.
 In this section, we detail the procedures teams are expected to follow during the cycle.
 
 \subsection{Defining Stories}
 \label{sec:defining-stories}
 
-Epics have already been defined
-as part of the cycle plan (see \S\ref{sec:planning-epics}). However, the epic is not at an appropriate
-level for scheduling day-to-day work. Rather, each epic is broken down
-into a series of self-contained ``stories''. A story describes a planned
-activity worth between a small fraction of a SP and several SPs (more
-than about 10 is likely an indication that the story has not been
-sufficiently refined). It must be possible to schedule a story within a
-single sprint, so no story should ever be allocated more than 26 SPs.
+Epics have already been defined as part of the \gls{cycle} plan (see \S\ref{sec:planning-epics}).
+However, the \gls{epic} is not at an appropriate level for scheduling day-to-day work.
+Rather, each \gls{epic} is broken down into a series of self-contained ``stories''.
+A \gls{story} describes a planned activity worth between a small fraction of a SP and several \glspl{sp} (more than about 10 is likely an indication that the \gls{story} has not been sufficiently refined).
+It must be possible to schedule a \gls{story} within a single sprint, so no \gls{story} should ever be allocated more than 26 \glspl{sp}.
 
-The process for breaking epics down into stories is not mandated. In
+The process for breaking \glspl{epic} down into stories is not mandated. In
 some circumstances, it may be appropriate for the technical manager to
 provide a breakdown; in others, they may request input from the
 developer who is actually going to be doing the work, or even hold a
 brainstorming session involving the wider team. This is a management
 decision.
 
-It is not required to break all epics down into stories before the cycle
-begins: it may be more appropriate to first schedule a few exploratory
-stories and use them to inform the development of the rest of the epic.
-However, do break epics down to describe the stories which will be
-worked in an
-upcoming sprint (\S\ref{sec:sprinting}) before the sprint
-starts. When doing so, you may wish to leave some spare time to handle
-emergent work (discussed in \S\ref{sec:bugs}).
+It is not required to break all \glspl{epic} down into stories before the \gls{cycle} begins: it may be more appropriate to first schedule a few exploratory stories and use them to inform the development of the rest of the \gls{epic}.
+However, do break \glspl{epic} down to describe the stories which will be worked in an upcoming sprint (\S\ref{sec:sprinting}) before the sprint starts.
+When doing so, you may wish to leave some spare time to handle emergent work (discussed in \S\ref{sec:bugs}).
 
-Note that there is no relationship enforced between the SP total
-estimated for the epic and the sum of the SPs of its constituent
-stories. It is therefore possible to over- or under-load an epic. This
-will have obvious ramifications for the schedule. See \S\ref{sec:cycle-value}
-for a discussion of its impact on earned value.
+Note that there is no relationship enforced between the \gls{sp} total estimated for the \gls{epic} and the sum of the \glspl{sp} of its constituent stories.
+It is therefore possible to over- or under-load an \gls{epic}.
+This will have obvious ramifications for the schedule.
+See \S\ref{sec:cycle-value} for a discussion of its impact on earned value.
 
 \subsection{Sprinting}
 \label{sec:sprinting}
 
-Each team organizes its work around periods of work called sprints. A
-sprint comprises a defined collection of stories which will be addressed
-over the course of the month. These stories are not necessarily (indeed,
-not generally) all drawn from the same epic: rather, while epics divide
-the cycle along logical grounds, sprints divide it along the time axes.
+Each team organizes its work around periods of work called sprints.
+A sprint comprises a defined collection of stories which will be addressed over the course of the month.
+These stories are not necessarily (indeed, not generally) all drawn from the same \gls{epic}: rather, while \glspl{epic} divide the \gls{cycle} along logical grounds, sprints divide it along the time axes.
 
 Broadly, executing a sprint falls into three stages:
 
@@ -896,7 +714,7 @@ Broadly, executing a sprint falls into three stages:
   Preparation.
 
   The team assigns the work that will be addressed during the sprint by choosing from the pre-defined stories (\S\ref{sec:defining-stories}).
-  Each team member should be assigned a plausible amount of work, based on the per-story SP estimates and the likely working rate of the developer (see \S\ref{sec:effort}).
+  Each team member should be assigned a plausible amount of work, based on the per-\gls{story} \gls{sp} estimates and the likely working rate of the developer (see \S\ref{sec:effort}).
 
   The process by which work is assigned to team members is a local
   management decision: the orthodox approach is to call a team-wide
@@ -923,13 +741,13 @@ Broadly, executing a sprint falls into three stages:
   rush on to the next challenge, but it is required to enable us to
   properly track earned value as per\S\ref{sec:cycle-value}.
 
-  When completing a story we do not change the number of SPs assigned to
-  it: the SP total reflects our initial estimate of the work involved,
+  When completing a \gls{story} we do not change the number of \glspl{sp} assigned to
+  it: the \gls{sp} total reflects our initial estimate of the work involved,
   not the total time invested. This makes it possible to review the
   quality of our estimates at the end of the sprint.
 
   Avoid adding more stories to a sprint in progress unless it is
-  unavoidable (for example, the story describes a critical bug that must
+  unavoidable (for example, the \gls{story} describes a critical bug that must
   be addressed before proceeding). A sprint should always stay current
   and should be up-to-date with reality; if necessary, already scheduled
   stories may be pushed out of a sprint as soon as it is obvious it is
@@ -949,7 +767,7 @@ Broadly, executing a sprint falls into three stages:
   may involve all team members, or just a few.
 \end{enumerate}
 
-We use JIRA's
+We use \gls{jira}'s
 \href{https://www.atlassian.com/software/jira/agile}{Agile} capabilities
 to manage our sprints. Each technical manager is responsible for
 defining and maintaining their own agile board. The board may be
@@ -963,43 +781,37 @@ for servicing user requests (e.g. providing developer support).
 \subsection{Completing Epics}
 \label{sec:epic-done}
 
-An epic may be marked as :jira\_field:done when:
+An \gls{epic} may be marked as :jira\_field:done when:
 
 \begin{enumerate}
 \item
-  It contains at least one completed story;
+  It contains at least one completed \gls{story};
 \item
-  There are no more incomplete stories defined within it;
+  There are no more incomplete \glspl{story} defined within it;
 \item
-  There are no plans to add more stories;
+  There are no plans to add more \glspl{story};
 \item
   (If applicable, i.e. it is not a bucket, as defined in \S\ref{sec:bucket}) its concrete deliverable has been achieved.
 \end{enumerate}
 
-Note that it is not permitted to close an epic without defining at least
-one story within it. Empty epics can never be completed.
+Note that it is not permitted to close an \gls{epic} without defining at least
+one \gls{story} within it. Empty \glspl{epic} can never be completed.
 
-When an epic is marked as complete, all of its value is earned (\S\ref{sec:cycle-value}).
+When an \gls{epic} is marked as complete, all of its value is earned (\S\ref{sec:cycle-value}).
 
 \subsection{Handling Bugs \& Emergent Work}
 \label{sec:bugs}
 
 \subsubsection{Receiving Bug Reports}\label{receiving-bug-reports}
 
-Members of the project who have access to JIRA may report bugs or make feature requests directly using JIRA.
-As discussed in \S\ref{sec:jira-maintenance}, technical managers should regularly monitor JIRA for relevant tickets and ensure they are handled appropriately.
+Members of the project who have access to \gls{jira} may report bugs or make feature requests directly using \gls{jira}.
+As discussed in \S\ref{sec:jira-maintenance}, technical managers should regularly monitor \gls{jira} for relevant tickets and ensure they are handled appropriately.
 
-Our code repositories are exposed to the world in general through
-\href{https://github.com/lsst/}{GitHub}. Each repository on GitHub has a
-bug tracker associated with it. Members of the public may report issues
-or make requests on the GitHub trackers. Per the
-\href{https://developer.lsst.io/processes/workflow.html}{Developer
-Workflow}, all new work must be associated with a JIRA ticket number
-before it can be committed to the repository. It is therefore the
-responsibility of technical managers to file a JIRA ticket corresponding
-to the GitHub ticket, to keep them synchronized with relevant
-information, and to ensure that the GitHub ticket is closed when the
-issue is resolved in JIRA.
+Our code repositories are exposed to the world in general through \href{https://github.com/lsst/}{GitHub}.
+Each repository on GitHub has a bug tracker associated with it.
+Members of the public may report issues or make requests on the GitHub trackers.
+Per the \href{https://developer.lsst.io/processes/workflow.html}{Developer Workflow}, all new work must be associated with a \gls{jira} ticket number before it can be committed to the repository.
+It is therefore the responsibility of technical managers to file a \gls{jira} ticket corresponding to the GitHub ticket, to keep them synchronized with relevant information, and to ensure that the GitHub ticket is closed when the issue is resolved in \gls{jira}.
 
 The GitHub issue trackers are, in some sense, not a core part of our
 workflow, but they are fundamental to community expectations of how they
@@ -1013,14 +825,13 @@ boundaries. Work together to ensure that all tickets are handled.
 
 \subsubsection{Issue Types}\label{issue-types}
 
-We have previously referred to day-to-day work being described by means
-of stories. However, JIRA provides us with two additional issue types:
-``bug'' and ``improvement''. Per RFC-43, the semantics of the various
-issue types are:
+We have previously referred to day-to-day work being described by means of stories.
+However, \gls{jira} provides us with two additional issue types: ``bug'' and ``improvement''.
+Per RFC-43, the semantics of the various issue types are:
 
 \begin{itemize}
 \item
-  A story is the result of breaking down an epic into workable units;
+  A \gls{story} is the result of breaking down an \gls{epic} into workable units;
 \item
   A bug describes a fault or error in code which has already been
   accepted to master;
@@ -1034,28 +845,20 @@ The three issue types are functionally equivalent: these semantic
 distinctions are for convenience only, and are not rigorously enforced.
 
 In particular, note that all issue types are equivalent in terms of the
-data which is loaded to PMCS: it makes no distinction between them.
+data which is loaded to the \gls{pmcs}: it makes no distinction between them.
 Marking a bug or improvement as :jira\_field:done has exactly the same
 impact on the global earned value state as would completing an
-equivalent story.
+equivalent \gls{story}.
 
 \subsubsection{Scheduling}\label{scheduling}
 
-In some cases, a ticket may describe emergent work which must be
-addressed immediately by adding it to a
-bucket epic (\S\ref{sec:bucket}). In other cases, it can
-be deferred to a later cycle, or, after appropriate discussion, may be
-regarded as inappropriate (and can be tagged as :jira\_field:invalid or
-:jira\_field:won't fix). This is a management decision. When closing a
-ticket as inappropriate, please take a moment to describe why---the
-individual who reported it will appreciate an explanation of why it has
-been rejected, and it will serve as a useful reference the next time
-somebody suggests the same thing.
+In some cases, a ticket may describe emergent work which must be addressed immediately by adding it to a bucket \gls{epic} (\S\ref{sec:bucket}).
+In other cases, it can be deferred to a later \gls{cycle}, or, after appropriate discussion, may be regarded as inappropriate (and can be tagged as :jira\_field:invalid or :jira\_field:won't fix).
+This is a management decision.
+When closing a ticket as inappropriate, please take a moment to describe why---the individual who reported it will appreciate an explanation of why it has been rejected, and it will serve as a useful reference the next time somebody suggests the same thing.
 
-A special case of inappropriate tickets are those that duplicate work
-which has already been described elsewhere. Please close these as
-:jira\_field:invalid, and add a JIRA link of type
-:jira\_field:duplicates to the original ticket.
+A special case of inappropriate tickets are those that duplicate work which has already been described elsewhere.
+Please close these as :jira\_field:invalid, and add a \gls{jira} link of type :jira\_field:duplicates to the original ticket.
 
 Tickets which are obviously filed by mistake may simply be deleted
 rather than setting a special status. Please only do this when you are
@@ -1068,70 +871,48 @@ Value}\label{relationship-to-earned-value}
 
 We adopt the position that bugs are a natural part of the software
 lifecycle, and hence addressing them at an appropriate level earns value
-in the same way as new software development. That is, SPs earned by
-working on bugs and completing bucket epics contribute to earned value
+in the same way as new software development. That is, \glspl{sp} earned by
+working on bugs and completing bucket \glspl{epic} contribute to earned value
 in the same way as other work.
 
-However, bugs do serve as an bellwether for software quality issues. It
-would obviously be inappropriate---and a severe source of schedule
-risk---for the value earned from addressing bugs in existing software to
-dominate the productivity of the team at the expense of new development.
-We expect that no more than around 30\% of schedulable developer time
-will be dedicated addressing bugs and performing maintenance: any more
-than this must be carefully justified.
+However, bugs do serve as an bellwether for software quality issues.
+It would obviously be inappropriate---and a severe source of schedule \gls{risk}---for the value earned from addressing bugs in existing software to dominate the productivity of the team at the expense of new development.
+We expect that no more than around 30\% of schedulable developer time will be dedicated addressing bugs and performing maintenance: any more than this must be carefully justified.
 
 \subsection{Earning Value}
 \label{sec:cycle-value}
 
-The basic procedure for earning value during the cycle is akin to that discussed in \S\ref{sec:long-term-value} for long term planning.
+The basic procedure for earning value during the \gls{cycle} is akin to that discussed in \S\ref{sec:long-term-value} for long term planning.
 
-In short, as we saw in \S\ref{sec:sps-to-bcws}, the
-BCWS for a particular epic is defined by its \emph{estimated} (i.e.
-attached to the epic before work commences) SP total and its staff
-assignment. When an epic
-is marked as complete (following the criteria in \S\ref{sec:epic-done}, this is
-the value that is earned.
+In short, as we saw in \S\ref{sec:sps-to-bcws}, the \gls{bcws} for a particular \gls{epic} is defined by its \emph{estimated} (i.e.  attached to the \gls{epic} before work commences) SP total and its staff assignment.
+When an \gls{epic} is marked as complete (following the criteria in \S\ref{sec:epic-done}, this is the value that is earned.
 
-The BCWP for an epic is calculated based on the fractional completeness
-of an epic. That is, if an epic has a total SP count of \(X\), and the
-total of stories marked as complete within it is \(Y\), then
-\(BCWP = BCWS \times Y / X\).
+The \gls{bcwp} for an \gls{epic} is calculated based on the fractional completeness of an \gls{epic}. That is, if an \gls{epic} has a total SP count of \(X\), and the total of stories marked as complete within it is \(Y\), then \(BCWP = BCWS \times Y / X\).
 
-Be aware that stories that marked as :jira\_field:invalid or
-:jira\_field:won't fix in JIRA are not included in this calculation:
-they earn no value.
+Be aware that stories that marked as :jira\_field:invalid or :jira\_field:won't fix in \gls{jira} are not included in this calculation: they earn no value.
 
-As we saw in \S\ref{sec:defining-stories}, it is not
-required that the total SPs of all the stories contained within an epic
-(the ``planned SPs'') is equal to the total SP estimate of the epic
-itself (``estimated SPs''). Further, it is permitted to add stories to
-(or, indeed, remove stories from) the epic during the cycle. In these
-cases, we hold to two basic tenets:
+As we saw in \S\ref{sec:defining-stories}, it is not required that the total \glspl{sp} of all the stories contained within an \gls{epic} (the ``planned \glspl{sp}'') is equal to the total SP estimate of the \gls{epic} itself (``estimated \glspl{sp}''). Further, it is permitted to add stories to (or, indeed, remove stories from) the \gls{epic} during the \gls{cycle}. In these cases, we hold to two basic tenets:
 
 \begin{enumerate}
 \item
-  No epic can ever be more than 100\% complete;
+  No \gls{epic} can ever be more than 100\% complete;
 \item
-  Completeness cannot decrease. That is, if an epic has been registered
-  as 90\% complete, adding more stories cannot make it \emph{less}
-  complete than before.
+  Completeness cannot decrease.
+  That is, if an \gls{epic} has been registered as 90\% complete, adding more stories cannot make it \emph{less} complete than before.
 \end{enumerate}
 
-In order to meet these criteria, the relative weights of stories will be
-automatically adjusted on ingest to the PMCS. The detailed algorithm by
-which this adjustment is made is not publicly documented.
+In order to meet these criteria, the relative weights of stories will be automatically adjusted on ingest to the \gls{pmcs}.
+The detailed algorithm by which this adjustment is made is not publicly documented.
 
 \subsection{JIRA Maintenance}
 \label{sec:jira-maintenance}
 
-At any time, new tickets may be added to JIRA by team members. Please
-remind your team of the best practice in this respect (RFC-147). It is
-the responsibility of technical managers to ensure that new tickets are
-handled appropriately, updating the schedule to include them where
-necessary. It is required that the \texttt{Team} field be set to the
-appropriate team (RFC-145). Please regularly monitor JIRA for incomplete
-tickets and update them appropriately. Where tickets describe bugs or
-other urgent emergent work which cannot be deferred, refer to \S\ref{sec:bugs}.
+At any time, new tickets may be added to \gls{jira} by team members.
+Please remind your team of the best practice in this respect (RFC-147).
+It is the responsibility of technical managers to ensure that new tickets are handled appropriately, updating the schedule to include them where necessary.
+It is required that the \texttt{Team} field be set to the appropriate team (RFC-145).
+Please regularly monitor \gls{jira} for incomplete tickets and update them appropriately.
+Where tickets describe bugs or other urgent emergent work which cannot be deferred, refer to \S\ref{sec:bugs}.
 
 \subsection{Coordination Standup}\label{coordination-standup}
 
@@ -1163,7 +944,7 @@ Submit your report by editing the
 \href{https://drive.google.com/drive/u/0/folders/0BxgFbTQURmr6TUJleXZaY2ZNcEE}{template
 for the appropriate month} on Google Docs. You need to fill in all the
 sections with your name attached; when complete, remove your name.
-Provide a brief (one or two sentences) high level summary, a per-WBS
+Provide a brief (one or two sentences) high level summary, a per-\gls{wbs}
 breakdown of work over the month being reported on and plans for the
 upcoming month, as well as describing any recruitment activities
 (positions opened, interviews conducted, appointments made, etc). Refer
@@ -1173,38 +954,26 @@ are not not always consistent).
 \section{Reporting Actuals}
 \label{sec:actuals}
 
-In order to comply with the
-earned value management system (\S\ref{sec:evms}), it is
-necessary to track the actual cost of work being performed (the
-``actuals'') in each leaf element of the WBS. That is, whenever an
-invoice is issued from a subcontracting institution to AURA, it must be
-broken down into dollar charges against individual WBS elements.
+In order to comply with the earned value management system (\S\ref{sec:evms}), it is necessary to track the actual cost of work being performed (the ``actuals'') in each leaf \gls{element} of the \gls{wbs}.
+That is, whenever an invoice is issued from a subcontracting institution to AURA, it must be broken down into dollar charges against individual \gls{wbs} elements.
 
 Some institutions rigorously track how staff are spending their time
 (e.g. by filling in timesheets), and may directly make that information
 available to AURA as part of the invoicing process. In this case, the
 technical manager need take no further action.
 
-Other institutions do not rigorously check staff activity and/or do not
-supply this information to AURA when invoicing. In this case, the
-technical manager is responsible for breaking down the invoice by WBS
-and forwarding that to the relevant AURA contracts officer (check with
-the Project Manager
-(\S\ref{sec:contacts}) if you are unsure who that is).
-Note that, since
-story points reflect estimated, not actual, time spent on work
-(\S\ref{sec:sprinting}), it is \emph{not} appropriate to
-simply allocate actual costs based on SP totals.
+Other institutions do not rigorously check staff activity and/or do not supply this information to AURA when invoicing.
+In this case, the technical manager is responsible for breaking down the invoice by \gls{wbs} and forwarding that to the relevant AURA contracts officer (check with the Project Manager (\S\ref{sec:contacts}) if you are unsure who that is).
+Note that, since \glspl{sp} reflect estimated, not actual, time spent on work (\S\ref{sec:sprinting}), it is \emph{not} appropriate to simply allocate actual costs based on SP totals.
 
-Typically, expenses are accrued at a broadly constant rate for each
-individual: salaries do not vary much from month to month. However, in
-some months, a given developer may be significantly less productive than
-others (for example, due to paid vacation). In these cases, it is
-appropriate to spread the cost across all the WBSs elements the
-developer has been working on.
+Typically, expenses are accrued at a broadly constant rate for each individual: salaries do not vary much from month to month.
+However, in some months, a given developer may be significantly less productive than others (for example, due to paid vacation).
+In these cases, it is appropriate to spread the cost across all the \gls{wbs} \glspl{element} the developer has been working on.
 
-A typical invoice breakout should be supplied in a spreadsheet similar
-to that shown in tab-invoice.
+\begin{note}
+Broken below.
+\end{note}
+A typical invoice breakout should be supplied in a spreadsheet similar to that shown in tab-invoice.
 
 Note that when reporting actuals at this level it is not required to
 provide a mapping from dollar values to individuals who did the work.
@@ -1218,18 +987,16 @@ provide it upon request.
 
 \begin{itemize}
 \item
-  During the first week of the calendar month, data from JIRA together
-  with actual costs (labor charges, etc) are ingested to the PMCS
-  system. This indicates the progress of all activities and shows any
-  Earned Value variances. This information is made available to
-  technical managers through eCAM.
+  During the first week of the calendar month, data from \gls{jira} together with actual costs (labor charges, etc) are ingested to the \gls{pmcs} system.
+  This indicates the progress of all activities and shows any Earned Value variances.
+  This information is made available to technical managers through \gls{ecam}.
 \item
   During the second week of the calendar month:
 
   \begin{quote}
   \begin{itemize}
   \item
-    Variance narratives (\S\ref{sec:variance-narrative}), where necessary, must be submitted through eCAM.
+    Variance narratives (\S\ref{sec:variance-narrative}), where necessary, must be submitted through \gls{ecam}.
   \item
     The monthly progress narrative (\S\ref{sec:monthly-narrative}) must be submitted through Google Docs by the tenth day of the month.
   \end{itemize}
