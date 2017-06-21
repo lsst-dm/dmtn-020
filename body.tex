@@ -968,10 +968,21 @@ Typically, expenses are accrued at a broadly constant rate for each individual: 
 However, in some months, a given developer may be significantly less productive than others (for example, due to paid vacation).
 In these cases, it is appropriate to spread the cost across all the \gls{wbs} \glspl{element} the developer has been working on.
 
-\begin{note}
-Broken below.
-\end{note}
-A typical invoice breakout should be supplied in a spreadsheet similar to that shown in tab-invoice.
+A typical invoice breakout should be supplied in a spreadsheet similar to that shown in Table \ref{tab:invoice}.
+
+\begin{table}
+\begin{longtable}[]{@{}llllll@{}}
+\hline
+\multicolumn{3}{c}{Invoice Date: YYYY-MM-DD} & \multicolumn{3}{c}{Period: YYYY-MM-DD/DD} \\
+\hline
+Total     & 02C.0N.00  & 02C.0N.01 & 02C.0N.02 & ... & 02C.0N.0M \\
+          & KLM20N00A  & KLM20N01A & KLM20N02A & ... & KLM20N0MA \\
+\$ABCD.EF & \$GHIJ.KL  & \$MNOP.QR & \$STUV.WX & ... & \$YZ.00 \\
+\hline
+\end{longtable}
+\caption{Example invoice breakout showing dollar values allocated to both WBS elements and corresponding account numbers.}
+\label{tab:invoice}
+\end{table}
 
 Note that when reporting actuals at this level it is not required to
 provide a mapping from dollar values to individuals who did the work.
