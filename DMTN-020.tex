@@ -1,24 +1,22 @@
 \documentclass[DM,lsstdraft,TN,toc]{lsstdoc}
-%Replace the CUx here and all \CU will resolve below.
 
-%\usepackage{glossaries}
-%\makeglossaries
-%\setacronymstyle{long-short}
-%\newacronym{svm}{SVM}{support vector machine}
-%\newacronym{dm}{DM}{Data Management}
-%\usepackage{gwp}
-%\usepackage{risk}
+\usepackage[nonumberlist,nogroupskip,toc,numberedsection=autolabel]{glossaries}
+\makeglossaries
 
 \setDocChangeRecord{%
-\addtohist{2}{2014-01-01}{Update from original }{JB,JS}
-\addtohist{3}{2017-01-09}{Update in TeX slight revision new practices }{WOM,JS}
-	}
+  \addtohist{1}{2016-07-01}{First release}{JB et al.}
+  \addtohist{2}{2016-11-26}{Add section on software releases}{JDS}
+  \addtohist{3}{2016-11-28}{Add material on relationships between miletones and the appropriate WBS for bucket epics}{JDS}
+  \addtohist{4}{\today}{Reflect new practices. Convert to \LaTeX{}.}{WOM, JDS}
+}
 
 \begin{document}
 
-\title[DM PM guide]{Data Management Project Management Guide }
+\input{glossary}
 
-\author{Jacek Becla, Frossie Economou, Margaret Gelman, Jeff Kantor, Simon Krughoff, Kevin Long, Fritz Mueller, William O Mullane, John Swinbank, Xiuqin Wu}
+\title[DM PM Guide]{Data Management Project Management Guide }
+
+\author{Jacek Becla, Frossie Economou, Margaret Gelman, Jeff Kantor, Simon Krughoff, Kevin Long, Fritz Mueller, William O'Mullane, John D. Swinbank, Xiuqin Wu}
 
 \setDocRef      {DMTN-020} % the reference code
 \setDocDate     {\today}              % the date of the issue
@@ -26,19 +24,19 @@
 %
 % a short abstract
 %
-\setDocAbstract {This is the DM guide for TCAMS implementing the earned value system. 
-  }
+\setDocAbstract{This is the DM guide for T/CAMs implementing the earned value system.}
 
 %
 % the title page
 %
 \maketitle
 
-%\printnoidxglossaries
 %
 % It's all yours from here on
 %
 \input{body}
+\glsaddall
+\printglossary[style=index]
 \section{References\label{sect:references}}
 \renewcommand{\refname}{}
 \bibliography{local,lsst,gaia_livelink_valid,refs,books,refs_ads}
