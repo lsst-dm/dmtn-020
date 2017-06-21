@@ -216,10 +216,10 @@ When reporting actual costs (\S\ref{sec:actuals}), it may
 be helpful to consider the following examples:
 
 A developer for which the total annual cost (salary, overheads, etc) is
-(A) charges an hourly rate of (A / 1800).
+\(A\) charges an hourly rate of \(A / 1800\).
 
-A scientist with total annual cost (B) charges an hourly rate of
-(B / 1440).
+A scientist with total annual cost \(B\) charges an hourly rate of
+\(B / 1440\).
 
 No further corrections are necessary. In particular, there is no
 difference in the way working hours are measured, or the conversion of
@@ -371,32 +371,32 @@ At any given time, the \gls{bcwp} of a planning package consists of the sum of t
 
 An example may serve to illustrate.
 
-Planning package (P) is baselined to start at the beginning of F17 and run through to the end of F18, i.e. a total of three \glspl{cycle}, or 18 months. It has two members of staff---(A) and (B)---assigned to it full time.
-Both share the same nominal cost of (\$X) per \gls{cycle}.
+Planning package \(P\) is baselined to start at the beginning of F17 and run through to the end of F18, i.e. a total of three \glspl{cycle}, or 18 months. It has two members of staff---\(A\) and \(B\)---assigned to it full time.
+Both share the same nominal cost of \$\(X\) per \gls{cycle}.
 
-The \gls{bcws} for the total planning package is the cost per \gls{cycle} multiplied by the number of \glspl{cycle}: $(3 \times \$2X = \$6X)$.
+The \gls{bcws} for the total planning package is the cost per \gls{cycle} multiplied by the number of \glspl{cycle}: \(3 \times 2 \times \$X = \$6X\).
 
-In F17, both members of staff are assigned to six-month \gls{epic} derived from (P).
-The \gls{bcws} of the \gls{epic} is (\$2X).
-The remaining value in the planning package is (\$4X).
+In F17, both members of staff are assigned to six-month \gls{epic} derived from \(P\).
+The \gls{bcws} of the \gls{epic} is \(\$2X\).
+The remaining value in the planning package is \(\$4X\).
 
 At the end of F17, the \gls{epic} is completed.
-The \gls{bcwp} and \gls{acwp} are both (\$2X).
+The \gls{bcwp} and \gls{acwp} are both \(\$2X\).
 The work is on cost and on schedule: there is no variance.
 
-In S18, (A) is reassigned and is unable to work on a new \gls{epic} derived from (P).
-(B) continues the work alone, completing an \gls{epic} worth (\$X) by the end of the \gls{cycle}.
-The \gls{bcwp} and \gls{acwp} are now both (\$3X); there is no cost variance.
-However, the \gls{bcws} is (\$4X): compared to the original schedule for the planning package, there is a schedule variance of (-\$X).
-There is a total of (\$3K) left in the planning package.
+In S18, \(A\) is reassigned and is unable to work on a new \gls{epic} derived from \(P\).
+\(B\) continues the work alone, completing an \gls{epic} worth \(\$X\) by the end of the \gls{cycle}.
+The \gls{bcwp} and \gls{acwp} are now both \(\$3X\); there is no cost variance.
+However, the \gls{bcws} is \(\$4X\): compared to the original schedule for the planning package, there is a schedule variance of \(-\$X\).
+There is a total of \(\$3K\) left in the planning package.
 
-In F18, (C) joins the project.
-(C) only costs (\$0.5X) per \gls{cycle}, but is a fast worker: she can complete in one \gls{cycle} work that would take (A) or (B) two \glspl{cycle}.
+In F18, \(C\) joins the project.
+\(C\) only costs \(\$0.5X\) per \gls{cycle}, but is a fast worker: she can complete in one \gls{cycle} work that would take \(A\) or \(B\) two \glspl{cycle}.
 
-(B) and (C) work together through F18.
-The \gls{acwp} for the \gls{cycle} is (\$1.5Xx); the \gls{bcwp} is (\$3X). The \gls{acwp} to date (\$4.5X).
-The \gls{bcwp} and \gls{bcws} are both (\$6X).
-At this point, the project is complete: there is no schedule variance, and a cost variance of (+\$1.5X).
+\(B\) and \(C\) work together through F18.
+The \gls{acwp} for the \gls{cycle} is \(\$1.5X\); the \gls{bcwp} is \(\$3X\). The \gls{acwp} to date \(\$4.5X\).
+The \gls{bcwp} and \gls{bcws} are both \(\$6X\).
+At this point, the project is complete: there is no schedule variance, and a cost variance of \(+\$1.5X\).
 
 \subsection{Epic-Based Long Term Plans}
 
@@ -885,7 +885,7 @@ The basic procedure for earning value during the \gls{cycle} is akin to that dis
 In short, as we saw in \S\ref{sec:sps-to-bcws}, the \gls{bcws} for a particular \gls{epic} is defined by its \emph{estimated} (i.e.  attached to the \gls{epic} before work commences) SP total and its staff assignment.
 When an \gls{epic} is marked as complete (following the criteria in \S\ref{sec:epic-done}, this is the value that is earned.
 
-The \gls{bcwp} for an \gls{epic} is calculated based on the fractional completeness of an \gls{epic}. That is, if an \gls{epic} has a total SP count of \(X\), and the total of stories marked as complete within it is \(Y\), then \(BCWP = BCWS \times Y / X\).
+The \gls{bcwp} for an \gls{epic} is calculated based on the fractional completeness of an \gls{epic}. That is, if an \gls{epic} has a total SP count of \(X\), and the total of stories marked as complete within it is \(Y\), then \(\mathrm{BCWP} = \mathrm{BCWS} \times Y / X\).
 
 Be aware that stories that marked as \texttt{invalid} or \texttt{won't fix} in \gls{jira} are not included in this calculation: they earn no value.
 
