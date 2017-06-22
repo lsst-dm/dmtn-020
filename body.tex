@@ -112,8 +112,8 @@ Those institutions directly relevant to DM include:
 \hline
 \end{longtable}
 
-\subsection{The Control Account
-Manager}\label{the-control-account-manager}
+\subsection{The Control Account Manager}
+\label{sec:cam}
 
 A \gls{ca} is the intersection between the \gls{wbs} and the \gls{obs}.
 Each \gls{ca} falls under the purview of a \gls{cam}.
@@ -274,9 +274,6 @@ This role is not equivalent to being granted personal research time, but reflect
 While the Science Lead reports to the Subsystem Scientist, they primarily provide a service to the local T/CAM, and, as such, are charged to a budget corresponding to the institutional \gls{wbs} (and \textit{not} to e.g. DM Project Science).
 Time spent performing this role must be accounted for in the usual way (either as \gls{loe} or as providing deliverables, preferring the latter whenever possible.
 
-
-
-
 \section{Long Term Planning}
 \label{sec:long-term-plan}
 
@@ -395,7 +392,8 @@ plan in this way can help in building up a detailed plan in a flexible,
 agile way, while also ensuring that scope, cost and schedule are
 carefully controlled.
 
-\subsection{Software Releases}\label{software-releases}
+\subsection{Software Releases}
+\label{sec:releases}
 
 Per \S\ref{sec:cycle-cadence}, a series of software releases will be made
 throughout LSST construction. These will provide a stable basis upon
@@ -442,9 +440,9 @@ Technical managers of the other groups are responsible for providing to \gls{squ
 This will include a set of release notes which provide a summary of work performed over the course of the \gls{cycle}.
 Please liaise with \gls{square} in advance to establish the appropriate format and granularity of these notes.
 
-\subsection{Defining The Plan}\label{defining-the-plan}
+\subsection{Defining The Plan}
 
-\subsubsection{Scoping Work}\label{scoping-work}
+\subsubsection{Scoping Work}
 
 The first essential step of developing the short term plan is to produce an outline of the programme of work to be executed.
 In general, this should flow directly from the long term plan (\S\ref{sec:long-term-plan}), ensuring that the expected planning packages are being worked on and milestones being hit.
@@ -542,7 +540,8 @@ With the agreement of the Project Manager and Project Controls Specialist, it is
 That is, the plan for the first three months of the \gls{cycle} is loaded before the start of the \gls{cycle}, and the remaining part of the plan covering the final three months is loaded before the start of the fourth month.
 This approach provides an opportunity to fine-tune the plan for the second half of the \gls{cycle}, without requiring a formal \gls{lcr} (\S\ref{sec:cycle-change}).
 
-\subsubsection{Scheduling Research Work}\label{scheduling-research-work}
+\subsubsection{Scheduling Research Work}
+\label{sec:research}
 
 As discussed in \S\ref{sec:long-term-research}, research is sometimes required
 to meet our objectives. However, it is not a natural fit to our usual
@@ -832,7 +831,8 @@ The three issue types are functionally equivalent: these semantic distinctions a
 In particular, note that all issue types are equivalent in terms of the data which is loaded to the \gls{pmcs}: it makes no distinction between them.
 Marking a bug or improvement as \texttt{done} has exactly the same impact on the global earned value state as would completing an equivalent \gls{story}.
 
-\subsubsection{Scheduling}\label{scheduling}
+\subsubsection{Scheduling}
+\label{sec:scheduling}
 
 In some cases, a ticket may describe emergent work which must be addressed immediately by adding it to a bucket \gls{epic} (\S\ref{sec:bucket}).
 In other cases, it can be deferred to a later \gls{cycle}, or, after appropriate discussion, may be regarded as inappropriate (and can be tagged as \texttt{invalid} or \texttt{won't fix}).
@@ -848,8 +848,7 @@ sure there is no value to leaving an audit trail, and when you have
 verified that the original author of the ticket is aware of and
 understands the outcome.
 
-\subsubsection{Relationship to Earned
-Value}\label{relationship-to-earned-value}
+\subsubsection{Relationship to Earned Value}
 
 We adopt the position that bugs are a natural part of the software
 lifecycle, and hence addressing them at an appropriate level earns value
@@ -896,21 +895,13 @@ It is required that the \texttt{Team} field be set to the appropriate team (RFC-
 Please regularly monitor \gls{jira} for incomplete tickets and update them appropriately.
 Where tickets describe bugs or other urgent emergent work which cannot be deferred, refer to \S\ref{sec:bugs}.
 
-\subsection{Coordination Standup}\label{coordination-standup}
+\subsection{Coordination Standup}
+\label{sec:sup}
 
-The meeting URL is not included here since this note is publicly
-available. Contact the Project Manager for details.
+The technical managers meet with the Project Manager (\S\ref{sec:contacts}) and interested others---it is not a closed meeting---twice every week.
+This is a forum to discuss general project management issues, but, in particular, to resolve issues which cut across team boundaries and are relevant for ongoing sprints.
 
-The technical managers meet with the
-Project Manager (\S\ref{sec:contacts}) and interested
-others (it is not a closed meeting) twice every week. This is a forum to
-discuss general project management issues, but, in particular, to
-resolve issues which cut across team boundaries and are relevant for the
-ongoing sprint.
-
-Meetings take place using \href{https://hangouts.google.com/}{Google
-Hangouts} at a pre-arranged URL. Meetings take place at 11:00 (11 a.m.)
-Project (Pacific) Time on Tuesdays and Fridays.
+Meetings take take place online, using a pre-arranged URL\footnote{The meeting URL is not included here; contact the Project Manager for details.}, at 11 a.m. Project (Pacific) Time on Tuesdays and Fridays.
 
 \subsection{Monthly Progress Narratives}
 \label{sec:monthly-narrative}
@@ -922,16 +913,10 @@ report should be generally submitted no later than tenth of the month
 occasion. You are encouraged to submit your report as early in the month
 as possible.
 
-Submit your report by editing the
-\href{https://drive.google.com/drive/u/0/folders/0BxgFbTQURmr6TUJleXZaY2ZNcEE}{template
-for the appropriate month} on Google Docs. You need to fill in all the
-sections with your name attached; when complete, remove your name.
-Provide a brief (one or two sentences) high level summary, a per-\gls{wbs}
-breakdown of work over the month being reported on and plans for the
-upcoming month, as well as describing any recruitment activities
-(positions opened, interviews conducted, appointments made, etc). Refer
-to previous reports for examples of the style used (but note that they
-are not not always consistent).
+Submit your report by editing the template for the appropriate month on Google Docs\footnote{Reports are linked from the \href{https://confluence.lsstcorp.org/display/DM/Useful+DMLT+Links}{Useful DMLT Links} Confluence page.}.
+You need to fill in all the sections with your name attached; when complete, remove your name.
+Provide a brief (one or two sentences) high level summary, a per-\gls{wbs} breakdown of work over the month being reported on and plans for the upcoming month, as well as describing any recruitment activities (positions opened, interviews conducted, appointments made, etc).
+Refer to previous reports for examples of the style used (but note that they are not not always consistent).
 
 \section{Reporting Actuals}
 \label{sec:actuals}
