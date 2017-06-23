@@ -11,6 +11,10 @@ You are encouraged to submit bug reports so that this document can be made compl
 
 Be aware of prefixes: ``LDM-'' documents refer specifically to the Data Management subsystem, ``LSE-'' to Systems Engineering, ``LPM-'' to Project Management.
 
+\paragraph*{\citeds{LDM-294}}
+\emph{Data Management Organization and Management}
+Describes the overall structure of LSST Data Management, the goals of the project, the approach being taken to reach them, and the roles of the various individuals and groups involved.
+
 \paragraph*{\citeds{LPM-43, LPM-44}}
 \emph{\gls{wbs}} and \emph{\gls{wbs} Dictionary}, respectively.
 The former shows the overall work breakdown structure for the whole project.
@@ -45,8 +49,7 @@ This guide is primarily aimed at the LSST DM technical managers.
 Technical managers report directly to the DM Project Manager.
 Technical managers are, in general, expected to act as \gls{cam} and technical lead for their \gls{wbs} \glspl{element}; as such, they are sometimes referred to as ``T/CAMs''.
 
-The T/CAM role is described in \citeds{ldm-294}.
-The role of \gls{cam} is defined in detail in \S\ref{sec:structure}.
+The T/CAM role is described in \citeds{LDM-294}, while the specific duties of a \gls{cam} are discussed in detail in \S\ref{sec:structure}.
 
 \section{Formal Organizational Structure}
 \label{sec:structure}
@@ -113,8 +116,8 @@ Those institutions directly relevant to DM include:
 \hline
 \end{longtable}
 
-\subsection{The Control Account
-Manager}\label{the-control-account-manager}
+\subsection{The Control Account Manager}
+\label{sec:cam}
 
 A \gls{ca} is the intersection between the \gls{wbs} and the \gls{obs}.
 Each \gls{ca} falls under the purview of a \gls{cam}.
@@ -151,7 +154,11 @@ Imperfect estimates are exposed as variances.
 Specifically, we can show either \gls{sv}---a negative value means that less
 of the system has been delivered to date than planned---or \gls{cv}---a negative value means that the work delivered to date has been more expensive than predicted.
 Related quantities, \gls{spi} and \gls{cpi}, express the same information as ratios rather than sums.
-In general, we strive to achieve variances of near zero: even a positive variance (corresponding to being ahead of schedule or being cheaper than expected) is indicative of an inaccurate plan.
+
+In the limit of perfect planning, variances will be zero.
+While this is our aspiration, we recognize that is a practical impossibility: variances are perfectly normal in a project, and we should not be afraid to have them as long as we can clearly explain their cause and the steps we are taking to mitigate them (see \S\ref{sec:variance-narrative}).
+
+Variance is perfectly normal in a project and we should not be afraid to have them and provide narratives about them. We should take care the narrative is not always the same i.e. if we have a negative variance every month and it is because we did not plan for something we should do better planning.
 
 All of these indices can be applied to any \gls{wbs} \gls{element} within the project.
 Thus, we can talk about value earned across the whole of DM (1.02C) or on a specific component (say, the User Workspace Toolkit, 1.02C.05.05).
@@ -176,8 +183,7 @@ The narrative is entered directly into \gls{ecam}.
 In future, narratives may also be required for positive variances (i.e. running ahead of schedule).
 
 Variance is calculated on a monthly basis; variance narratives are due in the second week of the calendar month following that to which they apply (refer to \S\ref{sec:reporting-cycle} for details).
-
-Variance is perfectly normal in a project and we should not be afraid to have them and provide narratives about them. We should take care the narrative is not always the same i.e. if we have a negative variance every month and it is because we did not plan for something we should do better planning.
+Note that the variance narrative should not regularly be the same from month to month: if the same circumstances keep recurring, it is indicative of a fault in our planning which we must address.
 
 \subsection{Level of Effort Work}
 \label{sec:loe}
@@ -189,14 +195,17 @@ This work is referred to as \gls{loe}: it is assumed to earn value simply throug
 
 \citeds{LDM-472} provides a detailed definition of the types of work it is permissible to regard as \gls{loe}.
 In general, we strive to minimize the fraction of our effort which is devoted to \gls{loe} activities and favor those which are more directly accountable.
-In certain cases such as operations of pipelines or other systems \gls{loe} is perfectly acceptable.
+However, in certain cases such as operations of pipelines or other systems, \gls{loe} is perfectly acceptable.
 
 The assumption encoded in \citeds{LDM-472} is that developers will spent 30\% of their time on \gls{loe} type activities, and the remaining 70\% of their effort is tracked against concrete deliverables.
-This does not have to be used as a rule however, if we can plan activities to more than 70\% of the time we should do so.
+However, as above we generally aspire to minimize the fraction of \gls{loe}; T/CAMs are encouarged to explicitly schedule as much developer time as is possible.
+
+Note that all \gls{loe} work should be invoiced to the ``00'' fourth-level \gls{wbs} element (1.02C.03.00, 1.02C.04.00, etc)
 
 \section{Estimating Effort}
 \label{sec:effort}
 
+\subsection{Basic Assumptions}
 The Project assumes that a full-time individual works for a total of
 1,800 hours per year: this figure is \emph{after} all vacations, sick
 leave, etc are taken into account. Staff appointed to ``developer''
@@ -225,39 +234,12 @@ No further corrections are necessary. In particular, there is no
 difference in the way working hours are measured, or the conversion of
 \glspl{sp} to hours.
 
-Some individuals serve ``Science Lead'' (SL) roles within DM which ,
-such as the Project Scientist and Pipelines Scientist. These roles are
-not equivalent to being granted personal research time, but reflect a
-level of scientific oversight within the project. Time spent performing
-this role must be accounted for in the usual way (either as \gls{loe} or as
-providing deliverables), and charged to an account agreed with the
-DM Project Manager (\S\ref{sec:contacts}). They generally
-serve as the Product Owners for parts of the system their respective
-institutions have been tasked to deliver (not all products, as we
-discussed). While SLs report to the Subsystem Scientist, they primarily
-provide a service to the local T/CAM.
-
-Science leads are typically not 100\% and as a rough guide we consider
-they spend about half their allocated time serving the Subsystem
-Scientist and half serving the T/CAM. As much work as possible should be
-accounted for in stories.
-
-Our base assumption is that 30\% of an individual's LSST time (i.e. 540 hours/year for a developer, 432 hours/year for a scientist) are devoted to overhead for meetings, ad-hoc discussions and other interruptions.
+Our base assumption is that 30\% of an individual's LSST time (i.e. 540 hours/year for a developer, 432 hours/year for a scientist) are devoted to overhead for regular meetings\footnote{``Meetings'' include, for example, scheduled weekly team meetings, stand-ups, etc; major conferences or project meetings involving preparation, travel time, etc should be scheduled in advance and allocated \glspl{sp}.}, ad-hoc discussions and other interruptions.
 This work is counted as \gls{loe} (and, as such, is charged to the relevant ``00'' fourth level \gls{wbs} \gls{element}, as described in \S\ref{sec:loe}).
-However meeting attendance is well understood:  on the planning side we should allocate stories and points for individuals attending and preparing for meetings.
-If we fail to correctly visualize this work we loose track of it.
-If we bill less to \gls{loe} and have to fill a variance narrative that is fine.
+It is actively encouraged to allocate less than 30\% of an individuals time to \gls{loe} where that is possible.
 
-Some individuals---notably technical managers themselves, as well as
-others in leadership roles---are expected to have a larger fraction of
-their time devoted to \gls{loe} work.
-
-Assuming no variation throughout the year, we therefore expect 105 hours
-of productive work from a developer, or 84 hours from a scientist, per
-month. Note that this is averaged across the year: some months, such as
-those containing major holidays, will naturally involve less working
-time than others: the remainder will necessarily include more working
-time to compensate.
+Assuming no variation throughout the year, we therefore expect 105 hours of productive work from a developer, or 84 hours from a scientist, per month.
+Note that this is averaged across the year: some months, such as those containing major holidays, will naturally involve less working time than others: the remainder will necessarily include more working time to compensate.
 
 Rather than working in hours, our \gls{jira} based system uses \glspl{sp}, with one \gls{sp} being defined as equivalent to four hours of effort by a competent developer.
 Thus, we expect developers and scientists to produce 26.25 and 21 \glspl{sp} per \emph{average} month respectively.
@@ -277,23 +259,29 @@ Scientist & 1440     &  84            & 21.00 \\
 \label{tab:working-rate}
 \end{table}
 
-On occasion, it may be appropriate to tailor the number of \glspl{sp} expected per unit time from a particular individual.
-For example:
+\subsection{Special Cases}
 
-\begin{itemize}
-\item
-  Individuals in leadership roles may assign a larger fraction of their time to \gls{loe} type work, and therefore spend fewer hours generating \glspl{sp}.
-  The ratio of hours to \glspl{sp} remains constant, but the number of hours decreases.
-\item
-  New or inexperienced developers, even when devoting their full attention to story-pointed work, will likely be less productive than their more experienced peers.
-  In this case, the ratio of hours to \glspl{sp} increases, but the number of hours remains constant.
-\end{itemize}
+\subsubsection{Newcomers}
+\label{sec:newcomers}
 
-In either case, the total number of \glspl{sp} which will will be generated by the team in a given time interval is reduced.
-This should be taken into account when \gls{resloading}.
+New or inexperienced developers, even when devoting their full attention to story-pointed work, will likely be less productive than their more experienced peers.
+In this case, the ratio of hours to \glspl{sp} increases, but the number of hours remains constant.
 
-For every \gls{story} we should record the points we actually spent on the \gls{story} versus the planned points.
-We must all monitor this as individuals to improve our planning performance.
+Note that specific activities related on ``onboarding'' and getting up to speed with the project can be ticketed as regular work.
+For example, working through tutorials, reading documentation, and so on are all activites which can earn \glspl{sp}.
+Typically, this will assigned to the ``00'' (management) element of the \gls{wbs} (\S\ref{sec:wbs}).
+
+\subsubsection{Technical Managers and other Leadership Roles}
+
+Individuals in leadership roles may find it necessary to assign a larger fraction of their time to \gls{loe} type work, and therefore spend fewer hours generating \glspl{sp}.
+The ratio of hours to \glspl{sp} remains constant, but the number of hours decreases.
+
+\subsubsection{Institutional Science/Engineering Leads}
+
+As described in \citeds{LDM-294}, as well as a T/CAM each institution with DM has a Science/Engineering Lead.
+This role is not equivalent to being granted personal research time, but reflect a level of scientific oversight within the project: they act as the overall Product Owner for the parts of the system that their institution has been tasked to deliver.
+While the Science Lead reports to the Subsystem Scientist, they primarily provide a service to the local T/CAM, and, as such, are charged to a budget corresponding to the institutional \gls{wbs} (and \textit{not} to e.g. DM Project Science).
+Time spent performing this role must be accounted for in the usual way (either as \gls{loe} or as providing deliverables, preferring the latter whenever possible.
 
 \section{Long Term Planning}
 \label{sec:long-term-plan}
@@ -413,7 +401,8 @@ plan in this way can help in building up a detailed plan in a flexible,
 agile way, while also ensuring that scope, cost and schedule are
 carefully controlled.
 
-\subsection{Software Releases}\label{software-releases}
+\subsection{Software Releases}
+\label{sec:releases}
 
 Per \S\ref{sec:cycle-cadence}, a series of software releases will be made
 throughout LSST construction. These will provide a stable basis upon
@@ -460,9 +449,9 @@ Technical managers of the other groups are responsible for providing to \gls{squ
 This will include a set of release notes which provide a summary of work performed over the course of the \gls{cycle}.
 Please liaise with \gls{square} in advance to establish the appropriate format and granularity of these notes.
 
-\subsection{Defining The Plan}\label{defining-the-plan}
+\subsection{Defining The Plan}
 
-\subsubsection{Scoping Work}\label{scoping-work}
+\subsubsection{Scoping Work}
 
 The first essential step of developing the short term plan is to produce an outline of the programme of work to be executed.
 In general, this should flow directly from the long term plan (\S\ref{sec:long-term-plan}), ensuring that the expected planning packages are being worked on and milestones being hit.
@@ -560,7 +549,8 @@ With the agreement of the Project Manager and Project Controls Specialist, it is
 That is, the plan for the first three months of the \gls{cycle} is loaded before the start of the \gls{cycle}, and the remaining part of the plan covering the final three months is loaded before the start of the fourth month.
 This approach provides an opportunity to fine-tune the plan for the second half of the \gls{cycle}, without requiring a formal \gls{lcr} (\S\ref{sec:cycle-change}).
 
-\subsubsection{Scheduling Research Work}\label{scheduling-research-work}
+\subsubsection{Scheduling Research Work}
+\label{sec:research}
 
 As discussed in \S\ref{sec:long-term-research}, research is sometimes required
 to meet our objectives. However, it is not a natural fit to our usual
@@ -744,12 +734,14 @@ Broadly, executing a sprint falls into three stages:
   ensure that completed stories are marked as \texttt{done}:
   experience suggests that this can easily be forgotten as developers
   rush on to the next challenge, but it is required to enable us to
-  properly track earned value as per\S\ref{sec:cycle-value}.
+  properly track earned value as per \S\ref{sec:cycle-value}.
 
   When completing a \gls{story} we do not change the number of \glspl{sp} assigned to
   it: the \gls{sp} total reflects our initial estimate of the work involved,
-  not the total time invested. This makes it possible to review the
-  quality of our estimates at the end of the sprint.
+  not the total time invested.
+  However, we should \textit{also} record the true \glspl{sp} expended on the issue.
+  This makes it possible to review the quality of our estimates at the end of the sprint.
+  Each individual, with guidance from their T/CAM, should use this information as they strive to improve the accuracy of their planning and estimating.
 
   Avoid adding more stories to a sprint in progress unless it is
   unavoidable (for example, the \gls{story} describes a critical bug that must
@@ -832,7 +824,7 @@ boundaries. Work together to ensure that all tickets are handled.
 
 We have previously referred to day-to-day work being described by means of stories.
 However, \gls{jira} provides us with two additional issue types: ``bug'' and ``improvement''.
-Per RFC-43, the semantics of the various issue types are:
+Per \jira{RFC-43}, the semantics of the various issue types are:
 
 \begin{itemize}
 \item
@@ -848,7 +840,8 @@ The three issue types are functionally equivalent: these semantic distinctions a
 In particular, note that all issue types are equivalent in terms of the data which is loaded to the \gls{pmcs}: it makes no distinction between them.
 Marking a bug or improvement as \texttt{done} has exactly the same impact on the global earned value state as would completing an equivalent \gls{story}.
 
-\subsubsection{Scheduling}\label{scheduling}
+\subsubsection{Scheduling}
+\label{sec:scheduling}
 
 In some cases, a ticket may describe emergent work which must be addressed immediately by adding it to a bucket \gls{epic} (\S\ref{sec:bucket}).
 In other cases, it can be deferred to a later \gls{cycle}, or, after appropriate discussion, may be regarded as inappropriate (and can be tagged as \texttt{invalid} or \texttt{won't fix}).
@@ -864,8 +857,7 @@ sure there is no value to leaving an audit trail, and when you have
 verified that the original author of the ticket is aware of and
 understands the outcome.
 
-\subsubsection{Relationship to Earned
-Value}\label{relationship-to-earned-value}
+\subsubsection{Relationship to Earned Value}
 
 We adopt the position that bugs are a natural part of the software
 lifecycle, and hence addressing them at an appropriate level earns value
@@ -906,27 +898,19 @@ The detailed algorithm by which this adjustment is made is not publicly document
 \label{sec:jira-maintenance}
 
 At any time, new tickets may be added to \gls{jira} by team members.
-Please remind your team of the best practice in this respect (RFC-147).
+Please remind your team of the best practice in this respect (\jira{RFC-147}).
 It is the responsibility of technical managers to ensure that new tickets are handled appropriately, updating the schedule to include them where necessary.
-It is required that the \texttt{Team} field be set to the appropriate team (RFC-145).
+It is required that the \texttt{Team} field be set to the appropriate team (\jira{RFC-145}).
 Please regularly monitor \gls{jira} for incomplete tickets and update them appropriately.
 Where tickets describe bugs or other urgent emergent work which cannot be deferred, refer to \S\ref{sec:bugs}.
 
-\subsection{Coordination Standup}\label{coordination-standup}
+\subsection{Coordination Standup}
+\label{sec:sup}
 
-The meeting URL is not included here since this note is publicly
-available. Contact the Project Manager for details.
+The technical managers meet with the Project Manager (\S\ref{sec:contacts}) and interested others---it is not a closed meeting---twice every week.
+This is a forum to discuss general project management issues, but, in particular, to resolve issues which cut across team boundaries and are relevant for ongoing sprints.
 
-The technical managers meet with the
-Project Manager (\S\ref{sec:contacts}) and interested
-others (it is not a closed meeting) twice every week. This is a forum to
-discuss general project management issues, but, in particular, to
-resolve issues which cut across team boundaries and are relevant for the
-ongoing sprint.
-
-Meetings take place using \href{https://hangouts.google.com/}{Google
-Hangouts} at a pre-arranged URL. Meetings take place at 11:00 (11 a.m.)
-Project (Pacific) Time on Tuesdays and Fridays.
+Meetings take take place online, using a pre-arranged URL\footnote{The meeting URL is not included here; contact the Project Manager for details.}, at 11 a.m. Project (Pacific) Time on Tuesdays and Fridays.
 
 \subsection{Monthly Progress Narratives}
 \label{sec:monthly-narrative}
@@ -938,16 +922,10 @@ report should be generally submitted no later than tenth of the month
 occasion. You are encouraged to submit your report as early in the month
 as possible.
 
-Submit your report by editing the
-\href{https://drive.google.com/drive/u/0/folders/0BxgFbTQURmr6TUJleXZaY2ZNcEE}{template
-for the appropriate month} on Google Docs. You need to fill in all the
-sections with your name attached; when complete, remove your name.
-Provide a brief (one or two sentences) high level summary, a per-\gls{wbs}
-breakdown of work over the month being reported on and plans for the
-upcoming month, as well as describing any recruitment activities
-(positions opened, interviews conducted, appointments made, etc). Refer
-to previous reports for examples of the style used (but note that they
-are not not always consistent).
+Submit your report by editing the template for the appropriate month on Google Docs\footnote{Reports are linked from the \href{https://confluence.lsstcorp.org/display/DM/Useful+DMLT+Links}{Useful DMLT Links} Confluence page.}.
+You need to fill in all the sections with your name attached; when complete, remove your name.
+Provide a brief (one or two sentences) high level summary, a per-\gls{wbs} breakdown of work over the month being reported on and plans for the upcoming month, as well as describing any recruitment activities (positions opened, interviews conducted, appointments made, etc).
+Refer to previous reports for examples of the style used (but note that they are not not always consistent).
 
 \section{Reporting Actuals}
 \label{sec:actuals}
@@ -1017,7 +995,8 @@ provide it upon request.
   provided to senior management and the AMCL for review.
 \end{itemize}
 
-\section{Staffing Changes}\label{staffing-changes}
+\section{Staffing Changes}
+\label{sec:staffing}
 
 In addition to onboarding procedures at your local institution, please
 be aware of
@@ -1032,9 +1011,7 @@ be aware of
   Onboarding Checklist}
 \end{itemize}
 
-and direct new recruits to them when they join your team.
+and direct new recruits to them when they join your team\footnote{As per \S\ref{sec:newcomers}, remember that newcomers should be allocated \glspl{sp} for working through this material.}.
 
-We maintain a
-\href{https://docs.google.com/spreadsheets/d/1G9KXBJJHfWkVDQeApfXaN_nZjD_YUJlHiEDOzhTy-0c/edit?usp=drive_web}{spreadsheet}
-listing all members of the DM team. Ensure it is kept up to date with
-the current and projected staffing within your team.
+The responsible T/CAM must also complete an \href{https://project.lsst.org/onboarding/form}{onboarding form} for the new recruit and update the \href{https://docs.google.com/spreadsheets/d/1G9KXBJJHfWkVDQeApfXaN_nZjD_YUJlHiEDOzhTy-0c/edit?usp=drive_web}{DM Team spreadsheet}.
+Similarly, when members of staff team leave the project, the T/CAM should fill in an \href{https://project.lsst.org/onboarding/offboarding_form}{offboarding form}.
