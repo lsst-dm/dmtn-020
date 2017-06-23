@@ -198,7 +198,7 @@ In general, we strive to minimize the fraction of our effort which is devoted to
 However, in certain cases such as operations of pipelines or other systems, \gls{loe} is perfectly acceptable.
 
 The assumption encoded in \citeds{LDM-472} is that developers will spent 30\% of their time on \gls{loe} type activities, and the remaining 70\% of their effort is tracked against concrete deliverables.
-However, as above we generally aspire to minimize the fraction of \gls{loe}; T/CAMs are encouarged to explicitly schedule as much developer time as is possible.
+However, as above we generally aspire to minimize the fraction of \gls{loe}; T/CAMs are encouraged to explicitly schedule as much developer time as is possible.
 
 Note that all \gls{loe} work should be invoiced to the ``00'' fourth-level \gls{wbs} element (1.02C.03.00, 1.02C.04.00, etc)
 
@@ -268,7 +268,7 @@ New or inexperienced developers, even when devoting their full attention to stor
 In this case, the ratio of hours to \glspl{sp} increases, but the number of hours remains constant.
 
 Note that specific activities related on ``onboarding'' and getting up to speed with the project can be ticketed as regular work.
-For example, working through tutorials, reading documentation, and so on are all activites which can earn \glspl{sp}.
+For example, working through tutorials, reading documentation, and so on are all activities which can earn \glspl{sp}.
 Typically, this will assigned to the ``00'' (management) element of the \gls{wbs} (\S\ref{sec:wbs}).
 
 \subsubsection{Technical Managers and other Leadership Roles}
@@ -409,17 +409,18 @@ throughout LSST construction. These will provide a stable basis upon
 which external users (other subsystems, science collaborations and the
 wider community) can base their work.
 
-Our releases follow a strictly time-based cadence. That is, they are
+In early development, releases followed a strictly time-based cadence. That is, they are
 made on a pre-defined schedule which tracks our
 short-term plan (\S\ref{sec:cycle-plan}), rather than
-being guaranteed to provide a particular set of functionality. For this
-reason, individual releases will not be exposed as milestones above
+being guaranteed to provide a particular set of functionality. 
+As of F17 with the test schedule in \citeds{LDM-503} release will have to provide required functionality for those tests.
+Still there is no need for individual releases will not be exposed as milestones above
 level 3 (exposing them at level 3 or below for internal use is
 optional). Other parts of the project which depend on certain functions
 being available should depend on a milestone describing that function,
 rather than on a particular release of the software.
 
-In addition to this cyclical official release process, we may provide
+In addition to this cyclical official release process, we shall provide
 packaged distributions of the codebase at more frequent intervals in
 support of commissioning or other activities that require a higher
 release cadence or timely delivery of particular features.
