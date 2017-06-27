@@ -1,7 +1,7 @@
 \section{Introduction}
 
-This document provides an informal guide to the everyday mechanisms underpinning LSST Data Management's approach to project management.
-It is intended to be read in conjunction with \citeds{LDM-472}, which provides a formal description of the project management process and requirements.
+This document provides a guide to the mechanisms underpinning LSST Data Management's approach to project management.
+It is intended to be read in conjunction with \citeds{LDM-294}, which describes the organization and management of the DM subsystem, and with reference to \citeds{LPM-98}, which describes the LSST \gls{pmcs}.
 
 \section{Important Documents}
 \label{sec:documents}
@@ -18,16 +18,11 @@ Describes the overall structure of LSST Data Management, the goals of the projec
 \paragraph*{\citeds{LPM-43, LPM-44}}
 \emph{\gls{wbs}} and \emph{\gls{wbs} Dictionary}, respectively.
 The former shows the overall work breakdown structure for the whole project.
-Note that these documents are periodically extracted from the master \gls{pmcs} system, and therefore occasionally do not reflect the most recent changes.
+Note that these documents are periodically extracted from the master \gls{pmcs}, and therefore occasionally do not reflect the most recent changes; \citeds{LDM-294} may be a more useful everyday reference.
 
 \paragraph*{\citeds{LPM-98}}
 \emph{LSST Project Controls System Description}.
 Describes and defines the components of the \gls{pmcs} used to manage and report on the overall LSST Project.
-
-\paragraph*{\citeds{LDM-472}}
-\emph{LSST DM Project Management and Tools}.
-The formal, high-level document which defines the project management process used by LSST DM.
-The present document may be thought of as a guide to applying the principles defined in \citeds{LDM-472} in practice.
 
 In addition, you should be familiar with the \href{https://project.lsst.org/meetings/lsst2014/node/100}{EVMS Training -- CAM 101} slides presented by the Project Controls Specialist (\S\ref{sec:contacts}) at the \href{https://project.lsst.org/meetings/lsst2014/}{LSST 2014 Meeting}.
 
@@ -193,11 +188,10 @@ However, parts of our work do not: every member of the team will find it necessa
 This may be particularly the case for technical managers or others in leadership roles within the project.
 This work is referred to as \gls{loe}: it is assumed to earn value simply through the passage of time.
 
-\citeds{LDM-472} provides a detailed definition of the types of work it is permissible to regard as \gls{loe}.
 In general, we strive to minimize the fraction of our effort which is devoted to \gls{loe} activities and favor those which are more directly accountable.
 However, in certain cases such as operations of pipelines or other systems, \gls{loe} is perfectly acceptable.
 
-The assumption encoded in \citeds{LDM-472} is that developers will spent 30\% of their time on \gls{loe} type activities, and the remaining 70\% of their effort is tracked against concrete deliverables.
+Our first-order estimate is that developers will spent 30\% of their time on \gls{loe} type activities, and the remaining 70\% of their effort is tracked against concrete deliverables.
 However, as above, we generally aspire to minimize the fraction of \gls{loe}: T/CAMs are therefore encouraged to explicitly schedule as much developer time as is possible.
 
 Note that all \gls{loe} work should be invoiced to the ``00'' fourth-level \gls{wbs} element (1.02C.03.00, 1.02C.04.00, etc)
@@ -286,8 +280,9 @@ Time spent performing this role must be accounted for in the usual way (either a
 \section{Long Term Planning}
 \label{sec:long-term-plan}
 
-Refer to \citeds{LDM-472} for a description of the long-term planning system.
-In brief, the plan for the duration of construction is embodied in:
+The authoritative summary of the long-term planning system make be found in \citeds{LDM-294}.
+Here we expand upon the details of that system.
+The plan for the duration of construction is embodied in:
 
 \begin{enumerate}
 \item
@@ -306,8 +301,7 @@ In brief, the plan for the duration of construction is embodied in:
 Planning packages are defined at the fourth level of the \gls{wbs} breakdown (e.g. at 1.02C.04.02; see \S\ref{sec:wbs}).
 They may not cut across the \gls{wbs} structure, but rather must refer to that particular fourth-level \gls{element} and its children.
 
-Milestones are defined at a number of levels: see \citeds{LDM-472} for details.
-To summarize:
+Milestones are allocated to one of four levels, defined as follows:
 
 \begin{description}
 \item[Level 1]
@@ -329,13 +323,10 @@ defined for use within DM, but even here properly adhering to the plan
 is vital: your colleagues in other teams will use these milestones to
 align their schedules with yours, so they rely on you to be accurate.
 
-Relationships may be defined between milestones and between milestones
-and planning packages. Often, as described in \citeds{LDM-472}, these are blocking
-relationships: a particular activity cannot proceed until all the work
-which blocks it has been completed. It is also possible to identify a
-non-specific relationship between activities. This should be taken to
-mean that they share some common aspects and hence it may be appropriate
-to consider them together.
+Relationships may be defined between milestones and between milestones and planning packages.
+Often these are blocking relationships: a particular activity cannot proceed until all the work which blocks it has been completed.
+It is also possible to identify a non-specific relationship between activities.
+This should be taken to mean that they share some common aspects and hence it may be appropriate to consider them together.
 
 \subsection{Planning Research Work}
 \label{sec:long-term-research}
@@ -423,8 +414,8 @@ release cadence or timely delivery of particular features.
 \section{Short Term Planning}
 \label{sec:cycle-plan}
 
-Per \citeds{LDM-472}, short term planning is carried out in blocks referred to as \glspl{cycle}, which (usually) last for six months.
-Before the start of a \gls{cycle}, technical managers work with the DM Project Manager and the Project Controls Specialist to ensure their plan for the \gls{cycle} is well defined in both \gls{jira} and the \gls{pmcs}.
+Short term planning is carried out in blocks referred to as \glspl{cycle}, which (usually) last for six months.
+Before the start of a \gls{cycle}, technical managers work with the DM Project Manager, the relevant product owners and the Project Controls Specialist to ensure their plan for the \gls{cycle} is well defined in both \gls{jira} and the \gls{pmcs}.
 
 \subsection{Cycle Cadence \& Release Planning}
 \label{sec:cycle-cadence}
@@ -473,7 +464,7 @@ It is better to under-commit and over-deliver than vice-versa, but, ideally, aim
 \subsubsection{Defining Epics}
 \label{sec:planning-epics}
 
-As described in \citeds{LDM-472}, the plan for a six month \gls{cycle} fundamentally consists of a set of resource loaded \glspl{epic} defined in \gls{jira}.
+The plan for a six month \gls{cycle} fundamentally consists of a set of resource loaded \glspl{epic} defined in \gls{jira}.
 Each \gls{epic} loaded into the plan must have:
 
 \begin{itemize}
