@@ -1,0 +1,165 @@
+\newacronym[description={Actual Cost of Work Performed (often referred to as ``actuals'')}]{acwp}{ACWP}{Actual Cost of Work Performed}
+
+\newacronym{bcwp}{BCWP}{Budgeted Cost of Work Performed}
+
+\newacronym{bcws}{BCWS}{Budgeted Cost of Work Scheduled}
+
+\newglossaryentry{unit}
+{
+ name={budgeted (labor) unit},
+ description={An hour of work}
+}
+
+\newacronym
+ [description={Control Account Manager.
+               A CAM is responsible for the scope, schedule and budget for one or more \glspl{ca}}]
+ {cam}{CAM}{Control Account Manager}
+
+\newacronym
+ [description={Change Control Board.
+               All changes to the baselined plan must be approved by the CCB.
+               See \citeds{LPM-19} for details}]
+ {ccb}{CCB}{Change Control Board}
+
+\newglossaryentry{ca}
+{
+ name={control account},
+ description={An intersection point between the \gls{wbs} and the \gls{obs}.
+              For example, work performed at IPAC (1.03) on the Science User Interface (1.02C.05) is managed by a single control account}
+}
+
+\newacronym
+ [description={Cost Performance Index. Defined as \gls{bcwp} $\div$ \gls{acwp}}]
+ {cpi}{CPI}{Cost Performance Index}
+
+\newacronym
+ [description={Cost Variance. Defined as \gls{bcwp} $-$ \gls{acwp}}]
+ {cv}{CV}{Cost Variance}
+
+\newglossaryentry{cycle}
+{
+ name=cycle,
+ description={The time period over which detailed, short-term plans are defined and executed.
+              Normally, cycles run for six months, and culminate in a new release of the LSST Software Stack, however this need not always be the case}
+}
+
+\newglossaryentry{ecam}
+{
+ name=eCAM,
+ description={The \href{https://msweb.lsstcorp.org/eCAM/}{eCAM Notebook}, a tool which reports information from the \gls{pmcs}.
+              It provides a convenient view of the current status of the project in terms of \gls{evms}}
+}
+
+\newglossaryentry{element}
+{
+ name=element,
+ description={A node in the hierarchical project \gls{wbs}}
+}
+
+\newglossaryentry{epic}
+{
+ name=epic,
+ description={A self contained work with a concrete deliverable which my be scheduled to take place with a single \gls{cycle} and \gls{wbs} \gls{element}}
+}
+
+\newacronym
+ [description={Earned Value Management System. See the brief description in \S\ref{sec:evms}, or refer to formal training}]
+ {evms}{EVMS}{Earned Value Management System}
+
+\newglossaryentry{jira}
+{
+ name=JIRA,
+ description={Issue and project tracking software produced by \href{https://www.atlassian.com}{Atlassian}.
+              \href{https://jira.lsstcorp.org}{LSST's JIRA} is a core interface between technical managers, their teams, and the \gls{pmcs}}
+}
+
+\newacronym
+ [description={LSST Change Request.
+               It is necessary to submit a change request to alter any ``baselined'' aspect of the project.
+               This includes, for example, altering change controlled plans, or epics that have been loaded to the \gls{pmcs}}]
+ {lcr}{LCR}{LSST Change Request}
+
+\newacronym
+ [description={
+  Level of Effort.
+  LOE work is that which does not correspond to a specific deliverable.
+  A detailed definition is provided in \citeds{LDM-472}; see also the discussion in \S\ref{sec:loe}}]
+ {loe}{LOE}{Level of Effort}
+
+\newacronym
+ [description={Major Research Equipment and Facilities Construction.
+               The terms under which LSST's \gls{nsf} funding has been issued; we are required to strictly adhere to them}]
+ {mrefc}{MREFC}{Major Research Equipment and Facilities Construction}
+
+\newacronym{nsf}{NSF}{National Science Foundation}
+
+\newacronym{obs}{OBS}{Organizational Breakdown Structure}
+
+\newglossaryentry{risk}
+{
+ name=risk,
+ description={Risks are (per ISO 31000) ``the effect of uncertainty upon objectives''.
+              For the purposes of this document, that corresponds to the impact of unplanned or unpredictable events upon the cost or schedule of the Project.
+              The Project maintains a register of risks, which includes probability estimates and possible mitigations}
+}
+
+\newacronym
+ [description={
+  Project Management Control System.
+  The PMCS is not a single piece of software, but rather an interlocking suite of tools.
+  In general, the CAM need not interact with PMCS directly, but only through the eCAM and JIRA tools: it is safe to treat PMCS as a ``black box''.
+  Occasionally, individual PMCS components such as Primavera or Deltek Cobra escape this abstraction and appear in documentation}]
+ {pmcs}{PMCS}{Project Management Control System}
+
+\newglossaryentry{resloading}
+{
+ name={resource loading},
+ description={Assigning particular resources (in software development, almost always staffing) to particular tasks.
+              A ``resource loaded plan'' provides a mapping of resources to the plan throughout execution}
+}
+
+\newacronym
+ [description={Story Point.
+               Used to estimate the duration of tasks in JIRA.
+               One SP is equivalent to 4 hours of uninterrupted effort by a competent developer}]
+ {sp}{SP}{Story Point}
+
+\newacronym
+ [description={Schedule Performance Index. Defined as \gls{bcwp} $\div$ \gls{bcws}}]
+ {spi}{SPI}{Schedule Performance Index}
+
+\newglossaryentry{sprint}
+{
+ name=sprint,
+ description={A defined period of work for a particular team.
+               Typically, sprints are one calendar month long, but this is not required}
+}
+
+\newacronym
+ [description={Science Quality and Reliability Engineering.
+               One of the teams which makes up the Data Management Group.
+               SQuaRE coordinates the end-of-cycle release of the codebase (refer to \S\ref{sec:cycle-cadence}), and therefore plays a pivotal role in planning}]
+ {square}{SQuaRE}{Science Quality and Reliability Engineering}
+
+\newglossaryentry{story}
+{
+ name=story,
+ description={A \gls{jira} issue type describing a scheduled, self-contained task worked as part of an \gls{epic}.
+              Typically, stories are appropriate for work worth between a fraction of a \gls{sp} and 10 \glspl{sp}; beyond that, the work is insufficiently fine-grained to schedule as a story.
+              While fractional \glspl{sp} are fine, all stories involve work, so the \glspl{sp} total of an in progress or completed story should not be 0},
+ plural=stories
+}
+
+\newacronym
+ [description={Schedule Variance. Defined as \gls{bcwp} $-$ \gls{bcws}}]
+ {sv}{SV}{Schedule Variance}
+
+
+\newglossaryentry{timebox}
+{
+ name=timebox,
+ description={A limited time period assigned to a piece of work or other activity.
+              Useful in scheduling work which is not otherwise easily limited in scope, for example research projects or servicing user requests}
+}
+
+\newacronym{wbs}{WBS}{Work Breakdown Structure}

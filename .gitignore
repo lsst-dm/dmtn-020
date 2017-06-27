@@ -1,2 +1,13 @@
-_build/
-__pycache__
+*.swp
+DMTN-020.aux
+DMTN-020.bbl
+DMTN-020.blg
+DMTN-020.glg
+DMTN-020.glo
+DMTN-020.gls
+DMTN-020.glsdefs
+DMTN-020.ist
+DMTN-020.log
+DMTN-020.out
+DMTN-020.pdf
+DMTN-020.toc
