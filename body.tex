@@ -884,7 +884,12 @@ The detailed algorithm by which this adjustment is made is not publicly document
 At any time, new tickets may be added to \gls{jira} by team members.
 Please remind your team of the best practice in this respect (\jira{RFC-147}).
 It is the responsibility of technical managers to ensure that new tickets are handled appropriately, updating the schedule to include them where necessary.
+
 It is required that the \texttt{Team} field be set to the appropriate team (\jira{RFC-145}).
+This indicates which manager is responsible for seeing that the work is completed successfully.
+Available teams, and the associated managers, are listed in the \href{https://developer.lsst.io/processes/jira_agile.html}{Developer Guide}; generally speaking, they align with the the work breakdown structure described in \S\ref{sec:wbs}.
+Where there is uncertainty about which team should be responsible for a particular ticket, the “System Management” team may be used to indicate that the DM Project Manager is responsible for assigning the work.
+
 Please regularly monitor \gls{jira} for incomplete tickets and update them appropriately.
 Where tickets describe bugs or other urgent emergent work which cannot be deferred, refer to \S\ref{sec:bugs}.
 
