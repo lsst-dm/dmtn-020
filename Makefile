@@ -1,4 +1,4 @@
-#export TEXMFHOME = lsst-texmf/texmf
+export TEXMFHOME = lsst-texmf/texmf
 
 DMTN-020.pdf: *.tex
 	xelatex DMTN-020
