@@ -620,12 +620,10 @@ The \gls{ccb} meets on the third Wednesday of the calendar month; change request
 Therefore, it is advisable to take time early in the calendar month to review \glspl{epic} due to start in the \emph{following} month and to issue an \gls{lcr} on them if necessary.
 
 Note that it is \emph{not possible} to alter history by means of an \gls{lcr}.
-That is, if the scheduled start date of an \gls{epic} is already in the past,
-it is not possible to move it into the future using a change request. In
-this case, there is no option but to carry the variance related to the
-late start of the \gls{epic} into the future, to describe that with narratives
-(\S\ref{sec:variance-narrative}) where necessary, and to
-attempt to address the variance as soon as is possible.
+That is, if the scheduled start date of an \gls{epic} is already in the past, it is not possible to move it into the future using a change request.
+In this case, there is no option but to carry the variance related to the late start of the \gls{epic} into the future, to describe that with narratives (\S\ref{sec:variance-narrative}) where necessary, and to attempt to address the variance as soon as is possible.
+On occasion, it may be necessary to abandon \glspl{epic} which have been started (or, perhaps, for which the scheduled start date has been passed), but it is no longer possible or meaningful to complete.
+Refer to \S\ref{sec:epic-wontfix} for advice.
 
 Based on the above, it is clear that technical managers should closely track performance relative to the plan throughout the \gls{cycle}, and proactively file change requests to avoid running variances wherever possible.
 
@@ -759,7 +757,10 @@ style work as appropriate: the former is suitable for planned
 development activities (e.g. Science Pipelines development); the latter
 for servicing user requests (e.g. providing developer support).
 
-\subsection{Completing Epics}
+\subsection{Closing Epics}
+\label{sec:epic-close}
+
+\subsubsection{Completing the Work}
 \label{sec:epic-done}
 
 An \gls{epic} may be marked as \texttt{done} when:
@@ -775,10 +776,27 @@ An \gls{epic} may be marked as \texttt{done} when:
   (If applicable, i.e. it is not a bucket, as defined in \S\ref{sec:bucket}) its concrete deliverable has been achieved.
 \end{enumerate}
 
-Note that it is not permitted to close an \gls{epic} without defining at least
-one \gls{story} within it. Empty \glspl{epic} can never be completed.
+Note that it is not permitted to close an \gls{epic} without defining at least one \gls{story} within it.
+Empty \glspl{epic} can never be completed.
 
 When an \gls{epic} is marked as complete, all of its value is earned (\S\ref{sec:cycle-value}).
+
+\subsubsection{Abandoning the Work}
+\label{sec:epic-wontfix}
+
+On occasion, an \gls{epic} which has been started --- or, more accurately, which has passed its scheduled start date, and so cannot be removed from the schedule --- is rendered obsolete due to changes in planning or requirements.
+When this happens, it is possible to abandon work on the epic.
+Abandoning the \gls{epic} is equivalent to claiming its value as being earned: no variance will be carried.
+This should be the exception, rather than the rule: while a change to the plan is sometimes necessary, if it happens frequently it is likely indicative of deeper problems.
+The procedure is as follows:
+
+\begin{enumerate}
+
+  \item{Ensure that the \gls{epic} contains at least one \gls{story}, marked as \texttt{done}, which describes the work which has been done to establish that the \gls{epic} is obsolete;}
+  \item{Add a comment to the \gls{epic} to the effect that it is obsolete;}
+  \item{Mark the epic as \texttt{won't fix}.}
+
+\end{enumerate}
 
 \subsection{Handling Bugs \& Emergent Work}
 \label{sec:bugs}
